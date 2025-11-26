@@ -1,78 +1,99 @@
-###ai-prompts-2025 
+AI Prompt Collection 2025: The Blueprint
 
-AI Prompt Collection 2025
+A modern, interactive library for storing, organizing, and accessing advanced AI prompts, designed for efficiency and collaboration. This single-file application serves as a comprehensive management tool for complex system prompts used across coding, design, and reasoning tasks.
 
-A modern, interactive library for storing, organizing, and accessing advanced AI prompts. This single-file web application features a clean, responsive interface designed to help users manage complex system prompts for coding, design, and reasoning tasks.
+🌟 Status & Badges
+
+Status
+
+Component
+
+Description
+
+
+
+Frontend
+
+Single-page application logic
+
+
+
+Styling
+
+Utility-first CSS framework
+
+
+
+Architecture
+
+Everything compiled into one file
 
 🚀 Live Demo
 
-(If you deploy this to GitHub Pages, replace this line with your URL: https://www.google.com/search?q=https://yourusername.github.io/your-repo-name)
+(If you deploy this to GitHub Pages, replace this line with your URL: https://darshil0.github.io/ai-prompts-2025/)
 
-✨ Features
+✨ Features at a Glance
 
-Interactive Sidebar: Filter prompts by categories (System Prompt, Coding & Web, Image Gen, etc.) or search by keywords/tags.
+Prompt Management: Store and retrieve complex, multi-line prompts easily.
 
-One-Click Copy: Easily copy complex prompts to your clipboard with a single click.
+Dynamic Filtering: Quickly filter prompts by Category (System Prompt, Coding & Web, Image Gen, etc.) or search using keywords and Tags.
 
-Syntax Highlighting: Prompts containing code blocks (like JSON) are automatically formatted for readability.
+Instant Copy: One-click functionality to copy the full prompt content to the clipboard.
 
-Responsive Design: Works seamlessly on desktop and mobile devices.
+Code Readability: Custom typography (JetBrains Mono) enhances the readability of code and JSON structures within the prompt content.
 
-Single File Architecture: The entire app runs from a single index.html file—no build process or complex installation required.
+Zero Configuration: The entire application is contained within a single index.html file, requiring no local build steps or package installations.
 
-🛠️ Tech Stack
+🛠️ Project Setup
 
-React 18: For UI components and state management.
+Required Files
 
-Tailwind CSS: For styling and responsive design.
+To run this project, you only need the following two files in your repository root:
 
-Lucide React: For consistent iconography.
+index.html (The application source code)
 
-Babel Standalone: Enables JSX compilation directly in the browser.
+README.md (This documentation file)
 
-📦 Installation & Usage
+Installation & Execution
 
-Method 1: Run Locally
+1. Run Locally
 
-Download the index.html file.
+Download or copy the contents of index.html.
 
-Double-click it to open it in any modern web browser (Chrome, Firefox, Safari, Edge).
+Save it as index.html on your computer.
 
-No server or internet connection is strictly required (though CDN scripts are loaded from the web).
+Double-click the file to open it in any modern web browser.
 
-Method 2: Host on GitHub Pages
+2. Host on GitHub Pages (Recommended)
 
-Fork or clone this repository.
+Upload index.html and README.md to your GitHub repository (e.g., ai-prompts-2025).
 
-Go to your repository Settings.
+Go to your repository Settings and navigate to the Pages section.
 
-Navigate to the Pages section.
+Select the main branch as the deployment source and save.
 
-Select the main branch as the source and save.
+Your prompt library will be instantly live at the URL provided by GitHub Pages.
 
-Your prompt library will be live at https://<username>.github.io/<repository-name>/.
+⚙️ Customization: Adding and Editing Prompts
 
-📂 Project Structure
+All prompt data is stored directly within the <script type="text/babel"> block inside index.html.
 
-/
-├── index.html      # Contains all logic, styles, and prompt data
-└── README.md       # Project documentation
-
-
-📝 Customizing Prompts
-
-To add or edit prompts, open index.html in any text editor (like VS Code or Notepad). Look for the promptData array near the top of the script section:
+To add a new prompt, simply edit the promptData array in index.html by adding a new JavaScript object following this structure:
 
 const promptData = [
+    // ... existing prompts
     {
-        id: 1,
+        id: 14, // Must be a unique number
         title: "Your New Prompt Title",
-        category: "Category Name",
-        tags: ["Tag1", "Tag2"],
-        description: "Short description for the sidebar.",
-        content: `Paste your full prompt text here...`
-    },
-    // ... more prompts
+        category: "New Category Name", // e.g., "Reasoning", "Data Analysis"
+        tags: ["Keyword1", "Keyword2"], // Used for search and filtering
+        description: "A short, engaging summary visible in the sidebar.",
+        content: `
+            Paste your full, multi-line, complex prompt text here.
+            Use backticks (\`) for multi-line strings.
+            You can include code blocks like \`\`\`json or \`\`\`javascript here.
+        `
+    }
 ];
 
 
