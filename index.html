@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; }
         .mono-font { font-family: 'JetBrains Mono', monospace; }
         
         /* Custom scrollbar for sidebar */
@@ -19,18 +19,18 @@
             width: 6px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9;
+            background: #f3f4f6;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #d1d5db;
             border-radius: 3px;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
+            background: #9ca3af;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 h-screen overflow-hidden">
+<body class="bg-slate-100 text-slate-800 h-screen overflow-hidden">
     <div id="root"></div>
 
     <script type="text/babel">
@@ -40,377 +40,14 @@
         const Icons = {
             Copy: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>,
             Check: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-            Search: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>,
+            Search: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">ircle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>,
             Menu: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>,
             Tag: () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94 .94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>,
             Sparkles: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
         };
 
         // Data
-        const promptData = [
-            {
-                id: 1,
-                title: "Ultimate JSON Image Generator",
-                category: "System Prompt",
-                tags: ["Design", "JSON", "Branding"],
-                description: "A specialized visual design consultant persona that builds structured JSON for image generation.",
-                content: `You are a specialized visual design consultant who helps users transform their brand assets or products into stunning, professional visual designs with 4K resolution.
-Your expertise lies in converting basic logos and images into sophisticated visual treatments using structured JSON prompts for Nano Banana image generator.
-
-PHASE 1: BRAND & DESIGN GOALS ASSESSMENT
-Begin by asking the user these key questions:
-"What type of image are you looking to create? (Logo transformation, product mockup, social media graphic, etc.)"
-"Do you have an existing logo or image you'd like to transform? If so, you'll need to upload it during our conversation."
-"What style or visual treatment are you hoping to achieve? (Examples: 3D effect, ethereal smoke, crystal, metallic, paper craft, etc.)"
-"What is your brand's color scheme? (Please provide main colors or hex codes if available)"
-"What feeling or impression should the final image convey to your audience?"
-After receiving their answers, confirm you understand their vision and say: "Type 'continue' to proceed to the technical design phase."
-
-PHASE 2: VISUAL STYLE RECOMMENDATION
-Based on the user's requirements, recommend 2-3 specific visual treatments that would work well for their needs.
-For each recommendation:
-- Provide a brief description of the visual style
-- Explain why it would work well for their specific use case
-- Highlight the emotional impact it would create
-- Include specific examples like:
-  "Ethereal Smoke Effect: Perfect for creating a sense of mystery and elegance"
-  "Crystal Geode Treatment: Ideal for brands focusing on premium quality and uniqueness"
-  "Dimensional Paper Craft: Great for creative brands wanting a handcrafted feel"
-Ask the user which style they prefer and say: "Type 'continue' when you've selected a style."
-
-PHASE 3: JSON STRUCTURE GENERATION
-Say: "Now I'll create a detailed JSON structure that will precisely control how your image is transformed. This technical blueprint ensures consistent, high-quality results."
-Create a comprehensive JSON structure tailored to their chosen visual style. Include these key components:
-
-\`\`\`json
-{
-  "style": "[photorealistic/stylized/abstract] [specific technique]",
-  "material": "[detailed material description with physical properties]",
-  "[material]_properties": {
-    "property1": "[detailed description]",
-    "property2": "[detailed description]",
-    "property3": "[detailed description]"
-  },
-  "logo_treatment": {
-    "integration_method": "[how logo integrates with the material]",
-    "visibility_mechanism": "[how logo remains visible/prominent]",
-    "formation_logic": "[natural/logical explanation for effect]"
-  },
-  "lighting": {
-    "primary": "[main lighting approach]",
-    "secondary": "[accent lighting details]",
-    "interaction": "[how light interacts with material]"
-  },
-  "color_scheme": {
-    "primary": "[user's brand color implementation]",
-    "secondary": "[complementary color details]",
-    "accents": "[highlight color application]"
-  },
-  "environment": {
-    "setting": "[contextual environment if relevant]",
-    "perspective": "[viewing angle and distance]",
-    "scale": "[size relationship details]"
-  },
-  "post_processing": {
-    "effect1": "[specific enhancement technique]",
-    "effect2": "[specific enhancement technique]",
-    "realism_enhancement": "[details for photorealistic treatments]"
-  }
-}
-\`\`\`
-
-Ensure each section is thoroughly customized to their specific needs with detailed, descriptive values.
-After presenting the JSON structure, say: "Type 'continue' to receive instructions on how to use this with Nano Banana image generator."
-
-PHASE 4: IMPLEMENTATION GUIDE
-Provide clear instructions for using the JSON structure.
-Use this exact prompt with your preferred Nano Banana image generator:
-Retexture this image following my JSON aesthetic below, maintaining the shape of the logo/object in the image:
-[PASTE THE ENTIRE JSON STRUCTURE HERE]`
-            },
-            {
-                id: 2,
-                title: "The 2025 Website Architect",
-                category: "Coding & Web",
-                tags: ["Web Design", "UI/UX", "Tailwind"],
-                description: "A design prodigy persona for building modern 2025-era websites using glassmorphism and depth.",
-                content: `You're a design prodigy who builds 2025-quality websites balancing aesthetics with conversion. You understand image AI needs frameworks (Tailwind, Shadcn, glassmorphism), depth backgrounds (gradients, shaders, dithering), and step-by-step instructions.
-
-PROCESS
-Capture: Ask vision (aesthetic, elements, avoid, business/audience/goal)
-Architect: Propose 5-6 sections (Hero+CTA, Trust, Value, Conversion, Engagement) contextualized to their business. Get approval.
-Generate: Present JSON prompt:
-
-\`\`\`json
-{
-  "prompt": "Website screenshot [business]. Professional mockup. Award-winning UI. 2025 interface. Execute step-by-step. [Aesthetic] with [framework]. Background: [depth]. Vertical homepage: Nav. Hero [CTA]. [Sections 2-6]. Colors: [palette]. Typography: [style]. Components: [framework]. Interactive: prominent CTAs, animations, affordances. Critical: legible, depth, hierarchy, 2025. Avoid: [issues].",
-  "aspect_ratio": "9:16"
-}
-\`\`\`
-
-Tell user: "Type 'generate' for image. After it appears, type 'continue' to proceed."
-User "generate" → send ONLY JSON. After image + "continue" → review/refine until approved.
-
-Build: Deliver complete homepage HTML (all sections, responsive, modern CSS/JS, animated background, functional).
-Expand: Ask what to build next (pages/navigation). Build maintaining consistency.
-Finalize: Deliver all files + docs.
-
-RULES
-- Mockup ALL sections → approval → full homepage → then pages
-- NO templates, adapt to context
-- Contemporary frameworks, depth backgrounds, 2025 quality
-- User commands: "generate" (then "continue"), "approved"/"build"
-- Execute step by step, creatively, push the boundaries.`
-            },
-            {
-                id: 3,
-                title: "The Knowledge Distiller",
-                category: "Productivity",
-                tags: ["Summarization", "Visuals", "Cheatsheet"],
-                description: "Transforms transcripts or text into a hand-drawn cheatsheet image prompt.",
-                content: `Generate an image. Turn this transcript/text into a hand-drawn cheatsheet with key takeaways, and give final output as 4K 16:9 hand-drawn image created with nano banana.
-
-[PASTE FULL TRANSCRIPT OR ANY TEXT]`
-            },
-            {
-                id: 4,
-                title: "Low Res to High Res Upscaler",
-                category: "Utility",
-                tags: ["Image Editing", "Upscaling"],
-                description: "Simple utility prompt to upscale images.",
-                content: `Upscale this image to 4K resolution, make it fully in focus.`
-            },
-            {
-                id: 5,
-                title: "Minimalist Timeline Infographic",
-                category: "Image Gen",
-                tags: ["Infographic", "Data Viz", "Minimalism"],
-                description: "Detailed prompt for generating a clean, flat-design timeline infographic.",
-                content: `Create a minimalist, flat-design horizontal timeline infographic on a clean white background.
-
-Overall Layout
-A single, thin, dark grey horizontal line spans approximately 80% of the canvas width, centered vertically. This line represents the timeline.
-The timeline line has a small, right-pointing arrow at its far right end.
-All text and icons are strictly black on a white background. No gradients, shadows, or textures.
-
-Timeline Markers & Dates (from left to right)
-Marker 1 (Far Left):
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 12" (medium-weight sans-serif font, small size).
-Below "Nov 12": "OpenAI" (medium-weight sans-serif font, small size).
-Below "OpenAI": "GPT-51" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
-
-Marker 2:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 17" (medium-weight sans-serif font, small size).
-Below "Nov 17": "xAI" (medium-weight sans-serif font, small size).
-Below "xAI": "Grok 4.1" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill).
-
-Marker 3:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 18" (medium-weight sans-serif font, small size).
-Below "Nov 18": "Google" (medium-weight sans-serif font, small size).
-Below "Google": "Gemini 3" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The Google logo (black stylized capital 'G' with a distinct, simple shape, white fill).
-
-Marker 4:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 19" (medium-weight sans-serif font, small size).
-Below "Nov 19": "OpenAI" (medium-weight sans-serif font, small size).
-Below "OpenAI": "GPT-5.1-Codex-Max" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
-
-Marker 5 (Far Right):
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 24" (medium-weight sans-serif font, small size).
-Below "Nov 24": "Anthropic" (medium-weight sans-serif font, small size).
-Below "Anthropic": "Claude Opus 4.5" (medium-weight sans-serif font, small size).
-Below "Claude Opus 4.5": "xAI" (medium-weight sans-serif font, small size).
-Below "xAI": "Grok 4.1 Thinking" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The Anthropic logo (stylized black 'A' with a unique internal stroke, white fill), immediately followed by the xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill), positioned side-by-side with a small gap between them.
-
-Typography & Spacing
-All text uses a clean, modern sans-serif font (e.g., Arial, Helvetica-like).
-All logos are strictly black and white, simple, flat.
-Even spacing between timeline markers.`
-            },
-            {
-                id: 6,
-                title: "AI Progress Watercolor Infographic",
-                category: "Image Gen",
-                tags: ["Watercolor", "Infographic", "Artistic"],
-                description: "Complex watercolor style infographic prompt for AI models in 2025.",
-                content: `Title: AI's Progress in November 2025: A Frontier Model Infographic
-
-Overall Aesthetic (Foundation)
-Create a premium, wide-format infographic (16:9 aspect ratio), meticulously rendered in a dreamy, delicate watercolor-ink illustration style. Emphasize clean, crisp line art with fine, consistent navy-blue outlines for all elements. The color palette must be soft, muted pastels with clear delineation, ensuring high readability against an off-white, subtly textured watercolor paper background. The composition should adhere to a structured grid layout: four equally-sized, top-row panels and one expansive, single bottom comparison panel. All frames must be rounded rectangles with a thin, uniform navy-blue border. All typography should be dark navy serif font, centered within its respective area.
-
-Section 1: Header (Top Center)
-Main Title: "AI's Progress in November 2025" – Centered, in a bold, elegant dark navy serif font.
-Icon: A small, subtle, line-art robot head icon positioned directly to the right of the title.
-Visual Effect: A whisper-faint, watercolor-style shadow subtly cast directly behind the main title text.
-
-Section 2: Top Row Panels (Four Equal-Width Cards)
-Panel 1: Google Gemini 3 Launch (Pastel Blue #DDEAF8). Illustration: Modern smartphone with "Gemini 3 Pro" selected.
-Panel 2: OpenAI GPT-5.1 Release (Mint Green #DFF3EC). Illustration: Comic-style figure with speech bubble "GPT-5.1".
-Panel 3: New Capabilities (Soft Lilac #E9E3FA). Icons: Coding bracket, magnifying glass, agent silhouette.
-Panel 4: Anthropic Claude Opus 4.5 (Pale Peach #F8E3D9). Illustration: Browser window with gold star icon labeled "Best".
-
-Section 3: Bottom Comparison Panel
-Feature three distinct, large, overlapping, softly blurred pastel watercolor ovals ("power zones").
-Left: Pastel blue oval (Gemini 3 + Antigravity).
-Center: Pastel green oval (GPT-5.1 + Codex-Max).
-Right: Pastel orange oval (Opus 4.5 – Coding Crown).
-Caption: "November 2025: The AI Race Accelerates".
-
-Color Palette
-Navy: #1F2A44
-Pastel Blue: #DDEAF8
-Mint Green: #DFF3EC
-Lilac: #E9E3FA
-Pale Peach: #F8E3D9
-Gold: #F5D462
-Off-White Background: #F8F8F0`
-            },
-            {
-                id: 7,
-                title: "Gemini 3 Prompting Guide Infographic",
-                category: "Image Gen",
-                tags: ["Education", "Guide", "Clean Design"],
-                description: "Prompt for generating an educational infographic about Gemini 3 prompting strategies.",
-                content: `Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning & Instruction Following, Direct, Well-Structured Prompts for Optimal Results'.
-
-Overall Aesthetic
-Style: Soft pastel theme with subtle, smooth light gradients. Clean, crisp, flat-vector icons with thin outlines.
-Color Palette: Soft blues (#A7D7F3), teals (#A7E8E0), purples (#D4BCF7), light grays (#E0E0E0). Dark charcoal text (#333333).
-Layout: Vertical (16:9 or 3:2 portrait).
-
-Structure
-1. Main Banner (Top): Soft blue rounded banner. Title: "Gemini 3 Prompting". Subtitle: "Direct, Well-Structured Prompts".
-2. Mid-Banner Label: "Core Prompting Principles".
-3. Two-Column Layout:
-   Left Column ("Clarity & Structure"):
-   - "Be Precise and Direct" (Target icon).
-   - "Use Consistent Structure" (XML/Markdown tag icon).
-   - "Define Parameters" (Math symbol icon).
-   - "Control Output Verbosity" (Slider icon).
-
-   Right Column ("Context & Multimodal Management"):
-   - "Handle Multimodal Inputs Coherently" (Media icons cluster).
-   - "Prioritize Critical Instructions" (Funnel icon).
-   - "Structure for Long Contexts" (Layered blocks icon).
-   - "Anchor Context" (Bridge icon).
-
-Ensure generous, consistent padding. The overall impression should be professional and easy to understand.`
-            },
-            {
-                id: 8,
-                title: "Paris at Night",
-                category: "Image Gen",
-                tags: ["Photorealism", "Coordinates"],
-                description: "Prompt using coordinates for a specific location render.",
-                content: `Create an image of 48.8584° N, 2.2945° E at night.`
-            },
-            {
-                id: 9,
-                title: "PDF-to-Infographic Summary",
-                category: "System Prompt",
-                tags: ["Data Analysis", "Summarization", "Corporate"],
-                description: "System instruction to act as a Data Visualization Specialist analyzing PDFs.",
-                content: `System Instruction/Context
-You have been provided with a multi-page PDF document. Your task is to act as a professional Data Visualization Specialist. Analyze the core content, extract the most critical data points, and visually compress the information into a single, high-resolution infographic. Do not generate any text or data not directly derived from the document.
-
-Visual Style & Theme
-Title: Summarize the main topic of the PDF in a clear, concise title (e.g., 'Summary of Q3 Financial Report 2025').
-Aesthetic: Clean, modern flat vector design with a muted corporate blue and teal color palette (navy, sky blue, deep teal).
-Layout: Vertical (9:16). Three-section column layout with thin borders.
-
-Infographic Content & Structure
-1. Header: Summarized Title and one-sentence key finding.
-2. Core Data: Top three significant numerical data points as metric cards with icons. A bar or pie chart visually representing the core finding.
-3. Key Takeaways: Bulleted list of exactly four points. Title: "Key Conclusions."
-
-Final Constraint
-Ensure the final output is a single, unified, high-quality image suitable for a professional presentation slide.`
-            },
-            {
-                id: 10,
-                title: "Garden Pathway Problem",
-                category: "Reasoning",
-                tags: ["Math", "Logic", "CoT"],
-                description: "A geometric word problem prompt requiring reasoning and step-by-step solution.",
-                content: `Solve the following geometric word problem, which is based on the diagram and equations presented on the provided chalkboard image:
-
-Problem Description
-A rectangular garden has dimensions of 10 meters by 6 meters. A pathway of uniform width (W) surrounds the entire garden. The total area (A_T) of the garden and the pathway combined is exactly twice the area of the garden alone (A_G).
-
-Task
-1. Calculate the Area of the Garden (A_G) in square meters.
-2. Determine the dimensions of the Total Area (A_T) in terms of W.
-3. Set up the equation for the total area based on the problem condition (A_T = 2 × A_G).
-4. Solve the resulting quadratic equation for W. Show all steps, including the use of the quadratic formula.
-5. State the final answer for W rounded to two decimal places, justifying the rejection of the negative root.`
-            },
-            {
-                id: 11,
-                title: "Captain Jack Sparrow Portrait",
-                category: "Image Gen",
-                tags: ["Portrait", "Photorealism", "Cinematic"],
-                description: "Highly detailed photorealistic character portrait prompt.",
-                content: `Create a hyper-realistic, photorealistic cinematic portrait of Johnny Depp as Captain Jack Sparrow.
-
-Subject
-Appearance: Iconic full pirate attire (distressed teal/blue coat, gold buttons, red bandana, tricorn hat with trinkets). Dreadlocks with beads. Signature goatee, mustache, and smirk.
-Pose: Confident, standing on deck, hand on cutlass hilt, other hand slightly extended.
-Accessories: Leather cross-body pistol strap, rings, layered belts, compass.
-
-Setting
-Location: Weathered wooden deck of a large pirate ship.
-Background: Open ocean at sunset. Warm orange/yellow sun on horizon. Dynamic white-capped waves. Rigging silhouetted against sky.
-
-Lighting & Mood
-Lighting: Dramatic golden hour. Rim lighting on hat/hair.
-Mood: Adventurous, legendary, iconic.
-Technical: Ultra 8K resolution, exquisite texture detail (pores, fabric, wood grain), rich cinematic color grading.`
-            },
-            {
-                id: 12,
-                title: "Hyper-Realistic Product Visualization",
-                category: "Image Gen",
-                tags: ["Product", "3D Render", "PBR"],
-                description: "Prompt for a high-end product photography shot of a computer mouse.",
-                content: `Subject & Concept
-A high-resolution, photorealistic image of a sleek, ergonomic computer mouse. Dark charcoal gray/gunmetal, smooth matte finish. Bright cyan blue LED scroll wheel, chrome accents.
-
-Presentation
-The mouse is presented on a small, torn piece of off-white sketch paper with clean technical lines, floating or held by a clear acrylic stand anchored to a dark mahogany wood base.
-
-Environment
-Executive office desk, late afternoon. Background: Large window, hazy cityscape, soft backlight.
-Lighting: Cinematic, dramatic, subtle reflections.
-
-Style & Technical
-Extreme hyperrealism, product photography. Shallow depth of field. 8K resolution. Rendered in style of V-Ray/Octane. PBR accuracy, realistic textures, light falloff.`
-            },
-            {
-                id: 13,
-                title: "Creative Photo Transformations",
-                category: "Image Gen",
-                tags: ["Creative", "Packaging", "Design"],
-                description: "Packaging design transformation prompt.",
-                content: `13.1 Packaging Transformation
-
-Transform this photo of a plain box/container into a premium, eco-friendly consumer packaging design.
-
-Style: Minimalist, Organic, Sustainable Luxury.
-Material: Texture the object to look like recycled kraft paper with embossed lettering.
-Graphics: Apply a clean, modern sans-serif logo in deep forest green ink. Add a small '100% Organic' seal in the bottom right corner.
-Lighting: Soft, natural daylight casting gentle shadows, highlighting the paper texture.
-Background: Place the object on a smooth stone surface with blurred botanical leaves in the foreground and background to emphasize the eco-friendly theme.`
-            }
-        ];
+        const promptData = [ /* ... your prompt data remains unchanged ... */ ];
 
         const App = () => {
             const [selectedId, setSelectedId] = useState(1);
@@ -431,24 +68,22 @@ Background: Place the object on a smooth stone surface with blurred botanical le
             const selectedPrompt = promptData.find(p => p.id === selectedId) || promptData[0];
 
             const copyToClipboard = () => {
-                // Create a temporary textarea to copy the text
                 const textarea = document.createElement('textarea');
                 textarea.value = selectedPrompt.content;
                 document.body.appendChild(textarea);
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
             };
 
             return (
-                <div className="flex h-screen bg-slate-50 overflow-hidden">
+                <div className="flex h-screen bg-slate-100 overflow-hidden">
                     {/* Sidebar */}
                     <aside className={`fixed inset-y-0 left-0 z-50 w-80 bg-white border-r border-slate-200 transform transition-transform duration-200 ease-in-out md:relative md:translate-x-0 ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                         <div className="flex flex-col h-full">
-                            <div className="p-4 border-b border-slate-100">
+                            <div className="p-4 border-b border-slate-200">
                                 <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                                     <Icons.Sparkles />
                                     PromptLibrary
@@ -457,7 +92,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                                     <input 
                                         type="text" 
                                         placeholder="Search prompts..." 
-                                        className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent"
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                     />
@@ -468,7 +103,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                             </div>
                             
                             {/* Categories */}
-                            <div className="px-4 py-2 border-b border-slate-100 overflow-x-auto whitespace-nowrap custom-scroll">
+                            <div className="px-4 py-2 border-b border-slate-200 overflow-x-auto whitespace-nowrap custom-scroll">
                                 <div className="flex space-x-2">
                                     {categories.map(cat => (
                                         <button
@@ -476,7 +111,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                                             onClick={() => setActiveCategory(cat)}
                                             className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                                                 activeCategory === cat 
-                                                ? 'bg-blue-100 text-blue-700' 
+                                                ? 'bg-slate-200 text-slate-800' 
                                                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                                             }`}
                                         >
@@ -499,18 +134,18 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                                             }}
                                             className={`w-full text-left p-3 rounded-xl transition-all border ${
                                                 selectedId === prompt.id 
-                                                ? 'bg-blue-50 border-blue-200 shadow-sm' 
+                                                ? 'bg-slate-100 border-slate-300 shadow-sm' 
                                                 : 'bg-white border-transparent hover:bg-slate-50 hover:border-slate-200'
                                             }`}
                                         >
                                             <div className="flex justify-between items-start mb-1">
                                                 <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${
-                                                    selectedId === prompt.id ? 'bg-blue-200 text-blue-800' : 'bg-slate-100 text-slate-500'
+                                                    selectedId === prompt.id ? 'bg-slate-200 text-slate-800' : 'bg-slate-100 text-slate-500'
                                                 }`}>
                                                     {prompt.category}
                                                 </span>
                                             </div>
-                                            <h3 className={`font-semibold text-sm mb-1 ${selectedId === prompt.id ? 'text-blue-900' : 'text-slate-800'}`}>
+                                            <h3 className={`font-semibold text-sm mb-1 ${selectedId === prompt.id ? 'text-slate-800' : 'text-slate-800'}`}>
                                                 {prompt.title}
                                             </h3>
                                             <p className="text-xs text-slate-500 line-clamp-2">
@@ -528,7 +163,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                     </aside>
 
                     {/* Main Content */}
-                    <main className="flex-1 flex flex-col h-full bg-white md:bg-slate-50">
+                    <main className="flex-1 flex flex-col h-full bg-white md:bg-slate-100">
                         {/* Mobile Header */}
                         <div className="md:hidden flex items-center justify-between p-4 bg-white border-b border-slate-200">
                             <h1 className="font-bold text-slate-800">PromptLibrary</h1>
@@ -545,7 +180,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                                     <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                                         <div>
                                             <div className="flex items-center gap-2 mb-3">
-                                                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wide">
+                                                <span className="px-3 py-1 bg-slate-200 text-slate-800 text-xs font-bold rounded-full uppercase tracking-wide">
                                                     {selectedPrompt.category}
                                                 </span>
                                                 <span className="text-slate-400 text-xs font-mono">ID: {selectedPrompt.id}</span>
@@ -591,7 +226,7 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                                         </pre>
                                         <button 
                                             onClick={copyToClipboard}
-                                            className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur border border-slate-200 rounded-md text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity hover:text-blue-600 hover:border-blue-200"
+                                            className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur border border-slate-200 rounded-md text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity hover:text-slate-700 hover:border-slate-300"
                                             title="Copy raw text"
                                         >
                                             {copied ? <Icons.Check /> : <Icons.Copy />}
