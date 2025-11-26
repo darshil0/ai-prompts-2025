@@ -10,25 +10,21 @@ A modern, interactive library for storing, organizing, and accessing advanced AI
 | ✅     | Styling      | Utility-first CSS framework       |
 | ✅     | Architecture | Everything compiled into one file |
 
-## Live Demo
+🚀 Live Demo
 
-If deployed to GitHub Pages, add your live URL here:
+(If you deploy this to GitHub Pages, replace this line with your URL: https://darshil0.github.io/ai-prompts-2025/)
 
-`https://<your-username>.github.io/ai-prompts-2025/`
+✨ Features at a Glance
 
-Example:
+- **Prompt Management**: Store and retrieve complex, multi-line prompts easily.
+- **Dynamic Filtering**: Quickly filter prompts by Category (System Prompt, Coding & Web, Image Gen, etc.) or search using keywords and Tags.
+- **Instant Copy**: One-click functionality to copy the full prompt content to the clipboard.
+- **Code Readability**: Custom typography (JetBrains Mono) enhances the readability of code and JSON structures within the prompt content.
+- **Zero Configuration**: The entire application is contained within a single `index.html` file, requiring no local build steps or package installations.
 
-`https://darshil0.github.io/ai-prompts-2025/`
+🛠️ Project Setup
 
-## Features
-
-- **Prompt Management**: Store and retrieve complex, multi-line prompts (including system prompts and templates) in one place.
-- **Dynamic Filtering**: Filter prompts by Category (e.g., System Prompt, Coding & Web, Image Gen) and search by keywords or Tags.
-- **Instant Copy**: One-click copy for the full prompt content to your clipboard.
-- **Code Readability**: Custom typography (JetBrains Mono) for clear display of code, JSON, and structured prompts.
-- **Zero Configuration**: Entire app is a single `index.html`—no builds, dependencies, or package installation required.
-
-## Project Structure
+### Required Files
 
 To run this project, you only need the following two files in your repository root:
 
