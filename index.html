@@ -40,20 +40,353 @@
         const Icons = {
             Copy: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>,
             Check: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-            // FIX: Added opening '<circle' tag
+            // FIXED: Missing opening '<circle' tag corrected
             Search: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>,
             Menu: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>,
             Tag: () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94 .94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>,
             Sparkles: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
         };
 
-        // Data (Assuming your promptData array is here)
+        // --- START OF NEW PROMPT DATA ---
         const promptData = [
-            // Dummy Data for Demonstration
-            { id: 1, title: "The Senior Developer Prompt", category: "Coding", description: "Write clean, highly optimized code for a given task, following best practices.", tags: ["React", "TypeScript"], content: "Act as a senior software architect. Provide a solution using modern ES6+ features and best-in-class performance. Your tone must be concise and expert." },
-            { id: 2, title: "Creative Story Generator", category: "Writing", description: "Generates a short, engaging story based on three user-provided keywords.", tags: ["Fiction", "Narrative"], content: "You are a Pulitzer-winning novelist. Craft a compelling short story (max 500 words) featuring these three elements: [ELEMENT 1], [ELEMENT 2], [ELEMENT 3]. Focus on character motivation." },
-            { id: 3, title: "Marketing Campaign Strategist", category: "Business", description: "Develops a comprehensive social media marketing plan.", tags: ["Social Media", "SEO"], content: "Develop a 3-month marketing strategy for a [PRODUCT TYPE] targeting [AUDIENCE]. Include KPIs, platform recommendations (e.g., Instagram, LinkedIn), and sample ad copy." }
+            {
+                id: 1,
+                title: "Minimalist Timeline Infographic",
+                category: "Infographic",
+                description: "Create a minimalist, flat-design horizontal timeline infographic showcasing key AI model releases in November 2025.",
+                tags: ["Design", "Flat", "Timeline", "Data"],
+                content: `Create a minimalist, flat-design horizontal timeline infographic on a clean white background.
+
+Overall Layout
+A single, thin, dark grey horizontal line spans approximately 80% of the canvas width, centered vertically. This line represents the timeline.
+The timeline line has a small, right-pointing arrow at its far right end.
+All text and icons are strictly black on a white background. No gradients, shadows, or textures.
+Timeline Markers & Dates (from left to right)
+Marker 1 (Far Left):
+A small vertical tick mark intersects the timeline line.
+Below the line, centered under the tick: "Nov 12" (medium-weight sans-serif font, small size).
+Below "Nov 12": "OpenAI" (medium-weight sans-serif font, small size).
+Below "OpenAI": "GPT-51" (medium-weight sans-serif font, small size).
+Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
+Marker 2:
+A small vertical tick mark intersects the timeline line.
+Below the line, centered under the tick: "Nov 17" (medium-weight sans-serif font, small size).
+Below "Nov 17": "xAI" (medium-weight sans-serif font, small size).
+Below "xAI": "Grok 4.1" (medium-weight sans-serif font, small size).
+Above the timeline line, centered above the tick: The xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill).
+Marker 3:
+A small vertical tick mark intersects the timeline line.
+Below the line, centered under the tick: "Nov 18" (medium-weight sans-serif font, small size).
+Below "Nov 18": "Google" (medium-weight sans-serif font, small size).
+Below "Google": "Gemini 3" (medium-weight sans-serif font, small size).
+Above the timeline line, centered above the tick: The Google logo (black stylized capital 'G' with a distinct, simple shape, white fill).
+Marker 4:
+A small vertical tick mark intersects the timeline line.
+Below the line, centered under the tick: "Nov 19" (medium-weight sans-serif font, small size).
+Below "Nov 19": "OpenAI" (medium-weight sans-serif font, small size).
+Below "OpenAI": "GPT-5.1-Codex-Max" (medium-weight sans-serif font, small size).
+Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
+Marker 5 (Far Right):
+A small vertical tick mark intersects the timeline line.
+Below the line, centered under the tick: "Nov 24" (medium-weight sans-serif font, small size).
+Below "Nov 24": "Anthropic" (medium-weight sans-serif font, small size).
+Below "Anthropic": "Claude Opus 4.5" (medium-weight sans-serif font, small size).
+Below "Claude Opus 4.5": "xAI" (medium-weight sans-serif font, small size).
+Below "xAI": "Grok 4.1 Thinking" (medium-weight sans-serif font, small size).
+Above the timeline line, centered above the tick: The Anthropic logo (stylized black 'A' with a unique internal stroke, white fill), immediately followed by the xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill), positioned side-by-side with a small gap between them.
+Typography Details
+All text uses a clean, modern sans-serif font (e.g., Arial, Helvetica-like).
+Font sizes should be consistent, with dates slightly larger than event descriptions if necessary for hierarchy, but generally small and readable.
+All text is black.
+Icon Details
+All logos are strictly black and white, simple, flat, and recognizable as depicted in the reference image.
+The icons are positioned above their respective timeline markers.
+Spacing
+Even spacing between timeline markers, as depicted.
+Clear, readable line spacing for text below the markers.
+Sufficient padding around the entire infographic on the white canvas.`
+            },
+            {
+                id: 2,
+                title: "AI Progress November 2025 Watercolor Infographic",
+                category: "Infographic",
+                description: "A watercolor-ink infographic summarizing major AI model releases in November 2025, using a structured grid layout.",
+                tags: ["Watercolor", "Design", "Grid", "Frontier Models"],
+                content: `Title: AI's Progress in November 2025: A Frontier Model Infographic
+
+Overall Aesthetic (Foundation)
+Create a premium, wide-format infographic (16:9 aspect ratio), meticulously rendered in a dreamy, delicate watercolor-ink illustration style. Emphasize clean, crisp line art with fine, consistent navy-blue outlines for all elements. The color palette must be soft, muted pastels with clear delineation, ensuring high readability against an off-white, subtly textured watercolor paper background. The composition should adhere to a structured grid layout: four equally-sized, top-row panels and one expansive, single bottom comparison panel. All frames must be rounded rectangles with a thin, uniform navy-blue border. All typography should be dark navy serif font, centered within its respective area.
+
+Section 1: Header (Top Center)
+Main Title: "AI's Progress in November 2025" – Centered, in a bold, elegant dark navy serif font.
+Icon: A small, subtle, line-art robot head icon positioned directly to the right of the title, perfectly aligned with the text baseline.
+Visual Effect: A whisper-faint, watercolor-style shadow subtly cast directly behind the main title text, giving it a gentle lift.
+Section 2: Top Row Panels (Four Equal-Width Cards)
+Each of these four panels must be a distinct, rounded rectangular card (navy border). Inside, feature a soft, ethereal watercolor background gradient and a single, thematic icon or minimalist illustration.
+
+Panel 1 (Far Left): Google Gemini 3 Launch
+Background: A serene, light pale-blue watercolor wash gradient.
+Central Illustration: A modern smartphone with gently rounded edges, depicted with thin navy outlines.
+On Phone Screen (Detailed UI):Small Header: "Choose your Model" (centered, small navy serif).
+Interactive Element: A clearly visible radio button next to the label "Gemini 3 Pro". The radio button should be selected/checked.
+Action Button: A prominent, rounded blue button at the bottom, labeled "Create" (centered, white text).
+Caption Below Panel: "Google launches Gemini 3 on Nov 18" (small navy serif font, centered).
+Panel 2 (Second from Left): OpenAI GPT-5.1 Release
+Background: A refreshing mint-green watercolor wash gradient.
+Central Illustration: A simple, friendly cartoon figure (head and shoulders), with a distinct, comic-style speech bubble emanating from its head, containing the text "GPT-5.1" (navy serif font).
+Caption Below Panel: "OpenAI releases GPT-5.1 on Nov 12" (small navy serif font, centered).
+Panel 3 (Third from Left): New Capabilities
+Background: A calming soft-lilac watercolor wash gradient.
+Central Icons (Horizontal Row): Three distinct, evenly spaced, thin line-art icons horizontally across the top half of the panel:A coding bracket symbol (</>) on the left.
+A research magnifying glass icon in the center.
+A generic "person" or "agent" icon (a simple human silhouette) on the right.
+Caption Below Panel: "New capabilities: coding, research, agents" (small navy serif font, centered).
+Panel 4 (Far Right): Anthropic Claude Opus 4.5
+Background: A warm, pale-peach watercolor wash gradient.
+Central Illustration: A stylized, minimalist browser window with three distinct horizontal text lines (representing content).
+Icon below browser: A prominent, glowing gold star icon positioned directly beneath the browser window, clearly labeled "Best" (small navy serif font).
+Caption Below Panel: "Anthropic releases Claude Opus 4.5 Nov 24" (small navy serif font, centered).
+Section 3: Bottom Comparison Panel (Expansive Panorama)
+This must be a single, wide, rounded rectangular panel with a navy border.
+Core Visual: Feature three distinct, large, overlapping, softly blurred pastel watercolor ovals ("power zones"), representing the three major models, creating a sense of dynamic interaction.Left Zone: A large, blurred pastel blue oval for Google.
+Center Zone: A large, blurred pastel green oval for OpenAI.
+Right Zone: A large, blurred pastel orange oval for Anthropic.
+Model Clusters (Overlaid on Ovals):
+Left Cluster (Over Blue Oval):
+Label Bubble: A crisp navy-outlined blue circle containing a white capital "G" (bold serif font).
+Title: Below the bubble, "Gemini 3 + Antigravity" (navy serif font).
+Center Cluster (Over Green Oval):
+Label Bubble: A crisp navy-outlined green circle containing a white capital "O" (bold serif font).
+Title: Below the bubble, "GPT-5.1 + Codex-Max" (navy serif font).
+Right Cluster (Over Orange Oval):
+Label Bubble: A crisp navy-outlined orange circle containing a white capital "A" (bold serif font).
+Title: Below the bubble, "Opus 4.5 – Coding Crown" (navy serif font).
+Bottom Caption (Centered Below Clusters):
+Main Text: "November 2025: The AI Race Accelerates" (larger navy serif font).
+Sub-Text: "Three major releases in just 12 days, frontier models competing for coding, reasoning, and agentic supremacy" (smaller navy serif font).
+Section 4: Footer (Bottom of Infographic)
+Small Print: "Painted in delicate watercolor-ink style, November 2025" – Centered at the very bottom, in a fine, small navy serif font.
+
+Color Palette (Explicit Hex Codes)
+Navy: #1F2A44 (for outlines, text)
+Pastel Blue: #DDEAF8 (for Google elements)
+Mint Green: #DFF3EC (for OpenAI elements)
+Lilac: #E9E3FA (for generic capabilities panel)
+Pale Peach: #F8E3D9 (for Anthropic elements)
+Gold: #F5D462 (for the "Best" star icon)
+Off-White Background: #F8F8F0 (a very subtle warm off-white)`
+            },
+            {
+                id: 3,
+                title: "Gemini 3 Prompting Guide Infographic",
+                category: "Infographic",
+                description: "A professional guide to advanced Gemini 3 prompting techniques focusing on clarity, structure, and context management.",
+                tags: ["Prompting", "Guide", "Structure", "Multimodal"],
+                content: `Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning & Instruction Following, Direct, Well-Structured Prompts for Optimal Results'.
+
+Overall Aesthetic
+Style: Soft pastel theme with subtle, smooth light gradients used within background elements. All visuals should be clean, crisp, flat-vector icons with thin, consistent outlines.
+Color Palette: Predominantly soft blues (#A7D7F3), teals (#A7E8E0), purples (#D4BCF7), and light grays (#E0E0E0). Text will be dark charcoal (#333333) for high readability.
+Visual Tone: Polished, instructional, and professional guide aesthetic.
+Background: A very light, almost white, subtle gradient from top to bottom (e.g., #F8F8F8 to #F0F0F0).
+Layout Structure
+Canvas: A single high-resolution image with a vertical orientation (approximately 16:9 or 3:2 portrait aspect ratio to accommodate content, but maintain an 'infographic' feel).
+
+Main Banner (Top):
+A full-width, soft blue (#A7D7F3) rounded rectangular banner at the very top.
+Main Title (Centered): "Gemini 3 Prompting: Advanced Reasoning & Instruction Following" in a bold, dark charcoal, prominent sans-serif font.
+Subtitle (Centered, directly below title): "Direct, Well-Structured Prompts for Optimal Results" in a slightly smaller, dark charcoal, medium-weight sans-serif font.
+Mid-Banner Label (Below Main Banner):
+Centered horizontally beneath the top banner, a clear label: "Core Prompting Principles". This label should be in a bold, dark charcoal sans-serif font, slightly smaller than the main title but larger than body text. It can be within a subtle, light gray (#E0E0E0) rounded rectangle or simply float above the columns.
+Two-Column Layout (Beneath Mid-Banner Label)
+The content is divided into two distinct, vertically aligned columns, each contained within a large, subtly rounded rectangular panel (light gray background, thin border). Maintain strong visual symmetry between the two columns in terms of height, width, and icon placement.
+
+Left Column: "Clarity & Structure"
+Header: "Clarity & Structure" in a bold, dark charcoal sans-serif font, left-aligned at the top of this column's panel.
+Content (Vertically Stacked, each with its icon):
+
+"Be Precise and Direct":Icon: A clean, flat-vector target icon with a stylized arrow hitting the bullseye. Use a soft teal (#A7E8E0) for the icon details.
+Text: "Be Precise and Direct" (dark charcoal, sans-serif, medium weight).
+"Use Consistent Structure":Icon: Two overlapping abstract rectangles representing XML tags (e.g., <tag>) and Markdown headings (e.g., ## Heading). Use a soft purple (#D4BCF7) for icon details.
+Text: "Use Consistent Structure" (dark charcoal, sans-serif, medium weight).
+"Define Parameters":Icon: A stylized mathematical visual: "X = [Specific Value]" or a simple equals sign (=) inside a circle. Use a soft blue (#A7D7F3) for icon details.
+Text: "Define Parameters" (dark charcoal, sans-serif, medium weight).
+"Control Output Verbosity":Icon: A horizontal slider interface with two clear endpoints labeled "Default" on the left and "Explicit Request" on the right. The slider should be slightly towards "Explicit Request". Use light gray (#E0E0E0) with teal accents for the slider.
+Text: "Control Output Verbosity" (dark charcoal, sans-serif, medium weight).
+Right Column: "Context & Multimodal Management"
+Header: "Context & Multimodal Management" in a bold, dark charcoal sans-serif font, left-aligned at the top of this column's panel.
+Content (Vertically Stacked, each with its icon):
+
+"Handle Multimodal Inputs Coherently":Icon: A cluster of four distinct, clean-vector icons: text document, image/picture frame, audio wave, and video play button. Use a soft blue (#A7D7F3) for icon details.
+Text: "Handle Multimodal Inputs Coherently" (dark charcoal, sans-serif, medium weight).
+"Prioritize Critical Instructions":Icon: A stylized funnel image, narrowing downwards. The top of the funnel should be labeled "System Instructions" and the narrow bottom "Constraints". Use a soft teal (#A7E8E0) for the funnel.
+Text: "Prioritize Critical Instructions" (dark charcoal, sans-serif, medium weight).
+"Structure for Long Contexts":Icon: Three layered, slightly transparent rectangular blocks. The bottom, largest block labeled "Large Context First", and the top, smallest block labeled "Specific Instructions Last". Use a soft purple (#D4BCF7) for the blocks.
+Text: "Structure for Long Contexts" (dark charcoal, sans-serif, medium weight).
+"Anchor Context":Icon: A stylized bridge connecting two elements: a rectangular block labeled "Data" on one side, and a thought/query bubble on the other. Use light gray (#E0E0E0) with blue accents for the bridge.
+Text: "Anchor Context" (dark charcoal, sans-serif, medium weight).
+Visual Constraints & Refinements
+All text must be legible, perfectly aligned, and consistently styled (sans-serif, dark charcoal).
+Icons should be visually balanced with their corresponding text, not too large or too small.
+Spacing: Ensure generous, consistent padding around all elements, inside panels, and between the main banner, label, and columns.
+The overall impression should be one of simplicity, professionalism, and ease of understanding.`
+            },
+            {
+                id: 4,
+                title: "Paris at Night",
+                category: "Image Generation",
+                description: "A photorealistic image of the Eiffel Tower's coordinates at night.",
+                tags: ["Photography", "Landmark", "Eiffel Tower", "Night"],
+                content: `Create an image of 48.8584° N, 2.2945° E at night.`
+            },
+            {
+                id: 5,
+                title: "PDF-to-Infographic Summary",
+                category: "Infographic",
+                description: "A prompt for summarizing a PDF document's key findings into a professional, flat-vector infographic.",
+                tags: ["Data", "Summary", "Corporate", "Visualization"],
+                content: `System Instruction/Context
+You have been provided with a multi-page PDF document. Your task is to act as a professional Data Visualization Specialist. Analyze the core content, extract the most critical data points, and visually compress the information into a single, high-resolution infographic. Do not generate any text or data not directly derived from the document.
+
+Visual Style & Theme
+Title: Summarize the main topic of the PDF in a clear, concise title (e.g., 'Summary of Q3 Financial Report 2025').
+Aesthetic: Clean, modern flat vector design with a muted corporate blue and teal color palette (e.g., professional shades like navy, sky blue, and deep teal).
+Layout: Vertical (9:16 aspect ratio). Use a structured three-section column layout with thin, dark borders separating the key sections.
+Typography: All text must be crisp, legible, and accurately spelled using a professional sans-serif font.
+Infographic Content & Structure
+Header (Top Section):
+Title: The summarized title (as specified above).
+Sub-Header: A one-sentence key finding from the document.
+Core Data (Middle Section):
+Translate the document's top three most significant numerical data points (e.g., sales figures, performance metrics, budget totals) into large, bold metric cards.
+For each metric card, include a simple, relevant icon (e.g., an upward arrow for growth, a dollar sign for finance).
+Generate a simple bar chart or pie chart that visually represents the core finding of the document, ensuring all chart labels are clearly rendered.
+Key Takeaways (Bottom Section):
+Summarize the document's main conclusions into a bulleted list of exactly four points.
+Title this section: "Key Conclusions."
+Use a checklist or star icon for each bullet point.
+Final Constraint
+Ensure the final output is a single, unified, high-quality image suitable for a professional presentation slide.`
+            },
+            {
+                id: 6,
+                title: "Garden Pathway Problem",
+                category: "Problem Solving",
+                description: "A complex geometric word problem requiring the calculation of a pathway's uniform width using the quadratic formula.",
+                tags: ["Math", "Geometry", "Quadratic", "Word Problem"],
+                content: `Solve the following geometric word problem, which is based on the diagram and equations presented on the provided chalkboard image:
+
+Problem Description
+A rectangular garden has dimensions of 10 meters by 6 meters. A pathway of uniform width (W) surrounds the entire garden. The total area (A_T) of the garden and the pathway combined is exactly twice the area of the garden alone (A_G).
+
+Task
+Calculate the Area of the Garden (A_G) in square meters.
+Determine the dimensions of the Total Area (A_T) in terms of W.
+Set up the equation for the total area based on the problem condition (A_T = 2 × A_G).
+Solve the resulting quadratic equation for W. Show all steps, including the use of the quadratic formula.
+State the final answer for W rounded to two decimal places, justifying the rejection of the negative root.`
+            },
+            {
+                id: 7,
+                title: "Captain Jack Sparrow Portrait",
+                category: "Image Generation",
+                description: "A hyper-realistic cinematic portrait prompt of Johnny Depp as Captain Jack Sparrow at sunset.",
+                tags: ["Portrait", "Cinematic", "Photorealistic", "Fantasy"],
+                content: `Create a hyper-realistic, photorealistic cinematic portrait of Johnny Depp as Captain Jack Sparrow.
+
+Subject
+Appearance:
+He is depicted in his iconic full pirate attire: a distressed, dark teal/blue long coat with ornate gold buttons and faded trim, a dirty white ruffled shirt, a vibrant red bandana tied around his head, and a large, weathered tricorn hat adorned with a feather, trinkets, and tattered edges.
+His hair is a mass of intricate dreadlocks, adorned with beads, coins, and fabric scraps, visible beneath and around his hat.
+He has his signature goatee and mustache, with a smirk/slight grin on his face, and his eyes show a mischievous, confident glint.
+Pose:
+He stands confidently, slightly turned towards the viewer, with his right hand (viewer's left) resting on the hilt of his ornate cutlass, which is pointed downwards.
+His left hand (viewer's right) is slightly extended forward, palm open, as if in a characteristic gesture.
+His posture is relaxed but commanding.
+Accessories:
+Detailed leather cross-body strap holding a pistol (a flintlock, visible on his hip), various rings on his fingers, multiple layered belts and sashes around his waist with pouches and compass.
+Setting
+Location:
+On the weathered, wooden deck of a large sailing pirate ship. The wooden planks are detailed with grain and subtle wear.
+Background:
+The open ocean at sunset. The sun is a prominent, warm orange/yellow sphere on the horizon, casting a dramatic, warm glow across the sky and water.
+There are dynamic, white-capped waves in the mid-ground.
+The ship's rigging and masts are visible, silhouetted against the vibrant sky, adding depth and scale.
+Lighting & Mood
+Lighting:
+Dramatic golden hour lighting from the sunset, casting warm, rich tones on Jack Sparrow and the ship.
+Strong backlighting from the sun creates a rim light effect, particularly on his hat and hair, while his front is well-lit by the ambient golden light.
+Mood:
+Adventurous, legendary, iconic, and slightly theatrical.
+Composition & Perspective
+Shot Type:
+A medium full shot, capturing Jack Sparrow from just above the knees up, centered in the frame.
+Angle:
+Eye-level or a very slightly low-angle perspective, making him appear heroic.
+Depth of Field:
+A moderate depth of field, keeping Jack Sparrow sharply in focus, with the background ship elements and ocean slightly blurred to emphasize him.
+Technical Quality & Details
+Resolution: Ultra 8K resolution.
+Texture: Exquisite detail on all textures: weathered leather, fabric of his coat and bandana, individual dreadlocks, skin pores and wrinkles, wood grain of the deck, and intricate metalwork on his pistol and cutlass.
+Color Grading: Rich, cinematic color grading with warm oranges, yellows, deep blues, and muted greens.
+Atmosphere: A subtle haze or glow around the setting sun.`
+            },
+            {
+                id: 8,
+                title: "Hyper-Realistic Product Visualization",
+                category: "Image Generation",
+                description: "A highly detailed product visualization prompt for an ergonomic computer mouse on a stylized office desk setup.",
+                tags: ["Product", "3D Render", "Photorealistic", "Tech"],
+                content: `Subject & Concept
+A high-resolution, photorealistic image of a sleek, ergonomic computer mouse. The mouse is a dark charcoal gray or gunmetal color with a smooth, matte finish. It features a bright cyan blue LED glowing from the scroll wheel and subtle chrome accents on the sides.
+
+Presentation & Composition
+The mouse is presented on a small, torn piece of off-white sketch paper, which includes faint, clean technical lines and handwritten text reading "RECHARGEABLE USB-C" near the bottom. This sketch appears to be floating or held by a clear acrylic stand anchored to a circular, dark mahogany wood base.
+
+Environment & Lighting
+The scene is an executive office desk setup during the late afternoon. The background should feature a large window overlooking a bright, slightly hazy cityscape, creating a soft backlight. The foreground lighting should be cinematic and dramatic, with subtle reflections and highlights on the mouse's surface to emphasize its contours.
+
+Style & Technical Details
+Extreme hyperrealism, product photography style. Shallow depth of field (bokeh) to isolate the mouse and base. 8K resolution. Rendered in the style of V-Ray or Octane Render. The image must have physically based rendering (PBR) accuracy, showing realistic textures, light falloff, and subtle dust/micro-scratches on the wood/acrylic for maximum realism.`
+            },
+            {
+                id: 9,
+                title: "Creative Photo Transformations",
+                category: "Image Generation",
+                description: "A collection of five creative transformation prompts for altering existing photos into various artistic styles.",
+                tags: ["Transformation", "Art Style", "Portrait", "Retro"],
+                content: `9.1 Packaging Transformation
+Transform the image into a 90s style Indian toffee packaging design inspired by <favourite candy>. The packaging should be vivid and colorful, featuring vibrant oranges, yellows, and reds. Include nostalgic fonts and typography inspired by India's 90s advertising, with bold and playful lettering. The overall look should evoke nostalgia with bright and lively colors, capturing the vintage essence of Indian candy wrappers.
+
+9.2 Retro Bollywood
+A hyper-realistic photograph with the warm, grainy tones and retro cinematic vibe of a 1970s film camera.
+
+Subject
+A stylish female as in the reference image sitting casually on the hood of a vintage classic car. She is wearing a white & red polka dot pinstriped shirt, with bell-bottom trousers, paired with canvas shoes, exuding a confident, 1970s Bollywood diva-style look. Preserve the face, facial structures, expressions, and body proportions from the provided reference image (the subject is smiling with glasses, looking directly at the camera). The subject's pose must be maintained—sitting on the car's hood, in a casual, candid manner.
+
+Car
+A large, classic American luxury car (no visible logos) in a deep maroon or royal color. It features wide whitewall tires, prominent chrome details on the grille and bumpers, and a highly polished metallic body that reflects sunlight.
+
+Setting
+Outdoors in daylight. The background is framed by tall green trees and well-maintained hedges. The scene should be well-lit, suggesting a sunny day.
+
+Style & Atmosphere
+Vintage 1970s Bollywood film aesthetic, high-quality, hyper-realistic photography.
+
+9.3 Classroom Portrait
+Cinematic portrait of the man in the picture (preserve 100% facial details of this man), vintage classroom. The camera is shot from a distance, with a small section of the chair's back visible in front, as if the photographer was taking the portrait discreetly or in a quiet moment. Soft, golden-yellow lighting reflects from a small window or gap in the right wall, forming diagonal lines of light that fall directly on the man's face, creating a dramatic and emotional contrast. The man sits alone in a chair, his feet resting on the desk, with a relaxed and cool expression, as if lost in thought.
+
+9.4 Re-light
+Relight this photo of me in moody club lighting using soft pink, purple, and blue neon tones coming from opposite sides. Keep the lighting directional but diffused, with reflections on the face and hair, subtle color contrast, and a blurred dark background that hints at glowing lights. Preserve facial details and makeup.
+
+9.5 Royalty
+Recreate this couple photo in the grand, opulent style of a Bollywood film. We are dressed as Indian royalty, wearing a heavy, intricately embroidered lehenga and sherwani in jewel tones like deep blue, green, orange and gold. We are posing in a magnificent palace corridor, with grand arches, fresco paintings, and numerous lit diyas in the background. The lighting is dramatic and warm, with a soft, hazy glow. My expression is regal, intense, and full of unspoken emotion. Before you do anything else, ask me to upload a selfie. Then use that selfie to create this image. Keep our faces the same and show the grandeur of the palace corridor too. Aspect ratio should be 1:1.
+
+9.6 Underwater Portrait
+Hyper-realistic, ultra-detailed close-up portrait showing only the left half of my face submerged in water, one eye in sharp focus, positioned on the far left of the frame, light rays creating caustic patterns on the skin, suspended water droplets and bubbles adding depth, cinematic lighting with soft shadows and sharp highlights, photorealistic textures including skin pores, wet lips, eyelashes, and subtle subsurface scattering, surreal and dreamlike atmosphere, shallow depth of field, underwater macro perspective. 1:1 aspect ratio.`
+            }
         ];
+        // --- END OF NEW PROMPT DATA ---
 
         const App = () => {
             const [selectedId, setSelectedId] = useState(1);
@@ -73,7 +406,6 @@
 
             // FIX: Logical change to ensure a prompt is selected if filtering occurs
             useEffect(() => {
-                // If the currently selected prompt is no longer in the filtered list, select the first one.
                 const isSelectedInFiltered = filteredPrompts.some(p => p.id === selectedId);
 
                 if (!isSelectedInFiltered && filteredPrompts.length > 0) {
@@ -226,7 +558,7 @@
                                                     ))}
                                                 </div>
                                             </div>
-                                            {/* REMOVED REDUNDANT COPY BUTTON HERE */}
+                                            {/* Redundant copy button removed */}
                                         </div>
                                     </div>
 
@@ -250,7 +582,7 @@
                                             <pre className="p-6 md:p-8 overflow-x-auto text-sm md:text-base leading-relaxed text-slate-800 mono-font whitespace-pre-wrap">
                                                 {selectedPrompt.content}
                                             </pre>
-                                            {/* Removed hover copy button, kept only the sticky header button */}
+                                            {/* Hover copy button removed */}
                                         </div>
                                     </div>
                                 </div>
