@@ -1,32 +1,14 @@
-AI Prompt Collection 2025: The Blueprint
+# AI Prompt Collection 2025: The Blueprint
 
 A modern, interactive library for storing, organizing, and accessing advanced AI prompts, designed for efficiency and collaboration. This single-file application serves as a comprehensive management tool for complex system prompts used across coding, design, and reasoning tasks.
 
 🌟 Status & Badges
 
-Status
-
-Component
-
-Description
-
-
-
-Frontend
-
-Single-page application logic
-
-
-
-Styling
-
-Utility-first CSS framework
-
-
-
-Architecture
-
-Everything compiled into one file
+| Status | Component    | Description                       |
+|--------|--------------|-----------------------------------|
+| ✅     | Frontend     | Single-page application logic     |
+| ✅     | Styling      | Utility-first CSS framework       |
+| ✅     | Architecture | Everything compiled into one file |
 
 🚀 Live Demo
 
@@ -34,19 +16,15 @@ Everything compiled into one file
 
 ✨ Features at a Glance
 
-Prompt Management: Store and retrieve complex, multi-line prompts easily.
-
-Dynamic Filtering: Quickly filter prompts by Category (System Prompt, Coding & Web, Image Gen, etc.) or search using keywords and Tags.
-
-Instant Copy: One-click functionality to copy the full prompt content to the clipboard.
-
-Code Readability: Custom typography (JetBrains Mono) enhances the readability of code and JSON structures within the prompt content.
-
-Zero Configuration: The entire application is contained within a single index.html file, requiring no local build steps or package installations.
+- **Prompt Management**: Store and retrieve complex, multi-line prompts easily.
+- **Dynamic Filtering**: Quickly filter prompts by Category (System Prompt, Coding & Web, Image Gen, etc.) or search using keywords and Tags.
+- **Instant Copy**: One-click functionality to copy the full prompt content to the clipboard.
+- **Code Readability**: Custom typography (JetBrains Mono) enhances the readability of code and JSON structures within the prompt content.
+- **Zero Configuration**: The entire application is contained within a single `index.html` file, requiring no local build steps or package installations.
 
 🛠️ Project Setup
 
-Required Files
+### Required Files
 
 To run this project, you only need the following two files in your repository root:
 
