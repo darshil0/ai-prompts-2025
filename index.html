@@ -428,9 +428,12 @@ Background: Place the object on a smooth stone surface with blurred botanical le
                 return matchesSearch && matchesCategory;
             });
 
-            const selectedPrompt = promptData.find(p => p.id === selectedId) || promptData[0];
+            const selectedPrompt = useMemo(() =>
+                promptData.find(p => p.id === selectedId) || filteredPrompts[0] || null
+            , [selectedId, filteredPrompts]);
 
             const copyToClipboard = () => {
+                if (!selectedPrompt) return;
                 // Create a temporary textarea to copy the text
                 const textarea = document.createElement('textarea');
                 textarea.value = selectedPrompt.content;
@@ -539,66 +542,73 @@ Background: Place the object on a smooth stone surface with blurred botanical le
 
                         {/* Content Area */}
                         <div className="flex-1 overflow-y-auto custom-scroll p-4 md:p-8">
-                            <div className="max-w-4xl mx-auto space-y-6">
-                                {/* Header Card */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-                                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                                        <div>
-                                            <div className="flex items-center gap-2 mb-3">
-                                                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wide">
-                                                    {selectedPrompt.category}
-                                                </span>
-                                                <span className="text-slate-400 text-xs font-mono">ID: {selectedPrompt.id}</span>
-                                            </div>
-                                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                                                {selectedPrompt.title}
-                                            </h2>
-                                            <div className="flex flex-wrap gap-2">
-                                                {selectedPrompt.tags.map(tag => (
-                                                    <span key={tag} className="inline-flex items-center gap-1 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded-md">
-                                                        <Icons.Tag /> {tag}
+                            {selectedPrompt ? (
+                                <div className="max-w-4xl mx-auto space-y-6">
+                                    {/* Header Card */}
+                                    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
+                                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-3">
+                                                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wide">
+                                                        {selectedPrompt.category}
                                                     </span>
-                                                ))}
+                                                    <span className="text-slate-400 text-xs font-mono">ID: {selectedPrompt.id}</span>
+                                                </div>
+                                                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                                                    {selectedPrompt.title}
+                                                </h2>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {selectedPrompt.tags.map(tag => (
+                                                        <span key={tag} className="inline-flex items-center gap-1 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded-md">
+                                                            <Icons.Tag /> {tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={copyToClipboard}
+                                                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-all shadow-sm ${
+                                                    copied
+                                                    ? 'bg-green-100 text-green-700 border border-green-200'
+                                                    : 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-md'
+                                                }`}
+                                            >
+                                                {copied ? <Icons.Check /> : <Icons.Copy />}
+                                                {copied ? 'Copied!' : 'Copy Prompt'}
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* Prompt Content */}
+                                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                                        <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                                            <h3 className="font-semibold text-slate-700 text-sm">Prompt Content</h3>
+                                            <div className="flex gap-1.5">
+                                                <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                                <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                                                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                                             </div>
                                         </div>
-                                        <button 
-                                            onClick={copyToClipboard}
-                                            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-all shadow-sm ${
-                                                copied 
-                                                ? 'bg-green-100 text-green-700 border border-green-200' 
-                                                : 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-md'
-                                            }`}
-                                        >
-                                            {copied ? <Icons.Check /> : <Icons.Copy />}
-                                            {copied ? 'Copied!' : 'Copy Prompt'}
-                                        </button>
-                                    </div>
-                                </div>
-
-                                {/* Prompt Content */}
-                                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                                    <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
-                                        <h3 className="font-semibold text-slate-700 text-sm">Prompt Content</h3>
-                                        <div className="flex gap-1.5">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-red-400/50"></div>
-                                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/50"></div>
-                                            <div className="w-2.5 h-2.5 rounded-full bg-green-400/50"></div>
+                                        <div className="relative group">
+                                            <pre className="p-6 md:p-8 overflow-x-auto text-sm md:text-base leading-relaxed text-slate-800 mono-font whitespace-pre-wrap">
+                                                {selectedPrompt.content}
+                                            </pre>
+                                            <button
+                                                onClick={copyToClipboard}
+                                                className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur border border-slate-200 rounded-md text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity hover:text-blue-600 hover:border-blue-200"
+                                                title="Copy raw text"
+                                            >
+                                                {copied ? <Icons.Check /> : <Icons.Copy />}
+                                            </button>
                                         </div>
                                     </div>
-                                    <div className="relative group">
-                                        <pre className="p-6 md:p-8 overflow-x-auto text-sm md:text-base leading-relaxed text-slate-800 mono-font whitespace-pre-wrap">
-                                            {selectedPrompt.content}
-                                        </pre>
-                                        <button 
-                                            onClick={copyToClipboard}
-                                            className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur border border-slate-200 rounded-md text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity hover:text-blue-600 hover:border-blue-200"
-                                            title="Copy raw text"
-                                        >
-                                            {copied ? <Icons.Check /> : <Icons.Copy />}
-                                        </button>
-                                    </div>
                                 </div>
-                            </div>
+                            ) : (
+                                <div className="text-center py-20 text-slate-500">
+                                    <p>No prompt selected.</p>
+                                    <p className="text-sm mt-2">Select a prompt from the sidebar to view its content.</p>
+                                </div>
+                            )}
                         </div>
                     </main>
 
