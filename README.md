@@ -2,7 +2,7 @@
 
 A modern, interactive library for storing, organizing, and accessing advanced AI prompts, designed for efficiency and collaboration. This single-file application serves as a comprehensive management tool for complex system prompts used across coding, design, and reasoning tasks.
 
-🌟 Status & Badges
+## Status & Badges
 
 | Status | Component    | Description                       |
 |--------|--------------|-----------------------------------|
@@ -45,9 +45,25 @@ To run this project, you only need the following two files in your repository ro
 2.  Go to your repository **Settings** and navigate to the **Pages** section.
 3.  Select the `main` branch as the deployment source and save.
 
-Your prompt library will be instantly live at the URL provided by GitHub Pages.
+```javascript
+const promptData = [
+  // ... existing prompts
+  {
+    id: 14, // Must be a unique number
+    title: "Your New Prompt Title",
+    category: "New Category Name", // e.g., "Reasoning", "Data Analysis"
+    tags: ["Keyword1", "Keyword2"], // Used for search and filtering
+    description: "A short, engaging summary visible in the sidebar.",
+    content: `
+      Paste your full, multi-line, complex prompt text here.
+      Use backticks (\`) for multi-line strings.
+      You can include code blocks like \`\`\`json or \`\`\`javascript here.
+    `
+  }
+];
+```
 
-⚙️ Customization: Adding and Editing Prompts
+**Guidelines:**
 
 All prompt data is stored directly within the `<script type="text/babel">` block inside `index.html`.
 
@@ -71,7 +87,7 @@ const promptData = [
 ];
 ```
 
+## License
 
-📄 License
+This project is open source and available for personal or commercial use. Respect all applicable licenses for any third-party libraries, fonts, or frameworks referenced within `index.html`.
 
-This project is open source and available for personal or commercial use.
