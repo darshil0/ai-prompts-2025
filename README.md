@@ -87,6 +87,17 @@ const promptData = [
 ];
 ```
 
+## Changelog
+
+### Version 1.1.0 (November 2024)
+- **Modernized Clipboard API**: Replaced the deprecated `document.execCommand('copy')` with the modern, more secure `navigator.clipboard.writeText` API for all copy-to-clipboard functionality. A fallback is retained for older browsers.
+- **Improved Rendering Performance**: Removed `backdrop-blur` and fractional opacity (`bg-white/80`) from the sidebar to prevent potential rendering glitches on certain browsers and improve performance. The sidebar now uses a solid `bg-white` background.
+- **Enhanced Code Readability**: Added comments to `index.html` to clarify the purpose of icon components and semantic list structures.
+
+### Version 1.0.0 (Initial Release)
+- Initial release of the AI Prompt Collection 2025 application.
+- Features include prompt management, dynamic filtering, instant copy, and a zero-configuration setup.
+
 ## License
 
 This project is open source and available for personal or commercial use. Respect all applicable licenses for any third-party libraries, fonts, or frameworks referenced within `index.html`.
