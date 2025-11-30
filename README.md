@@ -89,7 +89,7 @@ const promptData = [
 
 ## Changelog
 
-### Version 1.1.0 (November 2024)
+### Version 1.1.0 (November 2025)
 - **Modernized Clipboard API**: Replaced the deprecated `document.execCommand('copy')` with the modern, more secure `navigator.clipboard.writeText` API for all copy-to-clipboard functionality. A fallback is retained for older browsers.
 - **Improved Rendering Performance**: Removed `backdrop-blur` and fractional opacity (`bg-white/80`) from the sidebar to prevent potential rendering glitches on certain browsers and improve performance. The sidebar now uses a solid `bg-white` background.
 - **Enhanced Code Readability**: Added comments to `index.html` to clarify the purpose of icon components and semantic list structures.
