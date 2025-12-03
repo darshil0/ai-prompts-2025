@@ -8,46 +8,31 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'brand-primary': '#1e40af',
+                        'brand-secondary': '#3b82f6',
+                        'brand-accent': '#fbbf24',
+                    },
+                },
+            },
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; }
-        .mono-font { font-family: 'JetBrains Mono', monospace; }
-        
-        /* Custom scrollbar for sidebar */
-        .custom-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: #bae6fd;
-            border-radius: 3px;
-        }
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: #7dd3fc;
-        }
     </style>
 </head>
-<body class="bg-sky-50 text-slate-800 h-screen overflow-hidden">
+<body class="bg-gray-100">
     <div id="root"></div>
-
     <script type="text/babel">
-        const { useState, useEffect, useMemo } = React;
 
-        // --- Icon Components ---
-        // A collection of SVG icons used throughout the application, wrapped in React components for easy use.
-        const Icons = {
-            Copy: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>,
-            Check: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-            Search: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>,
-            Menu: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>,
-            Tag: () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94 .94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>,
-            Sparkles: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-        };
-
-        // --- START OF PROMPT DATA ---
         const promptData = [
             {
                 id: 1,
@@ -384,243 +369,183 @@ Recreate this couple photo in the grand, opulent style of a Bollywood film. We a
 
 9.6 Underwater Portrait
 Hyper-realistic, ultra-detailed close-up portrait showing only the left half of my face submerged in water, one eye in sharp focus, positioned on the far left of the frame, light rays creating caustic patterns on the skin, suspended water droplets and bubbles adding depth, cinematic lighting with soft shadows and sharp highlights, photorealistic textures including skin pores, wet lips, eyelashes, and subtle subsurface scattering, surreal and dreamlike atmosphere, shallow depth of field, underwater macro perspective. 1:1 aspect ratio.`
+            },
+            {
+                id: 10,
+                title: "Product Photography: Gold Necklace",
+                category: "Nano Banana Pro",
+                description: "Show a gold necklace on a sandy beach with gentle morning light.",
+                tags: ["Product Photography", "Jewelry", "Beach"],
+                content: "Show this [gold necklace] on a sandy beach with gentle morning light and soft shadows, seashells scattered nearby."
+            },
+            {
+                id: 11,
+                title: "Manga Style: Messi vs Ronaldo",
+                category: "Nano Banana Pro",
+                description: "Create a manga of these characters and show the stand off between Messi and Ronaldo.",
+                tags: ["Manga", "Anime", "Sports"],
+                content: "Create a manga of these characters and show the stand off between Messi and Ronaldo."
+            },
+            {
+                id: 12,
+                title: "Photo Editing: Background Replacement",
+                category: "Nano Banana Pro",
+                description: "Replace the background of this subject with a realistic urban sunset skyline.",
+                tags: ["Photo Editing", "Background Removal", "Sunset"],
+                content: "Replace the background of this subject with a realistic urban sunset skyline, maintaining proper shadows and ambient light interaction with the subject."
+            },
+            {
+                id: 13,
+                title: "Logic Puzzle: Office Arrangement",
+                category: "Nano Banana Pro",
+                description: "An image of an office where 10 different people are neatly arranged, each holding a unique object whose name starts with the letter 'A'.",
+                tags: ["Logic", "Puzzle", "Office"],
+                content: "An image of an office where 10 different people are neatly arranged (2 in the front row, 3 in the middle row, 5 in the back row), each holding a unique object whose name starts with the letter 'A'."
+            },
+            {
+                id: 14,
+                title: "Math Reasoning: Quadratic Formula",
+                category: "Nano Banana Pro",
+                description: "A symbolic algebra breakdown solving the equation 3x² − 5x + 2 = 0 using the quadratic formula.",
+                tags: ["Math", "Algebra", "Education"],
+                content: "A symbolic algebra breakdown solving the equation 3x² − 5x + 2 = 0 using the quadratic formula, each transformation written cleanly in sequential steps."
+            },
+            {
+                id: 15,
+                title: "Crane Shot: Hiker on a Canyon",
+                category: "Google Veo 3.1",
+                description: "Crane shot starting low on a lone hiker and ascending high above, revealing they are standing on the edge of a colossal, mist-filled canyon at sunrise.",
+                tags: ["Cinematography", "Nature", "Drone Shot"],
+                content: "Crane shot starting low on a lone hiker and ascending high above, revealing they are standing on the edge of a colossal, mist-filled canyon at sunrise, epic fantasy style, awe-inspiring, soft morning light."
+            },
+            {
+                id: 16,
+                title: "Shallow Depth of Field: Woman on a Bus",
+                category: "Google Veo 3.1",
+                description: "Close-up with very shallow depth of field, a young woman's face, looking out a bus window at the passing city lights.",
+                tags: ["Cinematography", "Portrait", "City"],
+                content: "Close-up with very shallow depth of field, a young woman's face, looking out a bus window at the passing city lights with her reflection faintly visible on the glass, inside a bus at night during a rainstorm, melancholic mood with cool blue tones, moody, cinematic."
+            },
+            {
+                id: 17,
+                title: "Dynamic Transition: Pop Star Performance",
+                category: "Google Veo 3.1",
+                description: "The camera performs a smooth 180-degree arc shot, starting with the front-facing view of the singer and circling around her to seamlessly end on the POV shot from behind her on stage.",
+                tags: ["Cinematography", "Music", "Concert"],
+                content: "The camera performs a smooth 180-degree arc shot, starting with the front-facing view of the singer and circling around her to seamlessly end on the POV shot from behind her on stage. The singer sings “when you look me in the eyes, I can see a million stars.”"
+            },
+            {
+                id: 18,
+                title: "Dialogue Scene: Detective Office",
+                category: "Google Veo 3.1",
+                description: "Create a medium shot of the detective behind his desk. He looks up at the woman and says in a weary voice, 'Of all the offices in this town, you had to walk into mine.'",
+                tags: ["Cinematography", "Dialogue", "Film Noir"],
+                content: "Using the provided images for the detective, the woman, and the office setting, create a medium shot of the detective behind his desk. He looks up at the woman and says in a weary voice, \"Of all the offices in this town, you had to walk into mine.\""
+            },
+            {
+                id: 19,
+                title: "Timestamp Prompting: Jungle Exploration",
+                category: "Google Veo 3.1",
+                description: "A multi-shot sequence with precise cinematic pacing, all within a single generation.",
+                tags: ["Cinematography", "Adventure", "Jungle"],
+                content: "[00:00-00:02] Medium shot from behind a young female explorer with a leather satchel and messy brown hair in a ponytail, as she pushes aside a large jungle vine to reveal a hidden path.\\n\\n[00:02-00:04] Reverse shot of the explorer's freckled face, her expression filled with awe as she gazes upon ancient, moss-covered ruins in the background. SFX: The rustle of dense leaves, distant exotic bird calls.\\n\\n[00:04-00:06] Tracking shot following the explorer as she steps into the clearing and runs her hand over the intricate carvings on a crumbling stone wall. Emotion: Wonder and reverence.\\n\\n[00:06-00:08] Wide, high-angle crane shot, revealing the lone explorer standing small in the center of the vast, forgotten temple complex, half-swallowed by the jungle. SFX: A swelling, gentle orchestral score begins to play."
             }
         ];
-        // --- END OF NEW PROMPT DATA ---
 
         const App = () => {
-            const [selectedId, setSelectedId] = useState(1);
-            const [searchQuery, setSearchQuery] = useState("");
-            const [activeCategory, setActiveCategory] = useState("All");
-            const [copied, setCopied] = useState(false);
-            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+            const [prompts, setPrompts] = React.useState(promptData);
+            const [search, setSearch] = React.useState('');
+            const [selectedCategory, setSelectedCategory] = React.useState('All');
+            const [selectedPrompt, setSelectedPrompt] = React.useState(null);
 
-            const categories = ["All", ...new Set(promptData.map(p => p.category))];
+            const categories = ['All', ...new Set(prompts.map(p => p.category))];
 
-            const filteredPrompts = promptData.filter(prompt => {
-                const matchesSearch = prompt.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                                     prompt.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-                const matchesCategory = activeCategory === "All" || prompt.category === activeCategory;
-                return matchesSearch && matchesCategory;
+            const filteredPrompts = prompts.filter(p => {
+                const searchMatch = p.title.toLowerCase().includes(search.toLowerCase());
+                const categoryMatch = selectedCategory === 'All' || p.category === selectedCategory;
+                return searchMatch && categoryMatch;
             });
 
-            const selectedPrompt = useMemo(() =>
-                promptData.find(p => p.id === selectedId) || filteredPrompts[0] || null
-            , [selectedId, filteredPrompts]);
-
-            const copyToClipboard = () => {
-                if (!selectedPrompt) return;
-                navigator.clipboard.writeText(selectedPrompt.content)
-                    .then(() => {
-                        setCopied(true);
-                        setTimeout(() => setCopied(false), 2000);
-                    })
-                    .catch(err => {
-                        console.error('Failed to copy text: ', err);
-                        // Fallback for older browsers
-                        const textarea = document.createElement('textarea');
-                        textarea.value = selectedPrompt.content;
-                        textarea.style.position = 'fixed';
-                        document.body.appendChild(textarea);
-                        textarea.focus();
-                        textarea.select();
-                        try {
-                            document.execCommand('copy');
-                            setCopied(true);
-                            setTimeout(() => setCopied(false), 2000);
-                        } catch (err) {
-                            console.error('Fallback copy failed: ', err);
-                        }
-                        document.body.removeChild(textarea);
-                    });
+            const handlePromptSelect = (prompt) => {
+                setSelectedPrompt(prompt);
             };
 
             return (
-                <div className="flex h-screen bg-sky-50 overflow-hidden">
-                    {/* Sidebar */}
-                    <aside className={`fixed inset-y-0 left-0 z-50 w-80 bg-white border-r border-slate-200 transform transition-transform duration-200 ease-in-out md:relative md:translate-x-0 ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                        <div className="flex flex-col h-full">
-                            <div className="p-4 border-b border-slate-200">
-                                <h1 className="text-xl font-bold text-cyan-900 flex items-center gap-2">
-                                    <Icons.Sparkles />
-                                    PromptLibrary
-                                </h1>
-                                <div className="mt-4 relative">
-                                    <input 
-                                        type="text" 
-                                        placeholder="Search prompts..." 
-                                        className="w-full pl-9 pr-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
+                <div className="min-h-screen bg-gray-100 font-sans">
+                    <header className="bg-brand-primary text-white shadow-md">
+                        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+                            <h1 className="text-3xl font-bold">AI Prompt Collection 2025</h1>
+                        </div>
+                    </header>
+                    <main className="container mx-auto p-4">
+                        <div className="flex flex-col md:flex-row gap-8">
+                            <aside className="w-full md:w-1/3">
+                                <div className="bg-white p-4 rounded-lg shadow-md">
+                                    <input
+                                        type="text"
+                                        placeholder="Search prompts..."
+                                        value={search}
+                                        onChange={e => setSearch(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-secondary"
                                     />
-                                    <div className="absolute left-3 top-2.5 text-slate-400">
-                                        <Icons.Search />
+                                    <div className="mt-4">
+                                        {categories.map(category => (
+                                            <button
+                                                key={category}
+                                                onClick={() => setSelectedCategory(category)}
+                                                className={`px-4 py-2 mr-2 mb-2 rounded-full text-sm font-semibold ${selectedCategory === category ? 'bg-brand-secondary text-white' : 'bg-gray-200 text-gray-700'}`}
+                                            >
+                                                {category}
+                                            </button>
+                                        ))}
                                     </div>
                                 </div>
-                            </div>
-                            
-                            {/* Categories */}
-                            <div className="px-4 py-2 border-b border-slate-200 overflow-x-auto whitespace-nowrap custom-scroll">
-                                <div className="flex space-x-2">
-                                    {categories.map(cat => (
-                                        <button
-                                            key={cat}
-                                            onClick={() => {
-                                                setActiveCategory(cat);
-                                                setCopied(false); // Reset copy state on category change
-                                            }}
-                                            className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                                                activeCategory === cat 
-                                                ? 'bg-cyan-100 text-cyan-700'
-                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                            }`}
-                                        >
-                                            {cat}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* --- Prompt List --- */}
-                            {/* Renders a selectable list of prompts. Uses semantic `ul` and `li` for accessibility. */}
-                            <div className="flex-1 overflow-y-auto custom-scroll p-3">
-                                {filteredPrompts.length > 0 ? (
-                                    <ul className="space-y-2">
+                                <div className="mt-8">
+                                    <h2 className="text-xl font-semibold mb-4">Prompts</h2>
+                                    <div className="space-y-4">
                                         {filteredPrompts.map(prompt => (
-                                            <li key={prompt.id}>
-                                                <button
-                                                    onClick={() => {
-                                                        setSelectedId(prompt.id);
-                                                        setMobileMenuOpen(false);
-                                                        setCopied(false);
-                                                    }}
-                                                    className={`w-full text-left p-3 rounded-xl transition-all border ${
-                                                        selectedId === prompt.id 
-                                                        ? 'bg-cyan-50 border-cyan-200 shadow-sm'
-                                                        : 'bg-white border-transparent hover:bg-sky-50 hover:border-slate-200'
-                                                    }`}
-                                                >
-                                                    <div className="flex justify-between items-start mb-1">
-                                                        <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${
-                                                            selectedId === prompt.id ? 'bg-cyan-200 text-cyan-800' : 'bg-slate-100 text-slate-500'
-                                                        }`}>
-                                                            {prompt.category}
-                                                        </span>
-                                                    </div>
-                                                    <h3 className={`font-semibold text-sm mb-1 ${selectedId === prompt.id ? 'text-cyan-900' : 'text-slate-800'}`}>
-                                                        {prompt.title}
-                                                    </h3>
-                                                    <p className="text-xs text-slate-500 line-clamp-2">
-                                                        {prompt.description}
-                                                    </p>
-                                                </button>
-                                            </li>
+                                            <div
+                                                key={prompt.id}
+                                                onClick={() => handlePromptSelect(prompt)}
+                                                className="bg-white p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow"
+                                            >
+                                                <h3 className="font-semibold">{prompt.title}</h3>
+                                                <p className="text-sm text-gray-600">{prompt.description}</p>
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                            <section className="w-full md:w-2/3">
+                                {selectedPrompt ? (
+                                    <div className="bg-white p-6 rounded-lg shadow-md">
+                                        <h2 className="text-2xl font-bold mb-4">{selectedPrompt.title}</h2>
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {selectedPrompt.tags.map(tag => (
+                                                <span key={tag} className="bg-brand-accent text-sm px-2 py-1 rounded-full">{tag}</span>
+                                            ))}
+                                        </div>
+                                        <pre className="bg-gray-100 p-4 rounded-lg font-mono text-sm whitespace-pre-wrap">{selectedPrompt.content}</pre>
+                                        <button
+                                            onClick={() => navigator.clipboard.writeText(selectedPrompt.content)}
+                                            className="mt-4 px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-opacity-80"
+                                        >
+                                            Copy Prompt
+                                        </button>
+                                    </div>
                                 ) : (
-                                    <div className="text-center py-8 text-slate-400 text-sm">
-                                        No prompts found
+                                    <div className="flex justify-center items-center h-full bg-white rounded-lg shadow-md">
+                                        <p className="text-gray-500">Select a prompt to view its details.</p>
                                     </div>
                                 )}
-                            </div>
-                        </div>
-                    </aside>
-
-                    {/* Main Content */}
-                    <main className="flex-1 flex flex-col h-full bg-white md:bg-sky-50">
-                        {/* Mobile Header */}
-                        <div className="md:hidden flex items-center justify-between p-4 bg-white border-b border-slate-200">
-                            <h1 className="font-bold text-cyan-900">PromptLibrary</h1>
-                            <button onClick={() => setMobileMenuOpen(true)} className="p-2 text-slate-600">
-                                <Icons.Menu />
-                            </button>
-                        </div>
-
-                        {/* Content Area */}
-                        <div className="flex-1 overflow-y-auto custom-scroll p-4 md:p-8">
-                            {selectedPrompt ? (
-                                <div className="max-w-4xl mx-auto space-y-6">
-                                    {/* Header Card */}
-                                    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-                                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                                            <div>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wide">
-                                                        {selectedPrompt.category}
-                                                    </span>
-                                                    <span className="text-slate-400 text-xs font-mono">ID: {selectedPrompt.id}</span>
-                                                </div>
-                                                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                                                    {selectedPrompt.title}
-                                                </h2>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {selectedPrompt.tags.map(tag => (
-                                                        <span key={tag} className="inline-flex items-center gap-1 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded-md">
-                                                            <Icons.Tag /> {tag}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                            <button
-                                                onClick={copyToClipboard}
-                                                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-all shadow-sm ${
-                                                    copied
-                                                    ? 'bg-green-100 text-green-700 border border-green-200'
-                                                    : 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-md'
-                                                }`}
-                                            >
-                                                {copied ? <Icons.Check /> : <Icons.Copy />}
-                                                {copied ? 'Copied!' : 'Copy Prompt'}
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    {/* Prompt Content */}
-                                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                                        <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
-                                            <h3 className="font-semibold text-slate-700 text-sm">Prompt Content</h3>
-                                            <div className="flex gap-1.5">
-                                                <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                                                <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                                                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                                            </div>
-                                        </div>
-                                        <div className="relative group">
-                                            <pre className="p-6 md:p-8 overflow-x-auto text-sm md:text-base leading-relaxed text-slate-800 mono-font whitespace-pre-wrap">
-                                                {selectedPrompt.content}
-                                            </pre>
-                                            <button
-                                                onClick={copyToClipboard}
-                                                className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur border border-slate-200 rounded-md text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity hover:text-blue-600 hover:border-blue-200"
-                                                title="Copy raw text"
-                                            >
-                                                {copied ? <Icons.Check /> : <Icons.Copy />}
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            ) : (
-                                <div className="text-center py-20 text-slate-500">
-                                    <p>No prompt selected.</p>
-                                    <p className="text-sm mt-2">Select a prompt from the sidebar to view its content.</p>
-                                </div>
-                            )}
+                            </section>
                         </div>
                     </main>
-
-                    {/* Overlay for mobile */}
-                    {mobileMenuOpen && (
-                        <div 
-                            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
-                            onClick={() => setMobileMenuOpen(false)}
-                        ></div>
-                    )}
                 </div>
             );
         };
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
     </script>
 </body>
 </html>
