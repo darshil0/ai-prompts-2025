@@ -89,6 +89,9 @@ const promptData = [
 
 ## Changelog
 
+### Version 2.0.1 (December 2025)
+- **UI Update**: The application's header has been updated with a new color scheme and typography for a more modern look. The search bar and category filters have been redesigned for better usability, and the prompt cards now feature a cleaner, more spacious layout.
+
 ### Version 2.0.0 (December 2025)
 - **UI Revamp**: Complete overhaul of the user interface with a modern, card-based design, an improved search bar, and a more vibrant color scheme. The application is now more responsive and user-friendly.
 - **New Prompts**: Added a collection of new prompts for "Nano Banana Pro," "Google Veo 3," and "Google Veo 3.1," covering a wide range of use cases from product photography to advanced cinematography.
