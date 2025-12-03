@@ -89,6 +89,10 @@ const promptData = [
 
 ## Changelog
 
+### Version 2.0.0 (December 2025)
+- **UI Revamp**: Complete overhaul of the user interface with a modern, card-based design, an improved search bar, and a more vibrant color scheme. The application is now more responsive and user-friendly.
+- **New Prompts**: Added a collection of new prompts for "Nano Banana Pro," "Google Veo 3," and "Google Veo 3.1," covering a wide range of use cases from product photography to advanced cinematography.
+
 ### Version 1.1.0 (November 2025)
 - **Modernized Clipboard API**: Replaced the deprecated `document.execCommand('copy')` with the modern, more secure `navigator.clipboard.writeText` API for all copy-to-clipboard functionality. A fallback is retained for older browsers.
 - **Improved Rendering Performance**: Removed `backdrop-blur` and fractional opacity (`bg-white/80`) from the sidebar to prevent potential rendering glitches on certain browsers and improve performance. The sidebar now uses a solid `bg-white` background.
@@ -101,4 +105,3 @@ const promptData = [
 ## License
 
 This project is open source and available for personal or commercial use. Respect all applicable licenses for any third-party libraries, fonts, or frameworks referenced within `index.html`.
-
