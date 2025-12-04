@@ -90,7 +90,7 @@ const promptData = [
 ## Changelog
 
 ### Version 2.0.2 (December 2025)
-- **Feature**: Added a favicon to the website for better browser tab identification.
+- **Feature**: Updated the favicon to be more visible.
 
 ### Version 2.0.1 (December 2025)
 - **New Prompts**: Added new prompts for Design, Coding, and Marketing to expand the collection.
