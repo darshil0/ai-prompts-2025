@@ -89,6 +89,9 @@ const promptData = [
 
 ## Changelog
 
+### Version 2.0.2 (December 2025)
+- **Feature**: Replaced the favicon with a user-provided image.
+
 ### Version 2.0.1 (December 2025)
 - **New Prompts**: Added new prompts for Design, Coding, and Marketing to expand the collection.
 
