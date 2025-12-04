@@ -180,4 +180,4 @@ For questions, suggestions, or issues:
 
 ---
 
-**Made with ✨ for the AI community** | Version 2.0.0 | December 2025
+**Made by [Darshil](https://github.com/darshil0) with Love ❤️** | Version 2.0.0 | December 2025
