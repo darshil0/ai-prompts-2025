@@ -8,7 +8,7 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 
 ## ✨ Features
 
-- **9 Premium Prompts**: Carefully crafted prompts for various use cases
+- **22 Premium Prompts**: Carefully crafted prompts for various use cases
 - **Smart Search**: Real-time search by title or tags
 - **Category Filtering**: Filter by Infographic, Image Generation, or Problem Solving
 - **One-Click Copy**: Modern clipboard API with fallback support
@@ -96,11 +96,11 @@ This application is built with accessibility as a priority:
 
 | Browser | Minimum Version | Status |
 |---------|----------------|--------|
-| Chrome | Latest, Latest-1 | ✅ Fully Supported |
-| Firefox | Latest, Latest-1 | ✅ Fully Supported |
-| Safari | Latest, Latest-1 | ✅ Fully Supported |
-| Edge | Latest, Latest-1 | ✅ Fully Supported |
-| Opera | Latest, Latest-1 | ✅ Fully Supported |
+| Chrome | 143+ | ✅ Fully Supported |
+| Firefox | 145+ | ✅ Fully Supported |
+| Safari | 26+ | ✅ Fully Supported |
+| Edge | 142+ | ✅ Fully Supported |
+| Opera | 124+ | ✅ Fully Supported |
 
 **Note**: The modern Clipboard API is used with automatic fallback for older browsers.
 
