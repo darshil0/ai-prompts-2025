@@ -240,4 +240,4 @@ For questions, suggestions, or issues:
 
 ---
 
-**Made by [Darshil](https://github.com/darshil0) with Love ❤️** | Version 3.0.0 | December 2025
+**Made by [Darshil](https://github.com/darshil0) with ❤️** | Version 3.0.0 | December 2025
