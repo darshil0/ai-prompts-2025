@@ -1,6 +1,6 @@
 # AI Prompt Collection 2025
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-brightgreen.svg)
 
@@ -8,7 +8,7 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 
 ## ✨ Features
 
-- **22 Premium Prompts**: Carefully crafted prompts for various use cases
+- **40 Premium Prompts**: Carefully crafted prompts for various use cases
 - **Smart Search**: Real-time search by title or tags
 - **Category Filtering**: Filter by Infographic, Image Generation, or Problem Solving
 - **One-Click Copy**: Modern clipboard API with fallback support
@@ -18,20 +18,65 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 
 ## 📚 Prompt Categories
 
+### Image Generation (7 prompts)
+- Paris at Night (Eiffel Tower)
+- Captain Jack Sparrow Portrait
+- Hyper-Realistic Product Visualization
+- Creative Photo Transformations
+- Traditional Dussehra Portrait
+- 90s Bollywood Movie Poster
+- Collectible Figurine Style
+
 ### Infographic (5 prompts)
 - Minimalist Timeline Infographic
 - AI Progress November 2025 Watercolor Infographic
 - Gemini 3 Prompting Guide Infographic
 - PDF-to-Infographic Summary
+- Modern Timeline Infographic
 
-### Image Generation (4 prompts)
-- Paris at Night (Eiffel Tower)
-- Captain Jack Sparrow Portrait
-- Hyper-Realistic Product Visualization
-- Creative Photo Transformations (6 sub-prompts)
+### Video Generation (5 prompts)
+- Crane Shot: Hiker on a Canyon
+- Shallow Depth of Field: Woman on a Bus
+- Dynamic Transition: Pop Star Performance
+- Dialogue Scene: Detective Office
+- Timestamp Prompting: Jungle Exploration
 
-### Problem Solving (1 prompt)
-- Garden Pathway Problem (Quadratic Equation)
+### Image Editing (5 prompts)
+- Product Photography: Gold Necklace
+- Manga Style: Messi vs Ronaldo
+- Photo Editing: Background Replacement
+- Polaroid Photo Booth
+- 3x3 Grid Photo
+
+### Design (5 prompts)
+- Modern Tech Logo Design
+- Full Branding Set Creation
+- UI/UX Homepage Design
+- Floor Plan to Interior Visualization
+- Text Rendering: IMAGINE
+
+### Problem Solving (3 prompts)
+- Garden Pathway Problem
+- Logic Puzzle: Office Arrangement
+- Math Reasoning: Quadratic Formula
+
+### Marketing (2 prompts)
+- Marketing Campaign Copy
+- Social Media Caption Generator
+
+### Writing (2 prompts)
+- Blog Post Outline
+- Email Polisher
+
+### Best Practices (3 prompts)
+- Be Specific
+- Use Natural Language
+- Edit, Don't Re-roll
+
+### Other Categories (3 prompts)
+- **Coding**: Python Web Scraper
+- **Education**: Concept Explainer
+- **Career**: Resume Bullet Point Generator
 
 ## 🚀 Quick Start
 
@@ -105,6 +150,21 @@ This application is built with accessibility as a priority:
 **Note**: The modern Clipboard API is used with automatic fallback for older browsers.
 
 ## 📝 Version History
+
+### Version 3.0.0 (December 4, 2025)
+
+**Major Improvements:**
+- ✨ Added 18 new high-quality prompts from Google's AI teams and other expert sources.
+- 🚀 Introduced a new "Best Practices" category with prompts that teach effective prompting techniques.
+- 🎨 Enhanced the "Copy to Clipboard" functionality with a modern, non-intrusive toast notification system, removing disruptive `alert()` pop-ups.
+- 📈 Expanded prompt categories to include Design, Writing, Education, Career, and more.
+
+**Technical Fixes:**
+- 🛠️ Fixed a critical React rendering bug that caused parts of the UI to be duplicated.
+- 🧹 General code cleanup and improved readability in the `index.html` file.
+
+**Documentation:**
+- 📝 Updated README.md with the latest version, an expanded prompt catalog, and a detailed changelog.
 
 ### Version 2.0.0 (December 4, 2025)
 
@@ -180,4 +240,4 @@ For questions, suggestions, or issues:
 
 ---
 
-**Made by [Darshil](https://github.com/darshil0) with Love ❤️** | Version 2.0.0 | December 2025
+**Made by [Darshil](https://github.com/darshil0) with Love ❤️** | Version 3.0.0 | December 2025
