@@ -1,58 +1,92 @@
-# AI Prompt Collection 2025
+# 🤖 AI Prompt Collection 2025
 
-![Version](https://img.shields.io/badge/version-3.0.https://img.shields.io/badge/license-MIT-greenhttps://img.shields.io/badge/accessibility-WCAG%202.1%20AA-brightgreen library of **premium AI prompts** designed for 2025—optimized for **Gemini**, **ChatGPT**, **Claude**, and other advanced models.
+A definitive, open-source library of **premium AI prompts** designed for 2025—optimized for **Gemini 3**, **ChatGPT**, **Claude**, and other advanced generative models.
 
-Includes creative prompts for **infographics, image generation, design, and problem-solving**, all built with accessibility and responsive design in mind.
+This collection focuses on high-utility prompts for **image generation, infographics, video, design, and complex problem-solving**, all built within an accessible and fully responsive interface.
 
-***
+-----
 
-## ✨ Highlights
+## 🛡️ Status
 
-- **41 Handcrafted Prompts** covering image generation, writing, and problem-solving.  
-- **Instant Search & Filters** by title, tags, or category.  
-- **Modern Clipboard Integration** with seamless fallback support.  
-- **Fully Responsive UI** optimized for desktop, tablet, and mobile.  
-- **Accessibility-First** approach (WCAG 2.1 AA compliance).  
-- **SEO-Ready Metadata** for improved search visibility.
+| Badge | Value |
+| :--- | :--- |
+| **Version** |  |
+| **License** |  |
+| **Accessibility** |  |
 
-***
+-----
 
-## 📚 Prompt Categories
+## ✨ Features & Highlights
+
+  * **Total Prompts:** **41 Handcrafted Prompts** across writing, image, and logic categories.
+  * **Search & Filter:** **Instant Search** and filters by title, tags, or category for quick discovery.
+  * **Copy Integration:** **Modern Clipboard API** for seamless, one-click copying with robust fallback support.
+  * **Responsive Design:** **Fully Responsive UI** optimized for all devices (desktop, tablet, mobile).
+  * **Accessibility:** **WCAG 2.1 AA** compliant for an inclusive user experience.
+  * **SEO:** **SEO-Ready Metadata** for improved search engine visibility.
+
+-----
+
+## 📚 Prompt Categories & Examples
+
+A breakdown of the utility categories and a few examples from the collection:
 
 ### 🎨 Image Generation (8)
-Eiffel Tower at Night -  Jack Sparrow Portrait -  Product Visualizations -  Dussehra Portraits -  90s Movie Posters -  Collectible Figurines -  Seasonal Panoramas
+
+  * **Focus:** Hyper-realistic visuals, stylized portraits, and commercial renders.
+  * *Examples: Eiffel Tower at Night, Jack Sparrow Portrait, Collectible Figurines, Seasonal Panoramas.*
 
 ### 📊 Infographics (5)
-Minimalist Timelines -  AI Progress (Nov 2025) -  Gemini 3 Prompting Guide -  PDF-to-Infographic Summaries -  Modern Timeline Designs
+
+  * **Focus:** Structured data visualization and complex topic summarization.
+  * *Examples: Minimalist Timelines, Gemini 3 Prompting Guide, PDF-to-Infographic Summaries.*
 
 ### 🎬 Video Generation (5)
-Dynamic Transitions -  Dialogue Scenes -  Crane Shots -  Depth-of-Field Settings -  Jungle Timestamp Prompting
+
+  * **Focus:** Cinematic camera movements, dynamic transitions, and scene direction.
+  * *Examples: Dynamic Transitions, Crane Shots, Depth-of-Field Settings, Jungle Timestamp Prompting.*
 
 ### 🖼️ Image Editing (5)
-Manga-Style Edits -  Background Swaps -  Product Shots -  Polaroid Effects -  Grid Layout Photos
+
+  * **Focus:** Post-production effects, background manipulation, and stylistic overlays.
+  * *Examples: Manga-Style Edits, Background Swaps, Polaroid Effects, Grid Layout Photos.*
 
 ### 💡 Design (5)
-Tech Logos -  Branding Sets -  UX/UI Layouts -  Floor Plan Visualizations -  Text Rendering Effects
+
+  * **Focus:** Conceptualizing full design systems, layouts, and rendering specific text effects.
+  * *Examples: Tech Logos, Branding Sets, UX/UI Layouts, Floor Plan Visualizations.*
 
 ### 🧠 Problem Solving (3)
-Logic Puzzles -  Reasoning Tasks -  Math Problems (Quadratic Formulas)
+
+  * **Focus:** Testing and leveraging the model's analytical and reasoning capabilities.
+  * *Examples: Logic Puzzles, Reasoning Tasks, Math Problems (Quadratic Formulas).*
 
 ### 📣 Marketing & Writing (4)
-Campaign Copy -  Social Posts -  Blog Outlines -  Email Polishers
+
+  * **Focus:** Generating high-quality campaign assets and refining existing copy.
+  * *Examples: Campaign Copy, Social Posts, Blog Outlines, Email Polishers.*
 
 ### 🧰 Best Practices (3)
-Be Specific -  Use Natural Language -  Edit, Don’t Re-roll
+
+  * **Focus:** Educational prompts demonstrating effective communication with AI models.
+  * *Examples: Be Specific, Use Natural Language, Edit, Don’t Re-roll.*
 
 ### ⚙️ Other Fields (3)
-- **Coding**: Python Web Scraper  
-- **Education**: Concept Explainer  
-- **Career**: Resume Bullet Generator
 
-***
+  * *Coding: Python Web Scraper*
+  * *Education: Concept Explainer*
+  * *Career: Resume Bullet Generator*
+
+-----
 
 ## 🚀 Quick Start
 
+You can run this project locally without any complex build steps.
+
 ### Option 1 — Open Directly
+
+Navigate to the repository folder and execute the following command:
+
 ```bash
 # Windows
 start index.html
@@ -64,7 +98,10 @@ open index.html
 xdg-open index.html
 ```
 
-### Option 2 — Serve Locally
+### Option 2 — Serve Locally (Recommended)
+
+Run a local HTTP server to prevent potential browser security restrictions:
+
 ```bash
 # Python 3
 python -m http.server 8000
@@ -75,118 +112,95 @@ npx http-server -p 8000
 # PHP
 php -S localhost:8000
 ```
-Then open **http://localhost:8000** in your browser.
 
-***
+Then, open your web browser and navigate to **http://localhost:8000**.
+
+-----
 
 ## 💻 Tech Stack
 
-| Component | Technology |
-|------------|-------------|
-| Framework | React 18 (Production Build) |
-| Styling | Tailwind CSS 3.x (CDN) |
-| Icons | Custom SVG Components |
-| Fonts | Inter (UI), JetBrains Mono (Prompts) |
-| Build | Single-file HTML — No bundler needed |
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Framework** | React 18 | Single-page application architecture. |
+| **Styling** | Tailwind CSS 3.x | Utility-first CSS for fast styling. |
+| **Fonts** | Inter, JetBrains Mono | Accessible UI font and clean monospace font for prompts. |
+| **Build** | Single-file HTML | No bundler required for simple deployment. |
 
-***
+-----
 
-## 🧩 How to Use
+## 🧩 How to Use the App
 
-1. Browse or search prompts by name or tag.  
-2. Filter by category for focused exploration.  
-3. Click **Copy Prompt** to copy to clipboard instantly.  
-4. On mobile, tap the menu icon to access the sidebar.
+1.  Use the **Search bar** or **Category Filters** to find a specific prompt.
+2.  Click the **Copy Prompt** button next to any item.
+3.  The prompt is instantly copied to your clipboard, ready to be pasted into your preferred AI model (**Gemini, ChatGPT, Claude**, etc.).
+4.  *(Mobile)* Access the category filters and search via the tap-to-open menu icon.
 
-***
+-----
 
-## ♿ Accessibility
+## ♿ Accessibility Standard
 
-This project follows **WCAG 2.1 AA** principles end-to-end.
+This project adheres to **WCAG 2.1 AA** compliance standards, ensuring maximum accessibility:
 
-- Keyboard navigation (Tab / Enter / Esc)
-- Semantic HTML + ARIA support
-- High color contrast and clear focus indicators
-- Responsive typography for readability across devices
+  * **Keyboard Navigation:** Full support for Tab, Enter, and Esc key navigation.
+  * **ARIA:** Proper use of Semantic HTML and ARIA attributes.
+  * **Visuals:** High color contrast ratios and clear focus indicators.
+  * **Responsiveness:** Fluid and responsive typography across all screen sizes.
 
-***
-
-## 🌐 Browser Support
-
-| Browser | Version | Status |
-|----------|----------|--------|
-| Chrome | 143+ | ✅ |
-| Firefox | 145+ | ✅ |
-| Safari | 26+ | ✅ |
-| Edge | 142+ | ✅ |
-| Opera | 124+ | ✅ |
-
-Automatic fallback included for older browsers lacking Clipboard API support.
-
-***
+-----
 
 ## 📝 Version History
 
-### **v3.0.1** — *Dec 7, 2025*
-- Added “Hyper-realistic Seasonal Panorama” prompt.
+### **v3.0.1** — *December 7, 2025*
 
-### **v3.0.0** — *Dec 4, 2025*
-- Introduced 18 new prompts covering Design, Writing, Education, and more.  
-- Added “Best Practices” category to teach effective AI prompting.  
-- Replaced `alert()` pop-ups with modern toast notifications.  
-- Fixed React rendering duplication bug.  
-- Cleaned and reformatted `index.html`.
+  * Added “Hyper-realistic Seasonal Panorama” prompt.
+
+### **v3.0.0** — *December 4, 2025*
+
+  * Major content update with **18 new prompts** (Design, Writing, Education).
+  * New **“Best Practices”** category added to guide users in effective prompting.
+  * Refined UX: Replaced old `alert()` pop-ups with modern **toast notifications**.
+  * Technical fix: Resolved a React rendering duplication bug.
 
 ### **v2.0.0**
-- Migrated to modern Clipboard API.  
-- Switched to React production builds.  
-- Added SEO tags and full accessibility support.  
-- Simplified UI and improved focus management.
 
-### **v1.0.0**
-- Initial release with 9 prompts, search, filtering, and mobile support.
+  * Technical Migration: Switched to modern **Clipboard API**.
+  * Build change: Migrated to official React production builds.
+  * Improved SEO and comprehensive accessibility integration.
 
-***
+-----
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
+We welcome contributions to grow this library\!
 
-1. **Fork** the repo  
-2. **Add** your prompt in `index.html`  
-   ```javascript
-   {
-     id: 10,
-     title: "Your Prompt Title",
-     category: "Infographic|Image Generation|Problem Solving",
-     description: "Short description (1–2 sentences)",
-     tags: ["Tag1", "Tag2", "Tag3"],
-     content: `Your full prompt content here...`
-   }
-   ```
-3. **Test** across browsers  
-4. **Submit** a pull request with your changes
+1.  **Fork** the repository.
+2.  **Add** your new prompt object directly into the data structure within `index.html`.
+    ```javascript
+    {
+      id: 42, // Next available ID
+      title: "Your Prompt Title",
+      category: "Infographics|Image Generation|Problem Solving",
+      description: "Short description (1–2 sentences for the card)",
+      tags: ["new", "Tag2", "Tag3"],
+      content: `Your full, powerful prompt text here...`
+    }
+    ```
+3.  **Test** the new prompt across different browsers.
+4.  **Submit** a pull request with a descriptive title.
 
-***
+-----
 
 ## 📄 License
 
-Released under the **MIT License** — freely usable for personal or commercial projects.
+This project is licensed under the **MIT License**. You are free to use and modify it for both personal and commercial projects.
 
-***
+-----
 
 ## 💬 Acknowledgments
 
-- Inspired by 2025 AI leaders: **Gemini 3**, **GPT‑5.1**, **Claude Opus 4.5**  
-- UI/UX influenced by modern design systems  
-- Community-driven feedback and contributions  
+  * Inspiration drawn from the capabilities of leading 2025 models: **Gemini 3**, **GPT‑5.1**, and **Claude Opus 4.5**.
+  * Thanks to the community for valuable feedback and contributions.
 
-***
+-----
 
-**Made with ❤️ by [Darshil](https://github.com/darshil0)**  
-Version 3.0.1 · December 2025
-
-***
-[1](https://img.shields.io/badge/version-3.0.1-blue.svg)
-[2](https://img.shields.io/badge/license-MIT-green.svg)
-[3](https://img.shields.io/badge/accessi)
+Made with ❤️ by [Darshil](https://github.com/darshil0) · **v3.0.1**
