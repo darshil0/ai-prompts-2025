@@ -114,7 +114,7 @@ Then visit `http://localhost:8000` in your browser.
 - **Frontend Framework**: React 18 (Production Build)
 - **Styling**: Tailwind CSS 3.x (CDN)
 - **Icons**: Custom SVG components
-- **Fonts**: 
+- **Fonts**:
   - Inter (UI text)
   - JetBrains Mono (code/prompt display)
 - **Build**: Single-file HTML (no build process required)
