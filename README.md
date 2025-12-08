@@ -1,6 +1,6 @@
 # AI Prompt Collection 2025
 
-![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-brightgreen.svg)
 
@@ -8,7 +8,7 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 
 ## ✨ Features
 
-- **40 Premium Prompts**: Carefully crafted prompts for various use cases
+- **41 Premium Prompts**: Carefully crafted prompts for various use cases
 - **Smart Search**: Real-time search by title or tags
 - **Category Filtering**: Filter by Infographic, Image Generation, or Problem Solving
 - **One-Click Copy**: Modern clipboard API with fallback support
@@ -18,7 +18,7 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 
 ## 📚 Prompt Categories
 
-### Image Generation (7 prompts)
+### Image Generation (8 prompts)
 - Paris at Night (Eiffel Tower)
 - Captain Jack Sparrow Portrait
 - Hyper-Realistic Product Visualization
@@ -26,6 +26,7 @@ A curated collection of premium AI prompts for 2025, featuring infographic desig
 - Traditional Dussehra Portrait
 - 90s Bollywood Movie Poster
 - Collectible Figurine Style
+- Hyper-realistic Seasonal Panorama
 
 ### Infographic (5 prompts)
 - Minimalist Timeline Infographic
@@ -150,6 +151,9 @@ This application is built with accessibility as a priority:
 **Note**: The modern Clipboard API is used with automatic fallback for older browsers.
 
 ## 📝 Version History
+
+### Version 3.0.1 (December 7, 2025)
+- Added new "Hyper-realistic Seasonal Panorama" prompt.
 
 ### Version 3.0.0 (December 4, 2025)
 
