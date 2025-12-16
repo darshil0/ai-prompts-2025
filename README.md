@@ -150,7 +150,7 @@ This project adheres to **WCAG 2.1 AA** compliance standards, ensuring maximum a
 
 ## 📝 Version History
 
-### **v3.0.2** — *December 8, 2025*
+### **v3.0.2** — *December 16, 2025*
 
 * Added "Male Educator with Neural Network Diagram" prompt.
 
