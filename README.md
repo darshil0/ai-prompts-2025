@@ -207,4 +207,4 @@ This project is licensed under the **MIT License**. You are free to use and modi
 
 ---
 
-Made with ❤️ by [Darshil](https://github.com/darshil0) · **v3.0.1**
+Made with ❤️ by [Darshil](https://github.com/darshil0) · **v3.0.2**
