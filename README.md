@@ -10,7 +10,7 @@ This collection focuses on high-utility prompts for **image generation, infograp
 
 | Badge | Value |
 |:------|:------|
-| **Version** | v3.0.1 |
+| **Version** | v3.0.2 |
 | **License** | MIT |
 | **Accessibility** | WCAG 2.1 AA Compliant |
 
@@ -31,7 +31,7 @@ This collection focuses on high-utility prompts for **image generation, infograp
 
 A breakdown of the utility categories and a few examples from the collection:
 
-### 🎨 Image Generation (8)
+### 🎨 Image Generation (9)
 
 * **Focus:** Hyper-realistic visuals, stylized portraits, and commercial renders.
 * **Examples:** Eiffel Tower at Night, Jack Sparrow Portrait, Collectible Figurines, Seasonal Panoramas.
@@ -149,6 +149,10 @@ This project adheres to **WCAG 2.1 AA** compliance standards, ensuring maximum a
 ---
 
 ## 📝 Version History
+
+### **v3.0.2** — *December 8, 2025*
+
+* Added "Male Educator with Neural Network Diagram" prompt.
 
 ### **v3.0.1** — *December 7, 2025*
 
