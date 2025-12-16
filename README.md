@@ -18,7 +18,7 @@ This collection focuses on high-utility prompts for **image generation, infograp
 
 ## ✨ Features & Highlights
 
-* **Total Prompts:** 60 Handcrafted Prompts across writing, image, and logic categories.
+* **Total Prompts:** 61 Handcrafted Prompts across writing, image, and logic categories.
 * **Search & Filter:** Instant Search and filters by title, tags, or category for quick discovery.
 * **Copy Integration:** Modern Clipboard API for seamless, one-click copying with robust fallback support.
 * **Responsive Design:** Fully Responsive UI optimized for all devices (desktop, tablet, mobile).
