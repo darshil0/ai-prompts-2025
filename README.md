@@ -10,7 +10,7 @@ This collection focuses on high-utility prompts for **image generation, infograp
 
 | Badge | Value |
 |:------|:------|
-| **Version** | v3.0.2 |
+| **Version** | v3.0.6 |
 | **License** | MIT |
 | **Accessibility** | WCAG 2.1 AA Compliant |
 
@@ -18,7 +18,7 @@ This collection focuses on high-utility prompts for **image generation, infograp
 
 ## ✨ Features & Highlights
 
-* **Total Prompts:** 61 Handcrafted Prompts across writing, image, and logic categories.
+* **Total Prompts:** 69 Handcrafted Prompts across writing, image, and logic categories.
 * **Search & Filter:** Instant Search and filters by title, tags, or category for quick discovery.
 * **Copy Integration:** Modern Clipboard API for seamless, one-click copying with robust fallback support.
 * **Responsive Design:** Fully Responsive UI optimized for all devices (desktop, tablet, mobile).
@@ -149,6 +149,14 @@ This project adheres to **WCAG 2.1 AA** compliance standards, ensuring maximum a
 ---
 
 ## 📝 Version History
+
+### **v3.0.6** — *December 23, 2025*
+
+* Added 2 new prompts, including a poster design and a recipe lineage.
+
+### **v3.0.4** — *December 22, 2025*
+
+* Added 6 new prompts, including OOO holiday messages and a business workflow.
 
 ### **v3.0.2** — *December 16, 2025*
 
