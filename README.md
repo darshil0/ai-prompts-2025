@@ -1,6 +1,6 @@
 # 🤖 AI Prompt Collection 2025
 
-A definitive, open-source library of **premium AI prompts** designed for 2025—optimized for **Gemini 3**, **ChatGPT**, **Claude**, and other advanced generative models.
+A definitive, open-source library of **67 premium AI prompts** designed for 2025—optimized for **Gemini 3**, **ChatGPT**, **Claude**, and other advanced generative models.
 
 This collection focuses on high-utility prompts for **image generation, infographics, video, design, and complex problem-solving**, all built within an accessible and fully responsive interface.
 
@@ -9,206 +9,108 @@ This collection focuses on high-utility prompts for **image generation, infograp
 ## 🛡️ Status
 
 | Badge | Value |
-|:------|:------|
+| --- | --- |
 | **Version** | v3.0.4 |
 | **License** | MIT |
+| **Prompt Count** | 67 Total |
 | **Accessibility** | WCAG 2.1 AA Compliant |
 
 ---
 
 ## ✨ Features & Highlights
 
-* **Total Prompts:** 67 Handcrafted Prompts across writing, image, and logic categories.
-* **Search & Filter:** Instant Search and filters by title, tags, or category for quick discovery.
-* **Copy Integration:** Modern Clipboard API for seamless, one-click copying with robust fallback support.
-* **Responsive Design:** Fully Responsive UI optimized for all devices (desktop, tablet, mobile).
-* **Accessibility:** WCAG 2.1 AA compliant for an inclusive user experience.
-* **SEO:** SEO-Ready Metadata for improved search engine visibility.
+* **Expanded Library:** Now featuring **67 handcrafted prompts** (up from 45) across 9 strategic categories.
+* **Search & Dynamic Filter:** Instant search indexing by title and tags, plus category-based filtering using React state.
+* **One-Click Copy:** Modern Clipboard API integration with custom toast notifications for user feedback.
+* **Responsive Architecture:** Grid-based layout built with Tailwind CSS, optimized for mobile, tablet, and ultra-wide displays.
+* **Best Practices Section:** Includes educational prompts designed to teach users how to communicate effectively with LLMs.
 
 ---
 
 ## 📚 Prompt Categories & Examples
 
-A breakdown of the utility categories and a few examples from the collection:
+The library is organized into specialized buckets to streamline your workflow:
 
-### 🎨 Image Generation (9)
+### 🎨 Visual & Creative
 
-* **Focus:** Hyper-realistic visuals, stylized portraits, and commercial renders.
-* **Examples:** Eiffel Tower at Night, Jack Sparrow Portrait, Collectible Figurines, Seasonal Panoramas.
+* **Image Generation (11):** Hyper-realistic landscapes, consistent comic characters, and search-grounded sports stadium renders.
+* **Video Generation (5):** Cinematic crane shots, shallow depth-of-field settings, and multi-shot jungle sequences.
+* **Image Editing (6):** Manga-style transformations, background replacements, and 3x3 emotion grids.
 
-### 📊 Infographics (5)
+### 📊 Professional & Business
 
-* **Focus:** Structured data visualization and complex topic summarization.
-* **Examples:** Minimalist Timelines, Gemini 3 Prompting Guide, PDF-to-Infographic Summaries.
+* **Infographics (6):** Seed-to-cup coffee lifecycles, minimalist AI timelines, and PDF-to-design summaries.
+* **Marketing & Writing (13):** High-converting SaaS copy, creative holiday OOO messages, and blog post outlines.
+* **Design (8):** UI/UX homepages, 3D text rendering, and architectural floor plan visualizations.
 
-### 🎬 Video Generation (5)
+### 🧠 Logic & Code
 
-* **Focus:** Cinematic camera movements, dynamic transitions, and scene direction.
-* **Examples:** Dynamic Transitions, Crane Shots, Depth-of-Field Settings, Jungle Timestamp Prompting.
-
-### 🖼️ Image Editing (5)
-
-* **Focus:** Post-production effects, background manipulation, and stylistic overlays.
-* **Examples:** Manga-Style Edits, Background Swaps, Polaroid Effects, Grid Layout Photos.
-
-### 💡 Design (5)
-
-* **Focus:** Conceptualizing full design systems, layouts, and rendering specific text effects.
-* **Examples:** Tech Logos, Branding Sets, UX/UI Layouts, Floor Plan Visualizations.
-
-### 🧠 Problem Solving (3)
-
-* **Focus:** Testing and leveraging the model's analytical and reasoning capabilities.
-* **Examples:** Logic Puzzles, Reasoning Tasks, Math Problems (Quadratic Formulas).
-
-### 📣 Marketing & Writing (4)
-
-* **Focus:** Generating high-quality campaign assets and refining existing copy.
-* **Examples:** Campaign Copy, Social Posts, Blog Outlines, Email Polishers.
-
-### 🧰 Best Practices (3)
-
-* **Focus:** Educational prompts demonstrating effective communication with AI models.
-* **Examples:** Be Specific, Use Natural Language, Edit Don't Re-roll.
-
-### ⚙️ Other Fields (3)
-
-* **Coding:** Python Web Scraper
-* **Education:** Concept Explainer
-* **Career:** Resume Bullet Generator
+* **Problem Solving (5):** Logistics supply chain optimization, quadratic algebra breakdowns, and office logic puzzles.
+* **Coding & Tech (8):** React state debugger, Python web scrapers, and unit test generators for Vitest/Jest.
+* **Best Practices (5):** Meta-prompts on specificity, natural language use, and iterative editing.
 
 ---
 
 ## 🚀 Quick Start
 
-You can run this project locally without any complex build steps.
+### Option 1 — Local Launch
 
-### Option 1 — Open Directly
+Simply open `index.html` in any modern web browser.
 
-Navigate to the repository folder and execute the following command:
+### Option 2 — Development Server (Recommended)
 
-```bash
-# Windows
-start index.html
-
-# macOS
-open index.html
-
-# Linux
-xdg-open index.html
-```
-
-### Option 2 — Serve Locally (Recommended)
-
-Run a local HTTP server to prevent potential browser security restrictions:
+To ensure the Clipboard API and external scripts load correctly, serve the file locally:
 
 ```bash
-# Python 3
+# Using Python
 python -m http.server 8000
 
-# Node.js
+# Using Node.js
 npx http-server -p 8000
 
-# PHP
-php -S localhost:8000
 ```
 
-Then, open your web browser and navigate to **http://localhost:8000**.
+Then visit: `http://localhost:8000`
 
 ---
 
 ## 💻 Tech Stack
 
 | Component | Technology | Description |
-|:----------|:-----------|:------------|
-| **Framework** | React 18 | Single-page application architecture. |
-| **Styling** | Tailwind CSS 3.x | Utility-first CSS for fast styling. |
-| **Fonts** | Inter, JetBrains Mono | Accessible UI font and clean monospace font for prompts. |
-| **Build** | Single-file HTML | No bundler required for simple deployment. |
-
----
-
-## 🧩 How to Use the App
-
-1. Use the **Search bar** or **Category Filters** to find a specific prompt.
-2. Click the **Copy Prompt** button next to any item.
-3. The prompt is instantly copied to your clipboard, ready to be pasted into your preferred AI model (**Gemini, ChatGPT, Claude**, etc.).
-4. **(Mobile)** Access the category filters and search via the tap-to-open menu icon.
-
----
-
-## ♿ Accessibility Standard
-
-This project adheres to **WCAG 2.1 AA** compliance standards, ensuring maximum accessibility:
-
-* **Keyboard Navigation:** Full support for Tab, Enter, and Esc key navigation.
-* **ARIA:** Proper use of Semantic HTML and ARIA attributes.
-* **Visuals:** High color contrast ratios and clear focus indicators.
-* **Responsiveness:** Fluid and responsive typography across all screen sizes.
+| --- | --- | --- |
+| **Framework** | React 18 | Declarative UI for high-performance filtering. |
+| **Styling** | Tailwind CSS | Utility-first styling for rapid layout development. |
+| **State** | React Hooks | `useState` and `useMemo` for efficient data handling. |
+| **Fonts** | Inter | Clean, professional typography for maximum readability. |
 
 ---
 
 ## 📝 Version History
 
-### **v3.0.4** — *December 22, 2025*
+### **v3.0.4** — *January 2, 2026*
 
-* Added 6 new prompts, including OOO holiday messages and a business workflow.
+* Expanded library to **67 prompts**.
+* Added **Professional & Creative OOO** message generators.
+* Implemented **Logistics Workflow** and **SaaS Hero Copy** prompts.
+* Improved search performance for larger datasets.
 
-### **v3.0.2** — *December 16, 2025*
+### **v3.0.0** — *December 2025*
 
-* Added "Male Educator with Neural Network Diagram" prompt.
-
-### **v3.0.1** — *December 7, 2025*
-
-* Added "Hyper-realistic Seasonal Panorama" prompt.
-
-### **v3.0.0** — *December 4, 2025*
-
-* Major content update with **18 new prompts** (Design, Writing, Education).
-* New **"Best Practices"** category added to guide users in effective prompting.
-* Refined UX: Replaced old `alert()` pop-ups with modern **toast notifications**.
-* Technical fix: Resolved a React rendering duplication bug.
-
-### **v2.0.0**
-
-* Technical Migration: Switched to modern **Clipboard API**.
-* Build change: Migrated to official React production builds.
-* Improved SEO and comprehensive accessibility integration.
+* Major content overhaul (18 new prompts).
+* Introduced the **Best Practices** category.
+* Switched to **Toast Notifications** to replace browser alerts.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions to grow this library!
+We welcome community additions!
 
-1. **Fork** the repository.
-2. **Add** your new prompt object directly into the data structure within `index.html`.
-   ```javascript
-   {
-     id: 42, // Next available ID
-     title: "Your Prompt Title",
-     category: "Infographics|Image Generation|Problem Solving",
-     description: "Short description (1–2 sentences for the card)",
-     tags: ["new", "Tag2", "Tag3"],
-     content: `Your full, powerful prompt text here...`
-   }
-   ```
-3. **Test** the new prompt across different browsers.
-4. **Submit** a pull request with a descriptive title.
+1. Fork the repo.
+2. Add your prompt to the `promptData` array in `index.html`.
+3. Ensure you include a unique ID (next in sequence), title, category, and relevant tags.
+4. Submit a Pull Request.
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License**. You are free to use and modify it for both personal and commercial projects.
-
----
-
-## 💬 Acknowledgments
-
-* Inspiration drawn from the capabilities of leading 2025 models: **Gemini 3**, **GPT-5.1**, and **Claude Opus 4.5**.
-* Thanks to the community for valuable feedback and contributions.
-
----
-
-Made with ❤️ by [Darshil](https://github.com/darshil0) · **v3.0.2**
+Made with ❤️ by [Darshil](https://github.com/darshil0) · **v3.0.4**
