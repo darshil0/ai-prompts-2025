@@ -1,4 +1,4 @@
-# 🤖 AI Prompt Collection 2026
+# 🤖 AI Prompt Collection 2025
 A definitive, open-source library of **80 premium AI prompts**—fully optimized for the 2026 generative landscape (Gemini 3, GPT-5, Nano Banana Pro).
 
 ---
