@@ -3,754 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A curated collection of premium AI prompts for 2025, featuring infographic designs, image generation, video creation, problem-solving templates, and coding prompts for Gemini, ChatGPT, and other AI models.">
-  <meta name="keywords" content="AI prompts, prompt library, AI prompt collection, infographic prompts, image generation, video generation, Gemini prompts, ChatGPT prompts, 2025, coding prompts, marketing copy">
-  <meta name="author" content="AI Prompts 2025">
-  <meta name="theme-color" content="#2563eb">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Prompt Collection 2025">
-  <meta property="og:description" content="A curated collection of premium AI prompts for infographic designs, image generation, video creation, and problem-solving.">
-  <meta property="og:site_name" content="AI Prompts 2025">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Prompt Collection 2025">
-  <meta name="twitter:description" content="A curated collection of premium AI prompts for infographic designs, image generation, video creation, and problem-solving.">
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E"
-  >
+  <meta name="description" content="A curated collection of 45 premium AI prompts for 2025.">
   <title>AI Prompt Collection 2025</title>
 
-  <!-- React + Babel + Tailwind (keep as in original design) -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-    .line-clamp-2 {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .smooth-scroll {
-      scroll-behavior: smooth;
-    }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .toast-fade { animation: fadeInOut 2s ease-in-out; }
+    @keyframes fadeInOut { 0% { opacity: 0; transform: translate(-50%, 20px); } 15% { opacity: 1; transform: translate(-50%, 0); } 85% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; transform: translate(-50%, -20px); } }
   </style>
 </head>
 
-<body class="bg-gray-50 smooth-scroll">
-  <a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
-
+<body class="bg-gray-50">
   <div id="root"></div>
 
-  <div aria-live="polite" aria-atomic="true" class="sr-only" id="clipboard-status"></div>
-
   <script type="text/babel">
-    const { useState, useEffect } = React;
+    const { useState, useMemo, useEffect } = React;
 
     const promptData = [
-      {
-        id: 1,
-        title: "Minimalist Timeline Infographic",
-        category: "Infographic",
-        description:
-          "Create a minimalist, flat-design horizontal timeline infographic showcasing key AI model releases in November 2025.",
-        tags: ["Design", "Flat", "Timeline", "Data"],
-        content: `Create a minimalist, flat-design horizontal timeline infographic on a clean white background.
-Overall Layout
-A single, thin, dark grey horizontal line spans approximately 80% of the canvas width, centered vertically. This line represents the timeline.
-The timeline line has a small, right-pointing arrow at its far right end.
-All text and icons are strictly black on a white background. No gradients, shadows, or textures.
-Timeline Markers & Dates (from left to right)
-Marker 1 (Far Left):
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 12" (medium-weight sans-serif font, small size).
-Below "Nov 12": "OpenAI" (medium-weight sans-serif font, small size).
-Below "OpenAI": "GPT-51" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
-Marker 2:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 17" (medium-weight sans-serif font, small size).
-Below "Nov 17": "xAI" (medium-weight sans-serif font, small size).
-Below "xAI": "Grok 4.1" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill).
-Marker 3:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 18" (medium-weight sans-serif font, small size).
-Below "Nov 18": "Google" (medium-weight sans-serif font, small size).
-Below "Google": "Gemini 3" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The Google logo (black stylized capital 'G' with a distinct, simple shape, white fill).
-Marker 4:
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 19" (medium-weight sans-serif font, small size).
-Below "Nov 19": "OpenAI" (medium-weight sans-serif font, small size).
-Below "OpenAI": "GPT-5.1-Codex-Max" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The OpenAI logo (abstract, stylized brain/knot symbol, black outline, white fill).
-Marker 5 (Far Right):
-A small vertical tick mark intersects the timeline line.
-Below the line, centered under the tick: "Nov 24" (medium-weight sans-serif font, small size).
-Below "Nov 24": "Anthropic" (medium-weight sans-serif font, small size).
-Below "Anthropic": "Claude Opus 4.5" (medium-weight sans-serif font, small size).
-Below "Claude Opus 4.5": "xAI" (medium-weight sans-serif font, small size).
-Below "xAI": "Grok 4.1 Thinking" (medium-weight sans-serif font, small size).
-Above the timeline line, centered above the tick: The Anthropic logo (stylized black 'A' with a unique internal stroke, white fill), immediately followed by the xAI logo (stylized black 'X' with a black diagonal line, contained within a black square, white fill), positioned side-by-side with a small gap between them.`
-      },
-      {
-        id: 2,
-        title: "AI Progress November 2025 Watercolor Infographic",
-        category: "Infographic",
-        description:
-          "A watercolor-ink infographic summarizing major AI model releases in November 2025, using a structured grid layout.",
-        tags: ["Watercolor", "Design", "Grid", "Frontier Models"],
-        content: `Title: AI's Progress in November 2025: A Frontier Model Infographic
-Overall Aesthetic (Foundation)
-Create a premium, wide-format infographic (16:9 aspect ratio), meticulously rendered in a dreamy, delicate watercolor-ink illustration style. Emphasize clean, crisp line art with fine, consistent navy-blue outlines for all elements. The color palette must be soft, muted pastels with clear delineation, ensuring high readability against an off-white, subtly textured watercolor paper background.
-Layout Structure
-Organize the infographic into a clean 3x2 grid layout with six distinct sections, each representing a major AI model release in November 2025. Each section should contain the company logo, model name, release date, and a brief description of key features or capabilities.
-Typography & Text Hierarchy
-Title at top center in elegant serif font
-Subtitle below in lighter weight
-Section headers in bold sans-serif
-Body text in clean, legible sans-serif at appropriate sizes
-Color Palette
-Soft blues, purples, and teals for backgrounds
-Navy blue for outlines and text
-Subtle pink/coral accents for highlights
-Cream/off-white base`
-      },
-      {
-        id: 3,
-        title: "Gemini 3 Prompting Guide Infographic",
-        category: "Infographic",
-        description:
-          "A professional guide to advanced Gemini 3 prompting techniques focusing on clarity, structure, and context management.",
-        tags: ["Prompting", "Guide", "Structure", "Multimodal"],
-        content: `Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning & Instruction Following, Direct, Well-Structured Prompts for Optimal Results'.
-Overall Aesthetic
-Style: Soft pastel theme with subtle, smooth light gradients used within background elements.
-Color Palette: Predominantly soft blues, teals, purples, and light grays.
-Visual Tone: Polished, instructional, and professional guide aesthetic.
-Main Sections (Vertical Flow)
-1. Introduction Section
- - Brief overview of Gemini 3 capabilities
- - Key principle: Clear, direct prompts yield best results
-2. Core Principles (3 columns)
- - Be Specific: Define exactly what you want
- - Provide Context: Give relevant background information
- - Structure Clearly: Use organized formatting
-3. Advanced Techniques
- - Chain of thought prompting
- - Few-shot examples
- - Role assignment
- - Output format specification
-4. Multimodal Best Practices
- - Image + text combinations
- - Document analysis tips
- - Video understanding approaches
-5. Common Pitfalls to Avoid
- - Vague instructions
- - Conflicting requirements
- - Missing context
-Footer: Version info and date`
-      },
-      {
-        id: 4,
-        title: "Paris at Night",
-        category: "Image Generation",
-        description: "A photorealistic image of the Eiffel Tower's coordinates at night.",
-        tags: ["Photography", "Landmark", "Eiffel Tower", "Night"],
-        content: `Create an image of 48.8584° N, 2.2945° E at night.`
-      },
-      {
-        id: 5,
-        title: "PDF-to-Infographic Summary",
-        category: "Infographic",
-        description:
-          "A prompt for summarizing a PDF document's key findings into a professional, flat-vector infographic.",
-        tags: ["Data", "Summary", "Corporate", "Visualization"],
-        content: `System Instruction/Context
-You have been provided with a multi-page PDF document. Your task is to act as a professional Data Visualization Specialist. Analyze the core content, extract the most critical data points, and visually compress the information into a single, high-resolution infographic.
-Visual Style & Theme
-Title: Summarize the main topic of the PDF in a clear, concise title.
-Aesthetic: Clean, modern flat vector design with a muted corporate blue and teal color palette.
-Layout: Vertical (9:16 aspect ratio). Use a structured three-section column layout.`
-      },
-      {
-        id: 6,
-        title: "Garden Pathway Problem",
-        category: "Problem Solving",
-        description:
-          "A complex geometric word problem requiring the calculation of a pathway's uniform width using the quadratic formula.",
-        tags: ["Math", "Geometry", "Quadratic", "Word Problem"],
-        content: `Solve the following geometric word problem:
-Problem Description
-A rectangular garden has dimensions of 10 meters by 6 meters. A pathway of uniform width (W) surrounds the entire garden. The total area of the garden and the pathway combined is exactly twice the area of the garden alone.
-Task
-Calculate the Area of the Garden in square meters.
-Determine the dimensions of the Total Area in terms of W.
-Set up the equation for the total area.
-Solve the resulting quadratic equation for W.`
-      },
-      {
-        id: 7,
-        title: "Captain Jack Sparrow Portrait",
-        category: "Image Generation",
-        description:
-          "A hyper-realistic cinematic portrait prompt of Johnny Depp as Captain Jack Sparrow at sunset.",
-        tags: ["Portrait", "Cinematic", "Photorealistic", "Fantasy"],
-        content: `Create a hyper-realistic, photorealistic cinematic portrait of Johnny Depp as Captain Jack Sparrow.
-Subject
-Appearance: He is depicted in his iconic full pirate attire with distressed coat, ruffled shirt, red bandana, and weathered tricorn hat.
-Hair: Intricate dreadlocks adorned with beads, coins, and fabric scraps.
-Expression: Signature goatee and mustache with a mischievous smirk.
-Setting
-Location: On the weathered wooden deck of a large sailing pirate ship.
-Background: Open ocean at sunset with dramatic warm glow and dynamic waves.
-Lighting & Mood
-Dramatic golden hour lighting from the sunset.
-Strong backlighting creating rim light effects.
-Adventurous, legendary, and iconic atmosphere.`
-      },
-      {
-        id: 8,
-        title: "Hyper-Realistic Product Visualization",
-        category: "Image Generation",
-        description:
-          "A highly detailed product visualization prompt for an ergonomic computer mouse on a stylized office desk setup.",
-        tags: ["Product", "3D Render", "Photorealistic", "Tech"],
-        content: `Subject & Concept
-A high-resolution, photorealistic image of a sleek, ergonomic computer mouse. Dark charcoal gray with smooth matte finish, bright cyan blue LED glowing from scroll wheel.
-Presentation & Composition
-The mouse is presented on a small, torn piece of off-white sketch paper with faint technical lines and "RECHARGEABLE USB-C" text.
-Environment & Lighting
-Executive office desk setup during late afternoon. Large window overlooking cityscape. Cinematic and dramatic lighting.
-Style & Technical Details
-Extreme hyperrealism, product photography style. 8K resolution. Physically based rendering accuracy.`
-      },
-      {
-        id: 9,
-        title: "Creative Photo Transformations",
-        category: "Image Generation",
-        description:
-          "A collection of creative transformation prompts for altering existing photos into various artistic styles.",
-        tags: ["Transformation", "Art Style", "Portrait", "Retro"],
-        content: `9.1 Packaging Transformation
-Transform the image into a 90s style Indian toffee packaging design. Vivid colors featuring vibrant oranges, yellows, and reds with nostalgic fonts.
-9.2 Retro Bollywood
-A hyper-realistic photograph with warm, grainy tones and retro cinematic vibe of 1970s film. Stylish female on vintage car hood wearing polka dot shirt and bell-bottoms.
-9.3 Classroom Portrait
-Cinematic portrait in vintage classroom with soft golden-yellow lighting forming diagonal lines. Subject sits relaxed with feet on desk.
-9.4 Re-light
-Relight this photo in moody club lighting using soft pink, purple, and blue neon tones from opposite sides.
-9.5 Royalty
-Recreate couple photo as Indian royalty in grand palace corridor with dramatic warm lighting and ornate details.
-9.6 Underwater Portrait
-Hyper-realistic close-up with half of face submerged in water, light rays creating caustic patterns, surreal and dreamlike atmosphere.`
-      },
-      {
-        id: 10,
-        title: "Product Photography: Gold Necklace",
-        category: "Image Editing",
-        description: "Show a gold necklace on a sandy beach with gentle morning light.",
-        tags: ["Product Photography", "Jewelry", "Beach"],
-        content:
-          "Show this gold necklace on a sandy beach with gentle morning light and soft shadows, seashells scattered nearby."
-      },
-      {
-        id: 11,
-        title: "Manga Style: Messi vs Ronaldo",
-        category: "Image Editing",
-        description:
-          "Create a manga of these characters and show the stand off between Messi and Ronaldo.",
-        tags: ["Manga", "Anime", "Sports"],
-        content:
-          "Create a manga of these characters and show the stand off between Messi and Ronaldo."
-      },
-      {
-        id: 12,
-        title: "Photo Editing: Background Replacement",
-        category: "Image Editing",
-        description:
-          "Replace the background of this subject with a realistic urban sunset skyline.",
-        tags: ["Photo Editing", "Background Removal", "Sunset"],
-        content:
-          "Replace the background of this subject with a realistic urban sunset skyline, maintaining proper shadows and ambient light interaction with the subject."
-      },
-      {
-        id: 13,
-        title: "Logic Puzzle: Office Arrangement",
-        category: "Problem Solving",
-        description:
-          "An image of an office where 10 different people are neatly arranged, each holding a unique object whose name starts with the letter 'A'.",
-        tags: ["Logic", "Puzzle", "Office"],
-        content:
-          "An image of an office where 10 different people are neatly arranged (2 in the front row, 3 in the middle row, 5 in the back row), each holding a unique object whose name starts with the letter 'A'."
-      },
-      {
-        id: 14,
-        title: "Math Reasoning: Quadratic Formula",
-        category: "Problem Solving",
-        description:
-          "A symbolic algebra breakdown solving an equation using the quadratic formula.",
-        tags: ["Math", "Algebra", "Education"],
-        content:
-          "A symbolic algebra breakdown solving the equation 3x² − 5x + 2 = 0 using the quadratic formula, each transformation written cleanly in sequential steps."
-      },
-      {
-        id: 15,
-        title: "Crane Shot: Hiker on a Canyon",
-        category: "Video Generation",
-        description:
-          "Crane shot starting low on a lone hiker and ascending high above, revealing they are standing on the edge of a colossal, mist-filled canyon at sunrise.",
-        tags: ["Cinematography", "Nature", "Drone Shot"],
-        content:
-          "Crane shot starting low on a lone hiker and ascending high above, revealing they are standing on the edge of a colossal, mist-filled canyon at sunrise, epic fantasy style, awe-inspiring, soft morning light."
-      },
-      {
-        id: 16,
-        title: "Shallow Depth of Field: Woman on a Bus",
-        category: "Video Generation",
-        description:
-          "Close-up with very shallow depth of field, a young woman's face, looking out a bus window at the passing city lights.",
-        tags: ["Cinematography", "Portrait", "City"],
-        content:
-          "Close-up with very shallow depth of field, a young woman's face, looking out a bus window at the passing city lights with her reflection faintly visible on the glass, inside a bus at night during a rainstorm, melancholic mood with cool blue tones, moody, cinematic."
-      },
-      {
-        id: 17,
-        title: "Dynamic Transition: Pop Star Performance",
-        category: "Video Generation",
-        description: "The camera performs a smooth 180-degree arc shot around a singer on stage.",
-        tags: ["Cinematography", "Music", "Concert"],
-        content:
-          "The camera performs a smooth 180-degree arc shot, starting with the front-facing view of the singer and circling around her to seamlessly end on the POV shot from behind her on stage. The singer sings 'when you look me in the eyes, I can see a million stars.'"
-      },
-      {
-        id: 18,
-        title: "Dialogue Scene: Detective Office",
-        category: "Video Generation",
-        description:
-          "Create a medium shot of the detective behind his desk in a film noir style.",
-        tags: ["Cinematography", "Dialogue", "Film Noir"],
-        content:
-          "Using the provided images for the detective, the woman, and the office setting, create a medium shot of the detective behind his desk. He looks up at the woman and says in a weary voice, 'Of all the offices in this town, you had to walk into mine.'"
-      },
-      {
-        id: 19,
-        title: "Timestamp Prompting: Jungle Exploration",
-        category: "Video Generation",
-        description:
-          "A multi-shot sequence with precise cinematic pacing, all within a single generation.",
-        tags: ["Cinematography", "Adventure", "Jungle"],
-        content: `[00:00-00:02] Medium shot from behind a young female explorer with a leather satchel and messy brown hair in a ponytail, as she pushes aside a large jungle vine to reveal a hidden path.
-[00:02-00:04] Reverse shot of the explorer's freckled face, her expression filled with awe as she gazes upon ancient, moss-covered ruins in the background. SFX: The rustle of dense leaves, distant exotic bird calls.
-[00:04-00:06] Tracking shot following the explorer as she steps into the clearing and runs her hand over the intricate carvings on a crumbling stone wall. Emotion: Wonder and reverence.
-[00:06-00:08] Wide, high-angle crane shot, revealing the lone explorer standing small in the center of the vast, forgotten temple complex, half-swallowed by the jungle. SFX: A swelling, gentle orchestral score begins to play.`
-      },
-      {
-        id: 20,
-        title: "Modern Tech Logo Design",
-        category: "Design",
-        description:
-          "Generate a minimalist logo for a new tech startup named 'InnovateAI'.",
-        tags: ["Logo", "Minimalist", "Tech", "Branding"],
-        content: `Design a modern, minimalist logo for a tech startup called 'InnovateAI'. The logo should be clean, memorable, and convey innovation and intelligence. Please provide the logo in SVG format.`
-      },
-      {
-        id: 21,
-        title: "Python Web Scraper",
-        category: "Coding",
-        description: "Write a Python script to scrape headlines from a news website.",
-        tags: ["Python", "Web Scraping", "Automation", "Data Extraction"],
-        content: `Write a Python script that uses the BeautifulSoup and requests libraries to scrape the main headlines from the homepage of 'https://news.example.com'. The script should print each headline to the console.`
-      },
-      {
-        id: 22,
-        title: "Marketing Campaign Copy",
-        category: "Marketing",
-        description: "Create compelling marketing copy for a new productivity app.",
-        tags: ["Copywriting", "Marketing", "Advertising", "Productivity"],
-        content: `Write three versions of marketing copy for a new productivity app that helps users manage their tasks and goals. The tone should be inspiring and highlight the app's key benefits, such as improved focus and organization.`
-      },
-      {
-        id: 23,
-        title: "Traditional Dussehra Portrait",
-        category: "Image Generation",
-        description:
-          "Transform a photo into a vibrant Dussehra celebration scene with traditional Indian festive attire.",
-        tags: ["Dussehra", "Festival", "Indian Culture", "Portrait"],
-        content: `Transform this photo into a vibrant Dussehra celebration scene. Place me in traditional Indian festive attire with marigold decorations in the background. Add warm golden lighting, diyas, and festive rangoli patterns. Create a cinematic look with rich oranges, reds, and golds.`
-      },
-      {
-        id: 24,
-        title: "90s Bollywood Movie Poster",
-        category: "Image Generation",
-        description:
-          "Recreate a photo in the style of a 1990s Bollywood movie poster with dramatic lighting and vintage aesthetics.",
-        tags: ["Bollywood", "Retro", "90s", "Movie Poster"],
-        content: `Transform me into a 1990s Bollywood movie heroine. Dress me in an elegant traditional silk saree with classic jewelry. Add dramatic Bollywood-style lighting with soft focus and film grain. The background should have vintage movie poster aesthetics with warm, saturated colors. Hair and makeup should reflect 90s Indian cinema glamor.`
-      },
-      {
-        id: 25,
-        title: "Collectible Figurine Style",
-        category: "Image Generation",
-        description:
-          "Turn a person into a 3D collectible figurine with a modern toy aesthetic.",
-        tags: ["3D", "Figurine", "Toy", "Character Design"],
-        content: `Transform me into a 3D collectible figurine with an oversized head, simplified facial features, and a cute, stylized look. Keep my outfit and overall appearance recognizable but adapted to a modern toy aesthetic. Background: Display shelf or collectible box packaging.`
-      },
-      {
-        id: 26,
-        title: "Polaroid Photo Booth",
-        category: "Image Editing",
-        description:
-          "Create a retro Polaroid-style photo booth strip with a nostalgic, candid feel.",
-        tags: ["Polaroid", "Vintage", "Photo Booth", "Retro"],
-        content: `Create a retro Polaroid-style photo booth strip featuring [me/a couple]. Face(s) should remain exactly as they appear in the original image. Use the iconic white Polaroid-style frame, soft flash lighting, and slightly faded tones for a nostalgic effect. The background should be simple, like a curtain or plain wall, to mimic classic photo booth vibes. Capture playful, candid poses across multiple frames.`
-      },
-      {
-        id: 27,
-        title: "Social Media Caption Generator",
-        category: "Marketing",
-        description:
-          "Generate engaging Instagram captions with relevant emojis and trending hashtags.",
-        tags: ["Social Media", "Instagram", "Copywriting", "Marketing"],
-        content: `Write 5 engaging Instagram captions for [describe your photo/content]. Make them relatable, include relevant emojis, and suggest 10 trending hashtags for maximum reach. Tone: [casual/professional/witty/inspirational].`
-      },
-      {
-        id: 28,
-        title: "Blog Post Outline",
-        category: "Writing",
-        description:
-          "Create a detailed blog post outline with an introduction, main sections, and a call-to-action.",
-        tags: ["Writing", "Content Creation", "Blogging", "Outline"],
-        content: `Create a detailed blog post outline for [topic]. Include an attention-grabbing introduction, 5–7 main sections with subheadings, key points to cover in each section, and a conclusion with a call-to-action. Target audience: [describe your audience].`
-      },
-      {
-        id: 29,
-        title: "Concept Explainer",
-        category: "Education",
-        description:
-          "Explain a complex topic in simple terms with analogies and real-world examples.",
-        tags: ["Education", "Learning", "Explainer", "Simplification"],
-        content: `Explain [complex topic] as if I'm a beginner. Use simple terms, everyday analogies, and real-world examples. Avoid jargon. Provide 3 key takeaways to remember.`
-      },
-      {
-        id: 30,
-        title: "Email Polisher",
-        category: "Writing",
-        description:
-          "Rewrite an email to be more professional, friendly, concise, or persuasive.",
-        tags: ["Email", "Writing", "Professional Communication", "Editing"],
-        content: `Rewrite this email to be more [professional/friendly/concise/persuasive]: [paste draft]. Preserve the message while improving clarity, tone, and structure. Suggest a suitable subject line.`
-      },
-      {
-        id: 31,
-        title: "Resume Bullet Point Generator",
-        category: "Career",
-        description:
-          "Turn responsibilities and achievements into strong resume bullet points.",
-        tags: ["Resume", "Career", "Job Search", "Writing"],
-        content: `Turn this [responsibility, task, or achievement] into 3 strong resume bullet points. Use action verbs, quantify results where possible, and highlight impact. Format for [industry/role type].`
-      },
-      {
-        id: 32,
-        title: "3x3 Grid Photo",
-        category: "Image Editing",
-        description:
-          "Generate a 3x3 grid of portraits showcasing different emotions, angles, or styles.",
-        tags: ["Grid", "Portrait", "Photography", "Social Media"],
-        content: `Generate a 3x3 grid of portraits of the subject, showcasing [e.g., different emotions, camera angles, fashion styles, or subtle makeup changes] in every frame. Each picture should have a distinct backdrop with vivid colors and textures, creating a visually engaging and cohesive narrative while preserving the subject's likeness in high-resolution detail.`
-      },
-      {
-        id: 33,
-        title: "Full Branding Set Creation",
-        category: "Design",
-        description:
-          "Create a complete brand identity kit for a modern tech startup.",
-        tags: ["Branding", "Logo", "Design", "Marketing"],
-        content: `Create a complete brand identity kit for a modern tech startup named "NovaEdge Systems," including logo variations, color palette, typography system, icon set, pattern language, and layout rules. The style should be clean, futuristic, minimal, and consistent across all assets.`
-      },
-      {
-        id: 34,
-        title: "UI/UX Homepage Design",
-        category: "Design",
-        description:
-          "Design a clean, modern homepage for a tech-focused blog website.",
-        tags: ["UI", "UX", "Web Design", "Homepage"],
-        content: `Design a clean, modern homepage for a tech-focused blog website. Use a minimalist layout with a full-width hero section at the top, including the brand logo in the top-left, a navigation bar with "Home, Categories, About, Contact," and a central headline with a subheadline. Use sans-serif typography (Inter / Satoshi). Include three featured article cards with thumbnails, titles, category tags, and short summaries. Add a prominent CTA button labeled "Read Latest Insights" below the hero text. Footer should contain social icons, newsletter signup field, and minimal copyright text. Maintain generous white space and soft shadows for a premium editorial feel.`
-      },
-      {
-        id: 35,
-        title: "Modern Timeline Infographic",
-        category: "Infographic",
-        description:
-          "Create a clean, modern vertical timeline infographic illustrating the major milestones of AI evolution.",
-        tags: ["Infographic", "Timeline", "Data Visualization", "AI"],
-        content: `Create a clean, modern vertical timeline infographic illustrating the major milestones of AI evolution from 2010 to 2025. Use a white background, thin grey dividers, and circular markers for each year. Include minimal icons, short text blocks, and smooth gradient accents in blue. Ensure the layout is symmetrical, evenly spaced, and visually balanced, with a bold header at the top reading "Evolution of AI: 2010–2025."`
-      },
-      {
-        id: 36,
-        title: "Floor Plan to Interior Visualization",
-        category: "Design",
-        description: "Create a realistic image of a floor plan.",
-        tags: ["Interior Design", "Architecture", "3D", "Visualization"],
-        content: `Make a realistic image of this floor plan.`
-      },
-      {
-        id: 37,
-        title: "Text Rendering: IMAGINE",
-        category: "Design",
-        description:
-          "Render the word \"IMAGINE\" in 3D block letters with metallic gold texture.",
-        tags: ["Text", "3D", "Typography", "Design"],
-        content: `Render the word "IMAGINE" in 3D block letters with metallic gold texture, soft shadow, and high-resolution, centered on a clean white background.`
-      },
-      {
-        id: 38,
-        title: "Best Practices: Be Specific",
-        category: "Best Practices",
-        description:
-          "Vague prompts yield generic results. Define the subject, the setting, the lighting, and other key details.",
-        tags: ["Prompting", "Best Practices", "Clarity"],
-        content: `Instead of "Cool car, neon, city, night, 8k," try "A cinematic wide shot of a futuristic sports car speeding through a rainy Tokyo street at night. The neon signs reflect off the wet pavement and the car's metallic chassis."`
-      },
-      {
-        id: 39,
-        title: "Best Practices: Use Natural Language",
-        category: "Best Practices",
-        description:
-          "Talk to the model as if you were briefing a human artist. Use proper grammar and descriptive adjectives.",
-        tags: ["Prompting", "Best Practices", "Natural Language"],
-        content: `Use full sentences and descriptive language. The model understands intent, physics, and composition, so treat it like a creative director, not a search engine.`
-      },
-      {
-        id: 40,
-        title: "Best Practices: Edit, Don't Re-roll",
-        category: "Best Practices",
-        description:
-          "If an image is 80% correct, do not generate a new one from scratch. Instead, simply ask for the specific change you need.",
-        tags: ["Prompting", "Best Practices", "Iteration"],
-        content: `The model is exceptionally good at understanding conversational edits. For example: "That's great, but change the lighting to sunset and make the text neon blue."`
-      },
-      {
-        id: 41,
-        title: "Lifecycle of a Coffee Bean Infographic",
-        category: "Infographic",
-        description:
-          "A soft pastel illustration of the lifecycle of a coffee bean, from seed to cup.",
-        tags: ["Infographic", "Illustration", "Coffee", "Pastel"],
-        content: `Lifecycle of a Coffee Bean infographic, soft pastel illustration, beige background. Centered title: "LIFECYCLE OF A COFFEE BEAN" and subtitle: "From Seed to Cup: A Journey of Five Factual Steps." Five circular panels in a horizontal sequence with subtle arrows connecting them.`
-      },
-      {
-        id: 42,
-        title: "Cricket Stadium with Live Scores",
-        category: "Image Generation",
-        description:
-          "Search grounding, 4K detail rendering, real-time data integration.",
-        tags: ["Search Grounding", "4K", "Real-Time Data"],
-        content: `Research yesterday's score from the England vs Australia Test Match, then create a 45° top-down photorealistic isometric miniature cricket stadium diorama, use soft, refined textures with realistic PBR materials and gentle, lifelike lighting and shadows. Floating, rounded beige scoreboard centred above the stadium that reads "End of Day 1" and includes yesterday's score—grounded with fundamental research. Circular two-tiered stands, multicoloured dot crowd, white scalloped roof. Felt field, central pitch, tiny low-poly white players. Four floodlights on the side of the black scoreboard (placeholder rectangle shape), and a sight screen. Seamless cream background, soft warm lighting, gentle bottom-right shadows. 1:1 aspect ratio.`
-      },
-      {
-        id: 43,
-        title: "Video Game Character Stats",
-        category: "Image Generation",
-        description:
-          "Fetching accurate real-world data and visualizing it.",
-        tags: ["Data Visualization", "Gaming", "Infographic"],
-        content: `Create an infographic showing the stats and abilities of [Character Name] from [Game Title]. Use search to find their accurate health points, attack power, defense rating, and special abilities. Display this in a trading card style with a 2:3 aspect ratio.`
-      },
-      {
-        id: 44,
-        title: "Visualizing Recipes with Search Grounding",
-        category: "Image Generation",
-        description: "Grounding text descriptions in visual reality.",
-        tags: ["Search Grounding", "Recipe", "Visualization"],
-        content: `Create an infographic that shows how to make elaichi chai`
-      },
-      {
-        id: 45,
-        title: "Multi-Page Comic Book Structure",
-        category: "Image Generation",
-        description:
-          "Character persistence, art style consistency, sequential storytelling.",
-        tags: ["Comic Book", "Storytelling", "Character Design"],
-        content: `Initial Structure Prompt:
-I want you to create the structure for a 5-page comic book with 1 cover page. I want them to be all original characters. Super-hero Genre. 1970s style`
-      }
+      // 1-39 (Standard Set)
+      { id: 1, title: "Minimalist Timeline Infographic", category: "Infographic", description: "Flat-design horizontal timeline for AI releases.", tags: ["Design", "Timeline"], content: "Create a minimalist, flat-design horizontal timeline infographic on a clean white background..." },
+      { id: 2, title: "AI Progress Watercolor", category: "Infographic", description: "Watercolor-ink grid summary of AI models.", tags: ["Watercolor", "Grid"], content: "Create a premium, wide-format infographic in a dreamy, delicate watercolor-ink style..." },
+      { id: 3, title: "Gemini 3 Prompting Guide", category: "Infographic", description: "Advanced reasoning and structure guide.", tags: ["Prompting", "Guide"], content: "Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning'..." },
+      { id: 4, title: "Paris at Night", category: "Image Generation", description: "Eiffel Tower coordinates at night.", tags: ["Photography", "Night"], content: "Create an image of 48.8584° N, 2.2945° E at night." },
+      { id: 5, title: "PDF-to-Infographic Summary", category: "Infographic", description: "Summarize PDFs into flat-vector designs.", tags: ["Data", "Summary"], content: "Act as a professional Data Visualization Specialist. Analyze the PDF content..." },
+      { id: 6, title: "Garden Pathway Problem", category: "Problem Solving", description: "Geometric quadratic equation word problem.", tags: ["Math", "Geometry"], content: "Solve the following: A rectangular garden has dimensions of 10m by 6m..." },
+      { id: 7, title: "Captain Jack Sparrow", category: "Image Generation", description: "Hyper-realistic cinematic portrait.", tags: ["Portrait", "Cinematic"], content: "Create a hyper-realistic, photorealistic cinematic portrait of Johnny Depp as Captain Jack Sparrow..." },
+      { id: 8, title: "Product Visualization", category: "Image Generation", description: "Ergonomic mouse 3D render.", tags: ["Product", "Tech"], content: "A high-resolution, photorealistic image of a sleek, ergonomic computer mouse..." },
+      { id: 9, title: "Creative Photo Transformations", category: "Image Generation", description: "Collection of artistic style shifts.", tags: ["Style", "Retro"], content: "Transform the image into 90s style packaging, Retro Bollywood, and Royalty..." },
+      { id: 10, title: "Gold Necklace", category: "Image Editing", description: "Jewelry on a sandy beach.", tags: ["Product", "Beach"], content: "Show this gold necklace on a sandy beach with gentle morning light." },
+      { id: 11, title: "Manga: Messi vs Ronaldo", category: "Image Editing", description: "Sports rivalry in anime style.", tags: ["Manga", "Sports"], content: "Create a manga of these characters and show the standoff between Messi and Ronaldo." },
+      { id: 12, title: "Background Replacement", category: "Image Editing", description: "Urban sunset skyline swap.", tags: ["Editing", "Sunset"], content: "Replace the background of this subject with a realistic urban sunset skyline." },
+      { id: 13, title: "Logic: Office Arrangement", category: "Problem Solving", description: "Object-based logic puzzle.", tags: ["Logic", "Puzzle"], content: "An image of an office where 10 people hold objects starting with 'A'..." },
+      { id: 14, title: "Math: Quadratic Formula", category: "Problem Solving", description: "Symbolic algebra breakdown.", tags: ["Math", "Algebra"], content: "A symbolic algebra breakdown solving 3x² − 5x + 2 = 0 using the quadratic formula." },
+      { id: 15, title: "Crane Shot: Hiker", category: "Video Generation", description: "Cinematic drone ascent over canyon.", tags: ["Video", "Nature"], content: "Crane shot starting low on a lone hiker and ascending high above a mist-filled canyon." },
+      { id: 16, title: "Shallow Depth: Bus", category: "Video Generation", description: "Portrait of woman on a bus at night.", tags: ["Video", "Moody"], content: "Close-up with shallow depth of field, a young woman's face looking out a bus window." },
+      { id: 17, title: "Dynamic Transition", category: "Video Generation", description: "180-degree arc shot of a singer.", tags: ["Video", "Music"], content: "The camera performs a smooth 180-degree arc shot around a singer on stage." },
+      { id: 18, title: "Dialogue Scene", category: "Video Generation", description: "Film noir detective office scene.", tags: ["Video", "Noir"], content: "Medium shot of the detective behind his desk. He says, 'Of all the offices...'" },
+      { id: 19, title: "Timestamp Prompting", category: "Video Generation", description: "Multi-shot jungle sequence.", tags: ["Video", "Adventure"], content: "[00:00-00:02] Explorer pushes vines... [00:04-00:06] Tracking shot of ruins..." },
+      { id: 20, title: "Modern Tech Logo", category: "Design", description: "Minimalist 'InnovateAI' logo.", tags: ["Logo", "Minimalist"], content: "Design a modern, minimalist logo for a tech startup called 'InnovateAI' in SVG." },
+      { id: 21, title: "Python Web Scraper", category: "Coding", description: "Scrape headlines with BeautifulSoup.", tags: ["Python", "Automation"], content: "Write a Python script using BeautifulSoup to scrape main headlines from a URL." },
+      { id: 22, title: "Marketing Copy", category: "Marketing", description: "Productivity app advertising copy.", tags: ["Copy", "Marketing"], content: "Write three versions of marketing copy for a new productivity app." },
+      { id: 23, title: "Dussehra Portrait", category: "Image Generation", description: "Indian festival celebration scene.", tags: ["Festival", "Culture"], content: "Transform this photo into a vibrant Dussehra celebration with marigold decorations." },
+      { id: 24, title: "90s Bollywood Poster", category: "Image Generation", description: "Vintage movie poster aesthetic.", tags: ["Retro", "Bollywood"], content: "Transform me into a 1990s Bollywood heroine with dramatic lighting and silk saree." },
+      { id: 25, title: "Collectible Figurine", category: "Image Generation", description: "3D toy style character design.", tags: ["3D", "Toy"], content: "Transform me into a 3D collectible figurine with an oversized head and stylized look." },
+      { id: 26, title: "Polaroid Photo Booth", category: "Image Editing", description: "Retro strip with candid poses.", tags: ["Polaroid", "Vintage"], content: "Create a retro Polaroid-style photo booth strip featuring [me/couple]." },
+      { id: 27, title: "Social Media Caption", category: "Marketing", description: "Instagram captions with hashtags.", tags: ["Social", "Marketing"], content: "Write 5 engaging Instagram captions with emojis and 10 trending hashtags." },
+      { id: 28, title: "Blog Post Outline", category: "Writing", description: "Structured content creation template.", tags: ["Writing", "Blog"], content: "Create a detailed blog post outline for [topic] including H1, H2, and CTA." },
+      { id: 29, title: "Concept Explainer", category: "Education", description: "Simplifying complex topics with analogies.", tags: ["Education", "Learning"], content: "Explain [complex topic] as if I'm a beginner using everyday analogies." },
+      { id: 30, title: "Email Polisher", category: "Writing", description: "Professional communication editing.", tags: ["Email", "Writing"], content: "Rewrite this email to be more professional while preserving the message." },
+      { id: 31, title: "Resume Bullet Points", category: "Career", description: "Quantified achievement generator.", tags: ["Career", "Resume"], content: "Turn this task into 3 strong resume bullet points using action verbs." },
+      { id: 32, title: "3x3 Grid Photo", category: "Image Editing", description: "Portraits showing different emotions.", tags: ["Grid", "Portrait"], content: "Generate a 3x3 grid of portraits showcasing different emotions in every frame." },
+      { id: 33, title: "Full Branding Set", category: "Design", description: "Tech startup identity kit.", tags: ["Branding", "Design"], content: "Create a complete brand identity kit for 'NovaEdge Systems' including palette and logo." },
+      { id: 34, title: "UI/UX Homepage", category: "Design", description: "Minimalist tech blog layout.", tags: ["UI", "UX"], content: "Design a clean, modern homepage for a tech-focused blog using Inter typography." },
+      { id: 35, title: "Modern AI Timeline", category: "Infographic", description: "AI evolution milestones 2010-2025.", tags: ["Infographic", "AI"], content: "Create a clean, modern vertical timeline illustrating AI evolution milestones." },
+      { id: 36, title: "Floor Plan Visualization", category: "Design", description: "Realistic 3D interior from 2D plan.", tags: ["Architecture", "3D"], content: "Make a realistic image of this floor plan." },
+      { id: 37, title: "3D Text Rendering", category: "Design", description: "Metallic gold 'IMAGINE' text.", tags: ["Text", "Typography"], content: "Render the word 'IMAGINE' in 3D block letters with metallic gold texture." },
+      { id: 38, title: "Best Practices: Be Specific", category: "Best Practices", description: "Move from vague to detailed prompts.", tags: ["Prompting", "Basics"], content: "Instead of 'Cool car,' try 'Cinematic wide shot of a futuristic sports car in Tokyo...'" },
+      { id: 39, title: "Best Practices: Natural Language", category: "Best Practices", description: "Talk to the model like a human.", tags: ["Prompting", "Advice"], content: "Use full sentences. The model understands intent, physics, and composition." },
+
+      // FIXED & ADDED (40-45)
+      { id: 40, title: "Best Practices: Edit, Don't Re-roll", category: "Best Practices", description: "Iterative editing vs fresh generation.", tags: ["Prompting", "Iteration"], content: "The image is 80% correct. Instead of a new prompt, ask: 'Change the shirt to forest green.'" },
+      { id: 41, title: "Lifecycle of a Coffee Bean", category: "Infographic", description: "Seed-to-cup pastel illustration.", tags: ["Infographic", "Illustration"], content: "Create a vertical infographic showing 6 stages of coffee from planting to brewing." },
+      { id: 42, title: "Cricket Stadium Search", category: "Image Generation", description: "Real-time data scoreboard integration.", tags: ["Grounding", "Sports"], content: "Use search grounding to show live scores from [Match Name] in a 4K stadium render." },
+      { id: 43, title: "Character Stats HUD", category: "Image Generation", description: "Gaming UI overlay visualization.", tags: ["Gaming", "HUD"], content: "Superimpose a semi-transparent HUD over an RPG hero showing glowing stat bars." },
+      { id: 44, title: "Recipe Search Grounding", category: "Image Generation", description: "Authentic ingredient visualization.", tags: ["Food", "Data"], content: "Use search grounding to arrange authentic regional ingredients for [Dish Name]." },
+      { id: 45, title: "Comic Persistence", category: "Image Generation", description: "Consistent character sequential art.", tags: ["Comic", "Consistency"], content: "Create a 5-panel page where the girl and robotic cat look identical in every frame." }
     ];
 
-    function App() {
+    const App = () => {
       const [search, setSearch] = useState("");
-      const [category, setCategory] = useState("All");
-      const [copiedId, setCopiedId] = useState(null);
+      const [activeCategory, setActiveCategory] = useState("All");
+      const [toast, setToast] = useState("");
 
-      const categories = ["All", ...Array.from(new Set(promptData.map(p => p.category)))];
+      const categories = ["All", ...new Set(promptData.map(p => p.category))];
 
-      const filtered = promptData.filter(p => {
-        const matchesCategory = category === "All" || p.category === category;
-        const q = search.toLowerCase();
-        const matchesSearch =
-          !q ||
-          p.title.toLowerCase().includes(q) ||
-          p.description.toLowerCase().includes(q) ||
-          p.tags.some(t => t.toLowerCase().includes(q));
-        return matchesCategory && matchesSearch;
-      });
+      const filtered = useMemo(() => {
+        return promptData.filter(item => {
+          const matchesCat = activeCategory === "All" || item.category === activeCategory;
+          const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase()) || 
+                               item.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
+          return matchesCat && matchesSearch;
+        });
+      }, [search, activeCategory]);
 
-      const handleCopy = async (content, id) => {
-        try {
-          await navigator.clipboard.writeText(content);
-          setCopiedId(id);
-          const status = document.getElementById("clipboard-status");
-          if (status) status.textContent = "Prompt copied to clipboard";
-          setTimeout(() => {
-            setCopiedId(null);
-            if (status) status.textContent = "";
-          }, 1500);
-        } catch {
-          const status = document.getElementById("clipboard-status");
-          if (status) status.textContent = "Failed to copy prompt";
-        }
+      const copy = (text) => {
+        navigator.clipboard.writeText(text);
+        setToast("Prompt copied to clipboard!");
+        setTimeout(() => setToast(""), 2000);
       };
 
       return (
-        <main id="main" className="min-h-screen">
-          <header className="bg-white border-b border-gray-200 sticky top-0 z-20">
-            <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">✨</span>
-                <div>
-                  <h1 className="text-lg font-semibold text-gray-900">
-                    AI Prompt Collection 2025
-                  </h1>
-                  <p className="text-xs text-gray-500">
-                    Curated prompts for images, video, writing, and more.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <input
-                  type="search"
-                  placeholder="Search by keyword, tag, or use case..."
-                  className="hidden sm:block w-72 px-3 py-1.5 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  aria-label="Search prompts"
-                />
-              </div>
+        <div className="min-h-screen pb-20">
+          <header className="bg-white border-b sticky top-0 z-30 p-4 md:p-6 shadow-sm">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+              <h1 className="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <span>✨</span> AI Prompt Library 2025
+              </h1>
+              <input 
+                type="text" 
+                placeholder="Search 45 prompts..."
+                className="w-full md:w-96 p-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all"
+                onChange={(e) => setSearch(e.target.value)}
+              />
             </div>
           </header>
 
-          <section className="bg-gray-50 border-b border-gray-200">
-            <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-              <div className="flex-1 flex gap-3 items-center">
-                <input
-                  type="search"
-                  placeholder="Search prompts..."
-                  className="sm:hidden flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  aria-label="Search prompts"
-                />
-                <div className="flex gap-2 overflow-x-auto">
-                  {categories.map(cat => (
-                    <button
-                      key={cat}
-                      onClick={() => setCategory(cat)}
-                      className={
-                        "px-3 py-1.5 text-xs sm:text-sm rounded-full border " +
-                        (category === cat
-                          ? "bg-blue-600 text-white border-blue-600"
-                          : "bg-white text-gray-700 border-gray-200 hover:bg-gray-100")
-                      }
-                    >
-                      {cat}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="max-w-6xl mx-auto px-4 py-6">
-            <p className="text-sm text-gray-500 mb-4">
-              Showing {filtered.length} of {promptData.length} prompts
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filtered.map(prompt => (
-                <article
-                  key={prompt.id}
-                  className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col"
+          <main className="max-w-7xl mx-auto p-4 md:p-6" id="main">
+            <nav className="flex flex-wrap gap-2 mb-8">
+              {categories.map(cat => (
+                <button 
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+                    activeCategory === cat ? "bg-blue-600 text-white shadow-lg shadow-blue-200" : "bg-white text-gray-500 border hover:bg-gray-50"
+                  }`}
                 >
-                  <div className="p-4 flex-1 flex flex-col">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <div>
-                        <h2 className="text-sm font-semibold text-gray-900 mb-1">
-                          {prompt.title}
-                        </h2>
-                        <p className="text-xs text-gray-500">{prompt.category}</p>
-                      </div>
-                      <button
-                        onClick={() => handleCopy(prompt.content, prompt.id)}
-                        className="inline-flex items-center gap-1 px-2 py-1 text-xs border border-gray-300 rounded-md bg-gray-50 hover:bg-gray-100 text-gray-700"
-                        aria-label="Copy prompt"
-                      >
-                        {copiedId === prompt.id ? "Copied" : "Copy"}
-                      </button>
-                    </div>
-                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                      {prompt.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {prompt.tags.map(tag => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center px-2 py-0.5 text-[11px] rounded-full bg-blue-50 text-blue-700 border border-blue-100"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <details className="mt-auto text-xs text-gray-700 bg-gray-50 rounded-lg p-2">
-                      <summary className="cursor-pointer text-gray-800 font-medium mb-1">
-                        View full prompt
-                      </summary>
-                      <pre className="mt-2 whitespace-pre-wrap text-[11px] leading-relaxed">
-                        {prompt.content}
-                      </pre>
-                    </details>
+                  {cat}
+                </button>
+              ))}
+            </nav>
+
+            <div className="mb-6 flex justify-between items-end">
+              <p className="text-gray-400 font-medium">Found {filtered.length} matching prompts</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map(p => (
+                <article key={p.id} className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col hover:border-blue-200 hover:shadow-xl hover:shadow-blue-50 transition-all group">
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-500 bg-blue-50 px-2.5 py-1 rounded-md">
+                      {p.category}
+                    </span>
+                    <button 
+                      onClick={() => copy(p.content)}
+                      className="text-xs font-bold bg-gray-900 text-white px-4 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-600"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-900 mb-2 leading-tight">{p.title}</h3>
+                  <p className="text-gray-500 text-sm mb-6 line-clamp-2 leading-relaxed">{p.description}</p>
+                  <div className="mt-auto flex flex-wrap gap-1.5">
+                    {p.tags.map(t => (
+                      <span key={t} className="text-[10px] bg-gray-50 text-gray-400 border border-gray-100 px-2 py-0.5 rounded-md">#{t}</span>
+                    ))}
                   </div>
                 </article>
               ))}
             </div>
-          </section>
-        </main>
-      );
-    }
+          </main>
 
-    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+          {toast && (
+            <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-8 py-3.5 rounded-full shadow-2xl z-50 toast-fade text-sm font-medium">
+              {toast}
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
   </script>
 </body>
 </html>
