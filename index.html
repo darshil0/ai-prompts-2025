@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A curated collection of 67 premium AI prompts for 2025-2026.">
-  <title>AI Prompt Collection 2025 | v3.0.4</title>
+  <meta name="description" content="A curated collection of 80 premium AI prompts for 2026.">
+  <title>AI Prompt Collection 2026 | v3.0.5</title>
 
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -28,98 +28,106 @@
     const { useState, useMemo } = React;
 
     const promptData = [
-      // 1-10: Infographics & Visuals
-      { id: 1, title: "Minimalist Timeline Infographic", category: "Infographics", description: "Flat-design horizontal timeline for AI releases.", tags: ["Design", "Timeline"], content: "Create a minimalist, flat-design horizontal timeline infographic on a clean white background..." },
-      { id: 2, title: "AI Progress Watercolor", category: "Infographics", description: "Watercolor-ink grid summary of AI models.", tags: ["Watercolor", "Grid"], content: "Create a premium, wide-format infographic in a dreamy, delicate watercolor-ink style..." },
-      { id: 3, title: "Gemini 3 Prompting Guide", category: "Infographics", description: "Advanced reasoning and structure guide.", tags: ["Prompting", "Guide"], content: "Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning'..." },
+      // ... [IDs 1-67 from previous version] ...
+      { id: 1, title: "Minimalist Timeline Infographic", category: "Infographics", description: "Flat-design horizontal timeline for AI releases.", tags: ["Design", "Timeline"], content: "Create a minimalist, flat-design horizontal timeline infographic on a clean white background showing the evolution of LLMs from 2020 to 2025." },
+      { id: 2, title: "AI Progress Watercolor", category: "Infographics", description: "Watercolor-ink grid summary of AI models.", tags: ["Watercolor", "Grid"], content: "Create a premium, wide-format infographic in a dreamy, delicate watercolor-ink style summarizing major AI breakthroughs." },
+      { id: 3, title: "Gemini 3 Prompting Guide", category: "Infographics", description: "Advanced reasoning and structure guide.", tags: ["Prompting", "Guide"], content: "Create a professional, modern infographic titled 'Gemini 3 Prompting: Advanced Reasoning' showing the Chain of Thought method." },
       { id: 4, title: "Paris at Night", category: "Image Generation", description: "Eiffel Tower coordinates at night.", tags: ["Photography", "Night"], content: "Create an image of 48.8584° N, 2.2945° E at night with long exposure light trails." },
-      { id: 5, title: "PDF-to-Infographic Summary", category: "Infographics", description: "Summarize PDFs into flat-vector designs.", tags: ["Data", "Summary"], content: "Analyze the provided PDF and create a visual hierarchy for an infographic using flat icons." },
-      { id: 6, title: "Garden Pathway Problem", category: "Problem Solving", description: "Geometric quadratic equation word problem.", tags: ["Math", "Geometry"], content: "A rectangular garden has dimensions of 10m by 6m. A pathway of uniform width x surrounds it..." },
-      { id: 7, title: "Captain Jack Sparrow", category: "Image Generation", description: "Hyper-realistic cinematic portrait.", tags: ["Portrait", "Cinematic"], content: "Hyper-realistic cinematic portrait of Johnny Depp as Jack Sparrow, 8k, sunset lighting." },
-      { id: 8, title: "Product Visualization", category: "Image Generation", description: "Ergonomic mouse 3D render.", tags: ["Product", "Tech"], content: "Photorealistic render of a sleek, ergonomic computer mouse with matte black finish and RGB." },
-      { id: 9, title: "Creative Style Shifts", category: "Image Generation", description: "Artistic transformation collection.", tags: ["Style", "Retro"], content: "Transform the image into: 90s packaging, Retro Bollywood, and Medieval Royalty." },
-      { id: 10, title: "Jewelry on Beach", category: "Image Editing", description: "Gold necklace in natural setting.", tags: ["Product", "Beach"], content: "Show this gold necklace laying on a sandy beach with gentle morning tide foam." },
+      { id: 5, title: "PDF-to-Infographic Summary", category: "Infographics", description: "Summarize PDFs into flat-vector designs.", tags: ["Data", "Summary"], content: "Act as a professional Data Visualization Specialist. Analyze the provided PDF and create a visual hierarchy for an infographic." },
+      { id: 6, title: "Garden Pathway Problem", category: "Problem Solving", description: "Geometric quadratic equation word problem.", tags: ["Math", "Geometry"], content: "Solve the following: A rectangular garden has dimensions of 10m by 6m. A pathway of uniform width x surrounds it..." },
+      { id: 7, title: "Captain Jack Sparrow", category: "Image Generation", description: "Hyper-realistic cinematic portrait.", tags: ["Portrait", "Cinematic"], content: "Create a hyper-realistic cinematic portrait of Jack Sparrow on the deck of the Black Pearl, sunset lighting, 8k." },
+      { id: 8, title: "Product Visualization", category: "Image Generation", description: "Ergonomic mouse 3D render.", tags: ["Product", "Tech"], content: "A high-resolution, photorealistic image of a sleek, ergonomic computer mouse with matte texture and RGB accents." },
+      { id: 9, title: "Creative Photo Transformations", category: "Image Generation", description: "Collection of artistic style shifts.", tags: ["Style", "Retro"], content: "Transform the image into three styles: 90s packaging, Retro Bollywood, and Medieval Royalty." },
+      { id: 10, title: "Gold Necklace", category: "Image Editing", description: "Jewelry on a sandy beach.", tags: ["Product", "Beach"], content: "Show this gold necklace laying on a sandy beach with gentle morning tide foam in the background." },
+      { id: 11, title: "Manga: Messi vs Ronaldo", category: "Image Editing", description: "Sports rivalry in anime style.", tags: ["Manga", "Sports"], content: "Transform this photo into a high-intensity manga panel showing a standoff between Messi and Ronaldo." },
+      { id: 12, title: "Background Replacement", category: "Image Editing", description: "Urban sunset skyline swap.", tags: ["Editing", "Sunset"], content: "Replace the background of the subject with a realistic, out-of-focus Tokyo neon skyline at sunset." },
+      { id: 13, title: "Logic: Office Arrangement", category: "Problem Solving", description: "Object-based logic puzzle.", tags: ["Logic", "Puzzle"], content: "An image of an office where 10 people hold objects starting with 'A'. Identify and list the objects." },
+      { id: 14, title: "Math: Quadratic Formula", category: "Problem Solving", description: "Symbolic algebra breakdown.", tags: ["Math", "Algebra"], content: "Provide a symbolic algebra breakdown solving 3x² − 5x + 2 = 0 using the quadratic formula step-by-step." },
+      { id: 15, title: "Crane Shot: Hiker", category: "Video Generation", description: "Cinematic drone ascent over canyon.", tags: ["Video", "Nature"], content: "Crane shot starting low on a lone hiker and ascending high above a mist-filled canyon in the Alps." },
+      { id: 16, title: "Shallow Depth: Bus", category: "Video Generation", description: "Portrait of woman on a bus at night.", tags: ["Video", "Moody"], content: "Cinematic close-up with shallow depth of field, a young woman looking out a bus window at night city lights." },
+      { id: 17, title: "Dynamic Transition", category: "Video Generation", description: "180-degree arc shot of a singer.", tags: ["Video", "Music"], content: "The camera performs a smooth 180-degree arc shot around a jazz singer in a smoky club." },
+      { id: 18, title: "Dialogue Scene", category: "Video Generation", description: "Film noir detective office scene.", tags: ["Video", "Noir"], content: "Medium shot of a detective. He says, 'The city never sleeps, and neither do the shadows.' High contrast lighting." },
+      { id: 19, title: "Timestamp Prompting", category: "Video Generation", description: "Multi-shot jungle sequence.", tags: ["Video", "Adventure"], content: "[00:00] Wide shot jungle. [00:03] Close up on panther eyes. [00:06] Tracking shot through vines." },
+      { id: 20, title: "Modern Tech Logo", category: "Design", description: "Minimalist 'InnovateAI' logo.", tags: ["Logo", "Minimalist"], content: "Design a minimalist vector logo for 'InnovateAI'. Use a combination of a brain and a circuit node." },
+      { id: 21, title: "Python Web Scraper", category: "Coding", description: "Scrape headlines with BeautifulSoup.", tags: ["Python", "Coding"], content: "Write a Python script using BeautifulSoup to scrape and save all H1 headlines from a given URL." },
+      { id: 22, title: "Marketing Campaign Copy", category: "Marketing", description: "Productivity app advertising copy.", tags: ["Copy", "Marketing"], content: "Generate three variations (Aggressive, Empathetic, Curious) of ad copy for a new task-tracking app." },
+      { id: 23, title: "Dussehra Portrait", category: "Image Generation", description: "Indian festival celebration scene.", tags: ["Festival", "Culture"], content: "Transform this photo into a vibrant Dussehra celebration with marigolds and oil lamps." },
+      { id: 24, title: "90s Bollywood Poster", category: "Image Generation", description: "Vintage movie poster aesthetic.", tags: ["Retro", "Bollywood"], content: "Transform me into a 1990s Bollywood hero with dramatic lighting and a vintage color grade." },
+      { id: 25, title: "Collectible Figurine", category: "Image Generation", description: "3D toy style character design.", tags: ["3D", "Toy"], content: "Transform this person into a 3D Funko-style collectible figurine in a branded window box." },
+      { id: 26, title: "Polaroid Photo Booth", category: "Image Editing", description: "Retro strip with candid poses.", tags: ["Polaroid", "Vintage"], content: "Create a 4-frame vertical Polaroid strip showing a couple laughing in a vintage photo booth." },
+      { id: 27, title: "Social Media Caption", category: "Marketing", description: "Instagram captions with hashtags.", tags: ["Social", "Marketing"], content: "Write 5 catchy Instagram captions for a new coffee shop opening, including relevant 2025 hashtags." },
+      { id: 28, title: "Blog Post Outline", category: "Marketing", description: "Structured content creation template.", tags: ["Writing", "Blog"], content: "Create a 1500-word blog post outline for 'The Ethics of AI in 2025' with H2 and H3 subheadings." },
+      { id: 29, title: "Concept Explainer", category: "Education", description: "Simplifying complex topics with analogies.", tags: ["Education", "Learning"], content: "Explain Quantum Entanglement using the analogy of a pair of magic dice." },
+      { id: 30, title: "Email Polisher", category: "Marketing", description: "Professional communication editing.", tags: ["Email", "Writing"], content: "Rewrite this frustrated email to be polite, firm, and professional while maintaining the core request." },
+      { id: 31, title: "Resume Bullet Points", category: "Career", description: "Quantified achievement generator.", tags: ["Career", "Resume"], content: "Convert these responsibilities into 3 achievement-oriented resume bullets using the STAR method." },
+      { id: 32, title: "3x3 Grid Photo", category: "Image Editing", description: "Portraits showing different emotions.", tags: ["Grid", "Portrait"], content: "Create a 3x3 grid of the same character expressing 9 different human emotions vividly." },
+      { id: 33, title: "Full Branding Set", category: "Design", description: "Tech startup identity kit.", tags: ["Branding", "Design"], content: "Create a brand identity kit for 'Zenith AI': Color palette, typography, and logo usage guidelines." },
+      { id: 34, title: "UI/UX Homepage", category: "Design", description: "Minimalist tech blog layout.", tags: ["UI", "UX"], content: "Design a desktop UI for a minimalist tech blog. Include a featured post hero and a clean sidebar." },
+      { id: 35, title: "Modern AI Timeline", category: "Infographics", description: "AI evolution milestones 2010-2025.", tags: ["Infographic", "AI"], content: "Create a vertical timeline infographic showing the transition from RNNs to Transformers to Gemini 3." },
+      { id: 36, title: "Floor Plan Visualization", category: "Design", description: "Realistic 3D interior from 2D plan.", tags: ["Architecture", "3D"], content: "Generate a photorealistic 3D top-down view of this 2D architectural floor plan with furniture." },
+      { id: 37, title: "3D Text Rendering", category: "Design", description: "Metallic gold 'IMAGINE' text.", tags: ["Text", "Typography"], content: "Render the word 'CREATIVITY' in floating 3D chrome letters over a dark liquid surface." },
+      { id: 38, title: "Best Practices: Be Specific", category: "Best Practices", description: "Move from vague to detailed prompts.", tags: ["Prompting", "Basics"], content: "Prompt: 'A forest' vs 'A bioluminescent temperate rainforest at twilight with glowing mushrooms.'" },
+      { id: 39, title: "Best Practices: Natural Language", category: "Best Practices", description: "Talk to the model like a human.", tags: ["Prompting", "Advice"], content: "Guide: Use natural, descriptive sentences instead of keyword-stuffing for better model intent." },
+      { id: 40, title: "Best Practices: Edit, Don't Re-roll", category: "Best Practices", description: "Iterative editing vs fresh generation.", tags: ["Prompting", "Iteration"], content: "Strategy: If an image is close, use 'Keep the character but change the background to a desert'." },
+      { id: 41, title: "Lifecycle of a Coffee Bean", category: "Infographics", description: "Seed-to-cup pastel illustration.", tags: ["Infographic", "Coffee"], content: "A flat-vector infographic showing the 6 stages of coffee production from bean to cup." },
+      { id: 42, title: "Cricket Stadium Search", category: "Image Generation", description: "Real-time data scoreboard integration.", tags: ["Grounding", "Sports"], content: "Generate a 4K image of a cricket match where the scoreboard displays the real-time score of [Match]." },
+      { id: 43, title: "Character Stats HUD", category: "Image Generation", description: "Gaming UI overlay visualization.", tags: ["Gaming", "UI"], content: "Create a fantasy warrior portrait with a semi-transparent futuristic HUD showing health and mana." },
+      { id: 44, title: "Recipe Search Grounding", category: "Image Generation", description: "Authentic ingredient visualization.", tags: ["Food", "Data"], content: "Generate a photo of [Dish] using search grounding to ensure authentic regional ingredients are visible." },
+      { id: 45, title: "Comic Persistence", category: "Image Generation", description: "Consistent character sequential art.", tags: ["Comic", "Consistency"], content: "Create a 4-panel comic strip where the main character remains identical in every panel." },
+      { id: 46, title: "Seasonal Panorama", category: "Image Generation", description: "360-degree Autumn to Winter transition.", tags: ["v3.0.1", "Landscape"], content: "Generate an 8K panorama transitioning from a golden autumn forest to a snowy winter peak." },
+      { id: 47, title: "Educator & Neural Net", category: "Image Generation", description: "Male educator with holographic diagram.", tags: ["v3.0.2", "Education"], content: "A male educator in a modern lab gesturing toward a 3D glowing neural network hologram." },
+      { id: 48, title: "Professional OOO Message", category: "Marketing", description: "Standard holiday out-of-office email.", tags: ["v3.0.4", "Corporate"], content: "Write a professional OOO email for December holidays. Mention limited access and return date." },
+      { id: 49, title: "Creative OOO Message", category: "Marketing", description: "Witty holiday recharging message.", tags: ["v3.0.4", "Creative"], content: "Write a creative OOO message using the metaphor of a laptop updating for the new year." },
+      { id: 50, title: "Logistics Workflow", category: "Problem Solving", description: "Supply chain automation logic.", tags: ["v3.0.4", "Business"], content: "Propose an AI-driven logistics workflow to solve a 'last-mile' delivery delay problem." },
+      { id: 51, title: "SaaS Hero Copy", category: "Marketing", description: "High-converting website header text.", tags: ["Copy", "SaaS"], content: "Generate 5 variations of a hero section headline for a new AI-powered SaaS tool." },
+      { id: 52, title: "API Documentation Draft", category: "Coding", description: "Technical writing for REST APIs.", tags: ["Coding", "Documentation"], content: "Write clear, concise documentation for a POST /v1/analyze endpoint including parameters." },
+      { id: 53, title: "Abstract 3D Background", category: "Design", description: "Floating geometric shapes for web.", tags: ["Design", "3D"], content: "Render an abstract 3D background with floating glass spheres and soft pink/blue lighting." },
+      { id: 54, title: "Product Feature Comparison", category: "Marketing", description: "Side-by-side marketing table.", tags: ["Copy", "Structure"], content: "Create a comparison table for three tiers of a software product: Basic, Pro, and Enterprise." },
+      { id: 55, title: "Historical Figure Interview", category: "Education", description: "Educational dialogue simulation.", tags: ["Education", "History"], content: "Simulate an interview with Leonardo da Vinci about modern technology. Keep his perspective authentic." },
+      { id: 56, title: "Cyberpunk Cityscape", category: "Image Generation", description: "Neon-soaked rainy street view.", tags: ["Art", "Sci-Fi"], content: "Wide shot of a cyberpunk city at night. Rain, neon reflections, flying vehicles, 8K resolution." },
+      { id: 57, title: "Python Data Analysis", category: "Coding", description: "Pandas script for CSV processing.", tags: ["Python", "Data"], content: "Write a Python script using Pandas to load a CSV, group by 'Category', and calculate the mean." },
+      { id: 58, title: "Instagram Story Script", category: "Marketing", description: "Visual and audio cues for Reels/Stories.", tags: ["Social", "Video"], content: "Script a 15-second Instagram Story promoting a book launch. Include visual cues and voiceover text." },
+      { id: 59, title: "Interior Lighting Study", category: "Design", description: "Same room, four different lightings.", tags: ["Architecture", "Lighting"], content: "Generate four views of a minimalist living room: Sunrise, Noon, Golden Hour, and Midnight." },
+      { id: 60, title: "Logical Fallacy Checker", category: "Problem Solving", description: "Identify errors in an argument.", tags: ["Logic", "Analysis"], content: "Read the following argument and identify any logical fallacies used: [Insert Argument]" },
+      { id: 61, title: "Podcast Episode Script", category: "Marketing", description: "Introduction and segment breakdown.", tags: ["Audio", "Content"], content: "Write an intro script for a tech podcast episode titled 'The Future of Neural Interfaces'." },
+      { id: 62, title: "React State Debugger", category: "Coding", description: "Fix stale closures in hooks.", tags: ["Coding", "React"], content: "Analyze the following React code for potential stale closures and memory leaks within useEffect hooks: [Insert Code]" },
+      { id: 63, title: "Minimalist Book Cover", category: "Design", description: "Modern typography-based cover art.", tags: ["Design", "Print"], content: "Design a minimalist book cover for a novel titled 'The Silent Signal'. Use Swiss design style." },
+      { id: 64, title: "Travel Itinerary: Tokyo", category: "Education", description: "7-day efficient travel plan.", tags: ["Travel", "Planning"], content: "Create a 7-day Tokyo itinerary focusing on hidden gems and efficient travel routes." },
+      { id: 65, title: "Unit Test Generator", category: "Coding", description: "Jest/Vitest tests for JS functions.", tags: ["Coding", "Testing"], content: "Write comprehensive unit tests using Vitest for a calculateTax(price, rate) utility function." },
+      { id: 66, title: "Fantasy World Map", category: "Image Generation", description: "Ornate cartography style map.", tags: ["Map", "Fantasy"], content: "Generate an ornate, hand-drawn style map of a fantasy continent with mountains and cities." },
+      { id: 67, title: "User Persona Creator", category: "Marketing", description: "Deep dive into target demographics.", tags: ["UX", "Marketing"], content: "Create a detailed user persona for a 25-year-old remote worker using a productivity app." },
 
-      // 11-20: Editing & Video
-      { id: 11, title: "Manga Standoff", category: "Image Editing", description: "Sports rivalry in anime style.", tags: ["Manga", "Sports"], content: "Transform this photo into a high-intensity manga panel showing a sports standoff." },
-      { id: 12, title: "Urban Background Swap", category: "Image Editing", description: "City skyline replacement.", tags: ["Editing", "Sunset"], content: "Replace the background of the subject with a realistic Tokyo neon skyline at sunset." },
-      { id: 13, title: "Office Logic Puzzle", category: "Problem Solving", description: "Object-based visual reasoning.", tags: ["Logic", "Puzzle"], content: "An office where 10 people hold objects starting with 'A'. Identify and list them." },
-      { id: 14, title: "Quadratic Step-by-Step", category: "Problem Solving", description: "Algebraic formula breakdown.", tags: ["Math", "Algebra"], content: "Break down solving 3x² − 5x + 2 = 0 using the quadratic formula step-by-step." },
-      { id: 15, title: "Canyon Crane Shot", category: "Video Generation", description: "Cinematic drone ascent.", tags: ["Video", "Nature"], content: "Crane shot starting low on a hiker and ascending high above a mist-filled canyon." },
-      { id: 16, title: "Bus Window Portrait", category: "Video Generation", description: "Moody shallow depth of field.", tags: ["Video", "Moody"], content: "Close-up of a face looking out a bus window at night city lights, shallow DOF." },
-      { id: 17, title: "180-Degree Singer Arc", category: "Video Generation", description: "Dynamic stage camera movement.", tags: ["Video", "Music"], content: "Smooth 180-degree arc shot around a singer on stage in a smoky club." },
-      { id: 18, title: "Detective Noir Dialogue", category: "Video Generation", description: "Film noir office sequence.", tags: ["Video", "Noir"], content: "Medium shot of a detective. He says, 'The city never sleeps...' High contrast lighting." },
-      { id: 19, title: "Jungle Timestamps", category: "Video Generation", description: "Multi-shot adventure sequence.", tags: ["Video", "Adventure"], content: "[00:00] Wide shot jungle. [00:03] Close up on panther. [00:06] Tracking shot." },
-      { id: 20, title: "InnovateAI Logo", category: "Design", description: "Minimalist circuit-brain logo.", tags: ["Logo", "Tech"], content: "Design a minimalist logo for 'InnovateAI'. Combine a brain and a circuit node." },
-
-      // 21-30: Marketing & Education
-      { id: 21, title: "Python Web Scraper", category: "Coding", description: "Automated headline extraction.", tags: ["Python", "Automation"], content: "Write a Python script using BeautifulSoup to scrape all H1 headlines from a URL." },
-      { id: 22, title: "Productivity App Ad", category: "Marketing", description: "Copy variations for task tools.", tags: ["Copy", "Marketing"], content: "Generate 3 variations of ad copy for a task-tracking app: Aggressive, Empathetic, Curious." },
-      { id: 23, title: "Dussehra Celebration", category: "Image Generation", description: "Indian festival culture scene.", tags: ["Culture", "Festival"], content: "Transform photo into a vibrant Dussehra celebration with marigolds and oil lamps." },
-      { id: 24, title: "90s Hero Poster", category: "Image Generation", description: "Vintage Bollywood aesthetic.", tags: ["Retro", "Cinema"], content: "Transform me into a 1990s movie hero with dramatic lighting and grain." },
-      { id: 25, title: "Funko Figurine Design", category: "Image Generation", description: "3D toy style character.", tags: ["3D", "Toy"], content: "Transform this person into a 3D collectible figurine in a branded window box." },
-      { id: 26, title: "Polaroid Strip", category: "Image Editing", description: "Retro candid photo layout.", tags: ["Vintage", "Social"], content: "Create a 4-frame vertical Polaroid strip showing a couple laughing." },
-      { id: 27, title: "Coffee Shop Captions", category: "Marketing", description: "Instagram post-generator.", tags: ["Social", "Marketing"], content: "Write 5 catchy Instagram captions for a new coffee shop including 2026 hashtags." },
-      { id: 28, title: "Ethics of AI Outline", category: "Marketing", description: "Long-form blog structure.", tags: ["Writing", "Blog"], content: "Create a 1500-word blog outline for 'The Ethics of AI in 2026' with subheadings." },
-      { id: 29, title: "Quantum Magic Dice", category: "Education", description: "Complex topic analogy.", tags: ["Education", "Physics"], content: "Explain Quantum Entanglement using the analogy of a pair of magic dice." },
-      { id: 30, title: "Tone-Shift Email", category: "Marketing", description: "Professionalize firm messages.", tags: ["Email", "Writing"], content: "Rewrite a frustrated email to be polite, firm, and professional." },
-
-      // 31-45: Career, Grid & Best Practices
-      { id: 31, title: "STAR Method Bullets", category: "Career", description: "Achievement-oriented resume points.", tags: ["Resume", "Career"], content: "Convert these tasks into 3 resume bullets using the STAR method (Situation, Task, Action, Result)." },
-      { id: 32, title: "9-Emotion Grid", category: "Image Editing", description: "Character study grid.", tags: ["Grid", "Portrait"], content: "Generate a 3x3 grid of the same character expressing 9 different human emotions." },
-      { id: 33, title: "Zenith AI Brand Kit", category: "Design", description: "Startup identity system.", tags: ["Branding", "Design"], content: "Create a brand identity kit: Color palette, typography, and logo usage guidelines." },
-      { id: 34, title: "Minimalist Tech UI", category: "Design", description: "Clean blog homepage layout.", tags: ["UI", "UX"], content: "Design a desktop UI for a minimalist tech blog with a clean hero section." },
-      { id: 35, title: "Evolution of Models", category: "Infographics", description: "Timeline from RNN to Gemini.", tags: ["Infographic", "AI"], content: "Vertical timeline infographic showing AI milestones from 2010 to 2026." },
-      { id: 36, title: "Architectural 3D Plan", category: "Design", description: "Furniture layout from 2D sketch.", tags: ["3D", "Architecture"], content: "Photorealistic 3D top-down view of a 2D floor plan with modern furniture." },
-      { id: 37, title: "Chrome Typography", category: "Design", description: "3D liquid metal text effect.", tags: ["Text", "Design"], content: "Render 'CREATIVITY' in floating 3D chrome letters over a dark liquid surface." },
-      { id: 38, title: "Specific vs Vague", category: "Best Practices", description: "Detailed prompting lesson.", tags: ["Prompting", "Basics"], content: "Lesson: Compare 'A forest' vs 'A bioluminescent temperate rainforest at twilight'." },
-      { id: 39, title: "Human Intent Guide", category: "Best Practices", description: "Natural language communication.", tags: ["Advice", "Prompting"], content: "Guide: Use natural, descriptive sentences instead of keyword-stuffing." },
-      { id: 40, title: "Iterative Edit Strategy", category: "Best Practices", description: "Saving correct generations.", tags: ["Editing", "Iteration"], content: "Strategy: 'Keep the character but change the background to a desert'." },
-      { id: 41, title: "Coffee Life Cycle", category: "Infographics", description: "Pastel vector illustration.", tags: ["Infographic", "Coffee"], content: "A flat-vector infographic showing 6 stages of coffee from bean to cup." },
-      { id: 42, title: "Real-time Scoreboard", category: "Image Generation", description: "Live data grounding render.", tags: ["Grounding", "Sports"], content: "Generate a stadium image where the scoreboard shows live scores for [Match Name]." },
-      { id: 43, title: "Cyberpunk HUD", category: "Image Generation", description: "Futuristic UI overlay.", tags: ["Gaming", "UI"], content: "Fantasy warrior portrait with a semi-transparent futuristic HUD overlay." },
-      { id: 44, title: "Authentic Ingredients", category: "Image Generation", description: "Search-grounded recipe visual.", tags: ["Food", "Grounding"], content: "Generate photo of [Dish] using grounded search for accurate regional ingredients." },
-      { id: 45, title: "4-Panel Continuity", category: "Image Generation", description: "Character consistency comic.", tags: ["Comic", "Art"], content: "Create a 4-panel comic strip where the main character remains identical in every panel." },
-
-      // 46-67: v3.0.4 Additions (Final Set)
-      { id: 46, title: "Autumn to Winter Panorama", category: "Image Generation", description: "360-degree seasonal transition.", tags: ["Landscape", "8K"], content: "Generate an 8K panorama transitioning from golden autumn forest to snowy winter peak." },
-      { id: 47, title: "Neural Net Educator", category: "Image Generation", description: "Educational holographic scene.", tags: ["Education", "Hologram"], content: "A male educator gesturing toward a 3D glowing neural network hologram." },
-      { id: 48, title: "Professional OOO Message", category: "Career", description: "Holiday out-of-office email.", tags: ["Email", "Business"], content: "Write a professional OOO for winter break. Include urgent contact details." },
-      { id: 50, title: "Supply Chain Logic", category: "Problem Solving", description: "Last-mile automation workflow.", tags: ["Business", "Logistics"], content: "Propose an AI-driven logistics workflow to solve a 'last-mile' delivery problem." },
-      { id: 51, title: "SaaS Hero Headlines", category: "Marketing", description: "High-converting speed-based copy.", tags: ["SaaS", "Copy"], content: "Generate 5 variations of a hero headline for a project management tool using 'Speed'." },
-      { id: 52, title: "REST API Doc Draft", category: "Coding", description: "Technical endpoint writing.", tags: ["Documentation", "API"], content: "Draft documentation for a POST /v1/analyze endpoint including JWT parameters." },
-      { id: 53, title: "Glass Pyramid Abstract", category: "Design", description: "4K floating geometric background.", tags: ["Design", "Art"], content: "Render a 4K abstract background with floating glass pyramids and soft purple lighting." },
-      { id: 54, title: "Feature Comparison Table", category: "Marketing", description: "Tiered software marketing layout.", tags: ["SaaS", "Structure"], content: "Create a comparison table between a Free and Pro plan for a cloud storage service." },
-      { id: 55, title: "Interview Marie Curie", category: "Education", description: "Historical perspective simulation.", tags: ["History", "Edu"], content: "Simulate an interview with Marie Curie about the future of green energy." },
-      { id: 56, title: "Rainy Neon Street", category: "Image Generation", description: "Cyberpunk cityscape render.", tags: ["Art", "Sci-Fi"], content: "Wide cinematic shot of a rainy cyberpunk street in 2077 with neon reflections." },
-      { id: 57, title: "Pandas Data Cleaner", category: "Coding", description: "CSV processing script.", tags: ["Python", "Data"], content: "Python script to clean a CSV by removing duplicates and filling NaN values with mean." },
-      { id: 58, title: "Reel Script: Product", category: "Marketing", description: "15-sec script with visual cues.", tags: ["Social", "Video"], content: "Script a 15-second Reel for a product launch: Hook, Value, and CTA." },
-      { id: 59, title: "Scandi Kitchen Lighting", category: "Design", description: "Lighting study across 4 times of day.", tags: ["Architecture", "3D"], content: "Generate 4 images of a Scandinavian kitchen: Morning, Noon, Dusk, and Night." },
-      { id: 60, title: "Logical Fallacy Auditor", category: "Problem Solving", description: "Transcript error identification.", tags: ["Logic", "Analysis"], content: "Analyze the debate transcript and highlight 3 logical fallacies found." },
-      { id: 61, title: "Edge Computing Podcast", category: "Marketing", description: "Introduction script breakdown.", tags: ["Audio", "Script"], content: "Script for a 10-minute podcast intro about the rise of edge computing." },
-      { id: 62, title: "Stale Closure Debugger", category: "Coding", description: "React hook setInterval fix.", tags: ["React", "Debug"], content: "Identify why this React counter component has a stale closure in its setInterval hook." },
-      { id: 63, title: "Silent Signal Book Cover", category: "Design", description: "High-contrast Swiss design.", tags: ["Design", "Print"], content: "Minimalist book cover for 'The Silent Signal'. Use high-contrast black/white typography." },
-      { id: 64, title: "7-Day Tokyo Tech Hubs", category: "Career", description: "Efficient travel itinerary.", tags: ["Travel", "Planning"], content: "7-day itinerary for Tokyo focusing on tech hubs and hidden gems." },
-      { id: 65, title: "Email Regex Tests", category: "Coding", description: "Comprehensive Vitest edge cases.", tags: ["QA", "Testing"], content: "Generate 5 edge-case unit tests for an email validation function." },
-      { id: 66, title: "Fantasy Continent Map", category: "Image Generation", description: "Ornate cartography parchment.", tags: ["Map", "Art"], content: "High-detail map of a fantasy continent with parchment textures and sea monsters." },
-      { id: 67, title: "Remote Manager Persona", category: "Career", description: "UX demographic deep dive.", tags: ["UX", "Marketing"], content: "Detailed user persona for a middle-aged manager transitioning to remote work." }
+      // 68-80: 2026 Trending / g3Mini X Updates
+      { id: 68, title: "2026 Vision Board", category: "Image Generation", description: "Knolling-style hand-drawn goal layout.", tags: ["Planning", "2026"], content: "Create an illustrated vision board for 2026 goals in a hand-drawn, notebook-paper style. Use a knolling layout with cross-hatching and handwritten annotations for habits and milestones." },
+      { id: 69, title: "Temporal Fusion", category: "Image Editing", description: "Summer-to-Winter seamless split.", tags: ["Temporal", "v3.0.5"], content: "Using two provided photos—one of a summer garden, one of a winter landscape—create a single photograph with a seamless vertical transition down the middle." },
+      { id: 70, title: "Micro-World Illusion", category: "Image Generation", description: "Macro-perspective toy effect.", tags: ["Macro", "Perspective"], content: "Create a hyper-realistic miniature scene where a [Subject] appears toy-sized on a wooden office desk. Use macro lens perspective with shallow depth of field." },
+      { id: 71, title: "Younger Self Hug", category: "Image Editing", description: "Cross-generational composite hug.", tags: ["Emotion", "Editing"], content: "Synthesize a current photo and a childhood photo into a single cohesive, cinematic image showing the two individuals hugging with consistent lighting." },
+      { id: 72, title: "Identity Without Face", category: "Image Generation", description: "Postural and lighting-based mood.", tags: ["Cinematic", "Portrait"], content: "A cinematic back-view portrait of a figure looking at a city. Convey 'Determination' solely through posture and high-contrast volumetric lighting." },
+      { id: 73, title: "Object Mythology", category: "Image Generation", description: "Standard item to legendary artifact.", tags: ["Fantasy", "Product"], content: "Transform a standard [Item] into a glowing, legendary artifact found in an ancient ruin. Use golden-hour lighting and particle effects." },
+      { id: 74, title: "SAUCE Constraint", category: "Problem Solving", description: "Alpha-ordered ingredient portrait.", tags: ["Logic", "g3Mini"], content: "Generate an image of five chefs. Arrange them so the first letters of the ingredients they hold spell 'SAUCE' from left to right." },
+      { id: 75, title: "Zodiac Cosmic Portrait", category: "Image Generation", description: "Star sign high-fashion fusion.", tags: ["Cosmic", "Fashion"], content: "A high-fashion portrait integrated with [Zodiac Sign] cosmic symbols, constellations, and a nebula-colored color palette." },
+      { id: 76, title: "Viral Twitter Thread", category: "Marketing", description: "7-tweet engagement framework.", tags: ["X", "Social"], content: "Write a 7-tweet thread on [Topic] that builds curiosity, delivers 3 actionable value points, and ends with a high-conversion CTA." },
+      { id: 77, title: "Rant-to-Authority", category: "Marketing", description: "LinkedIn authority post converter.", tags: ["LinkedIn", "Growth"], content: "Convert the following raw thoughts/voice-note transcript into a high-authority LinkedIn post with line breaks and strong hooks: [Input]" },
+      { id: 78, title: "Natural Skin Retouch", category: "Image Editing", description: "High-end pore-preserving retouching.", tags: ["Beauty", "Natural"], content: "Apply high-end frequency separation retouching to this portrait. Maintain 100% visible skin pores and texture while evening out skin tone." },
+      { id: 79, title: "2026 Habit Roadmap", category: "Problem Solving", description: "3-part maintenance logic plan.", tags: ["Productivity", "Planning"], content: "Design a 3-part habit maintenance plan for a [Resolution] including daily triggers, weekly reviews, and failure-mitigation strategies." },
+      { id: 80, title: "The Unseen Angle", category: "Design", description: "Impossible camera perspective.", tags: ["Design", "Technical"], content: "Render a [Product] from a technically 'impossible' angle, such as from inside the device looking out through the glass." }
     ];
 
     const App = () => {
       const [search, setSearch] = useState("");
-      const [catFilter, setCatFilter] = useState("All");
+      const [filter, setFilter] = useState("All");
       const [toast, setToast] = useState("");
 
       const categories = ["All", ...new Set(promptData.map(p => p.category))];
 
       const filteredItems = useMemo(() => {
         return promptData.filter(item => {
-          const matchCat = catFilter === "All" || item.category === catFilter;
+          const matchCat = filter === "All" || item.category === filter;
           const matchSearch = item.title.toLowerCase().includes(search.toLowerCase()) || 
                               item.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
           return matchCat && matchSearch;
         });
-      }, [search, catFilter]);
+      }, [search, filter]);
 
       const copy = (text) => {
         navigator.clipboard.writeText(text);
@@ -131,12 +139,10 @@
         <div className="min-h-screen pb-20">
           <header className="bg-white border-b sticky top-0 z-50 p-6 shadow-sm">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                ✨ Prompt Library 2026 <span className="text-[10px] text-gray-400 font-mono">v3.0.4</span>
-              </h1>
+              <h1 className="text-2xl font-bold text-indigo-600">✨ Prompt Library 2026 <span className="text-xs text-gray-400 align-middle ml-2">v3.0.5</span></h1>
               <input 
-                type="text" placeholder="Search 67 prompts..." 
-                className="w-full md:w-96 p-2.5 border rounded-xl outline-none focus:ring-2 focus:ring-blue-500"
+                type="text" placeholder="Search 80 prompts..." 
+                className="w-full md:w-96 p-2.5 border rounded-xl outline-none focus:ring-2 focus:ring-indigo-400"
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
@@ -145,9 +151,7 @@
           <main className="max-w-7xl mx-auto p-6">
             <nav className="flex flex-wrap gap-2 mb-10">
               {categories.map(c => (
-                <button key={c} onClick={() => setCatFilter(c)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${catFilter === c ? "bg-blue-600 text-white shadow-lg shadow-blue-200" : "bg-white text-gray-500 border hover:bg-gray-100"}`}>
-                  {c}
-                </button>
+                <button key={c} onClick={() => setFilter(c)} className={`px-4 py-2 rounded-full text-sm font-semibold transition ${filter === c ? "bg-indigo-600 text-white shadow-lg" : "bg-white text-gray-500 border hover:bg-gray-100"}`}>{c}</button>
               ))}
             </nav>
 
@@ -155,8 +159,8 @@
               {filteredItems.map(p => (
                 <article key={p.id} className="bg-white border rounded-2xl p-6 flex flex-col hover:shadow-xl transition group">
                   <div className="flex justify-between items-start mb-4">
-                    <span className="text-[10px] font-bold uppercase text-blue-500 bg-blue-50 px-2 py-1 rounded">{p.category}</span>
-                    <button onClick={() => copy(p.content)} className="text-xs bg-gray-900 text-white px-4 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-blue-600">Copy</button>
+                    <span className="text-[10px] font-bold uppercase text-indigo-500 bg-indigo-50 px-2 py-1 rounded">{p.category}</span>
+                    <button onClick={() => copy(p.content)} className="text-xs bg-gray-900 text-white px-4 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition">Copy</button>
                   </div>
                   <h3 className="font-bold text-lg mb-2 leading-tight">{p.title}</h3>
                   <p className="text-gray-500 text-sm mb-6 line-clamp-2">{p.description}</p>
@@ -167,7 +171,6 @@
               ))}
             </div>
           </main>
-
           {toast && <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-8 py-3.5 rounded-full shadow-2xl z-50 toast-up">{toast}</div>}
         </div>
       );
