@@ -1,38 +1,10 @@
- # 🤖 AI Prompt Collection 2025
-A definitive, open-source library of **80 premium AI prompts**—fully optimized for the 2025 generative AI landscape (Gemini 3, GPT-5, Nano Banana Pro).
+# 🤖 AI Prompt Collection 2026
 
----
+A curated, open-source library of **80 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
 
-## 🛡️ Project Status
-| Badge | Value |
-|:------|:------|
-| **Version** | v3.0.5 |
-| **Release Date** | Jan 2, 2026 |
-| **Total Prompts** | 80 |
-| **License** | MIT |
-
----
-
-## ✨ v3.0.5 Updates
-* **G3mini Trending Collection:** 13 new prompts sourced from the 2026 "Vision Board" viral campaign.
-* **Multimodal Logic:** Introduced the **SAUCE Constraint** and **Temporal Fusion** categories.
-* **Deep Research Agents:** New prompts for agentic reporting and PhD-level reasoning tasks.
-
----
-
-## 📚 Categories Breakdown
-
-1. **Infographics (8):** Minimalist timelines, watercolor summaries, data visualizations, and journey maps.
-2. **Image Generation (7):** Vision boards, cosmic portraits, micro-world illusions, and mythological objects.
-3. **Image Editing (12):** Temporal fusion, manga transformations, vintage film looks, seasonal transforms, and natural skin retouching.
-4. **Video Generation (1):** Cinematic crane shots and dynamic camera movements.
-5. **Marketing (13):** Viral Twitter threads, email sequences, landing page headlines, and rant-to-authority conversions.
-6. **Career (10):** STAR resume bullets, LinkedIn profiles, salary negotiation, and portfolio case studies.
-7. **Coding (13):** API error handlers, React hooks, form validation, authentication middleware, and regex utilities.
-8. **Problem Solving (9):** Root cause analysis, decision matrices, SWOT frameworks, and habit roadmaps.
-9. **Design (7):** Color palettes, typography scales, icon guidelines, and impossible camera angles.
-
-**Total: 80 Prompts**
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-3.0.5-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
+[![Prompts](https://img.shields.io/badge/prompts-80-purple.svg)](index.html)
 
 ---
 
@@ -42,33 +14,57 @@ A definitive, open-source library of **80 premium AI prompts**—fully optimized
 1. Open `index.html` in your browser
 2. Browse by category or search by keyword
 3. Click "Copy" to grab any prompt
-4. Paste into your favorite AI tool (Claude, ChatGPT, Gemini, etc.)
+4. Paste into your favorite AI tool
 
-### Option 2: Use Directly
-All prompts are stored in the `promptData` array inside the HTML file. You can:
-- Extract them programmatically
-- Import into your own tools
-- Customize for your specific use cases
+### Option 2: Direct Integration
+Extract prompts from the `promptData` array in `index.html` for programmatic use in your own applications.
+
+---
+
+## ✨ What's New in v3.0.5
+
+- **13 New Prompts:** Trending 2026 Vision Board collection from viral campaign
+- **Advanced Categories:** SAUCE Constraint and Temporal Fusion for multimodal AI
+- **Research Agents:** PhD-level reasoning and agentic reporting prompts
+- **Enhanced UX:** Improved search, filtering, and mobile responsiveness
+
+---
+
+## 📚 Category Breakdown
+
+| Category | Count | Description |
+|----------|-------|-------------|
+| **Infographics** | 8 | Timelines, data visualizations, journey maps, comparison matrices |
+| **Image Generation** | 7 | Vision boards, portraits, micro-worlds, mythological objects |
+| **Image Editing** | 12 | Temporal fusion, style transfers, composites, retouching |
+| **Video Generation** | 1 | Cinematic camera movements and drone shots |
+| **Marketing** | 13 | Viral threads, email sequences, ad copy, landing pages |
+| **Career** | 10 | Resumes, LinkedIn optimization, negotiation, portfolios |
+| **Coding** | 13 | API handlers, React hooks, validation, authentication |
+| **Problem Solving** | 9 | Root cause analysis, decision frameworks, habit systems |
+| **Design** | 7 | Color palettes, typography, icons, accessibility |
+
+**Total: 80 Prompts**
 
 ---
 
 ## 🎯 Featured Prompts
 
 ### 🔥 Trending in 2026
-- **2026 Vision Board** - Hand-drawn goal visualization with knolling layout
-- **Temporal Fusion** - Blend summer/winter landscapes in one seamless frame
-- **Hugging My Younger Self** - Cross-generational composite photography
-- **SAUCE Logical Challenge** - Alphanumeric constraint puzzle for AI image generation
+- **2026 Vision Board** – Hand-drawn goal visualization with knolling layout
+- **Temporal Fusion** – Seamlessly blend summer/winter in one frame
+- **Hugging My Younger Self** – Emotional cross-generational composite
+- **SAUCE Logical Challenge** – Alphanumeric constraint puzzle for AI
 
-### 💼 Professional Essentials
-- **STAR Resume Bullets** - Convert responsibilities into quantified achievements
-- **Viral Twitter Thread** - 7-tweet engagement framework with proven structure
-- **React State Debugger** - Fix stale closures and dependency issues
+### 💼 Professional Power Tools
+- **STAR Resume Bullets** – Convert tasks into quantified achievements
+- **Viral Twitter Thread** – 7-tweet engagement framework
+- **React State Debugger** – Fix stale closures and hooks issues
 
-### 🎨 Creative Powerhouses
-- **Object Mythology** - Transform everyday items into legendary artifacts
-- **Identity Without Face** - Atmospheric storytelling through posture and mood
-- **Natural Skin Retouch** - Pore-preserving professional beauty editing
+### 🎨 Creative Generators
+- **Object Mythology** – Turn everyday items into legendary artifacts
+- **Identity Without Face** – Atmospheric storytelling through posture
+- **Natural Skin Retouch** – Pore-preserving professional editing
 
 ---
 
@@ -77,18 +73,22 @@ All prompts are stored in the `promptData` array inside the HTML file. You can:
 ```
 ai-prompt-collection-2026/
 ├── index.html          # Complete web app with all 80 prompts
-├── README.md          # This file
-└── LICENSE            # MIT License
+├── README.md           # This file
+├── LICENSE             # MIT License
+└── favicon.svg         # Project icon
 ```
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! To add new prompts:
+We welcome high-quality prompt submissions!
 
-1. Fork the repository
-2. Add your prompt to the `promptData` array following this structure:
+### How to Contribute
+
+1. **Fork** this repository
+2. **Add** your prompt to the `promptData` array in `index.html`:
+
 ```javascript
 {
   id: 81,
@@ -99,47 +99,77 @@ We welcome contributions! To add new prompts:
   content: "Full prompt text that users will copy"
 }
 ```
-3. Update the category counts in README.md
-4. Submit a pull request
+
+3. **Update** category counts in README.md
+4. **Test** the web interface locally
+5. **Submit** a pull request with a clear description
+
+### Contribution Guidelines
+
+- **Quality First:** Prompts should be well-tested and produce consistent results
+- **Clear Structure:** Include specific constraints and expected output format
+- **Unique Value:** Avoid duplicating existing prompts
+- **Proper Formatting:** Follow the existing JSON structure
 
 ---
 
 ## 📖 Usage Tips
 
-### For Best Results:
-- **Be Specific:** Modify prompts with your exact requirements
-- **Iterate:** Use outputs as inputs for refinement
-- **Combine:** Mix multiple prompts for complex workflows
-- **Context Matters:** Add your specific constraints, brand guidelines, or technical requirements
+### Maximize Prompt Effectiveness
 
-### Prompt Engineering Principles:
-1. Clear objective statement
-2. Specific constraints and requirements
-3. Expected output format
-4. Quality indicators (e.g., "professional," "cinematic," "beginner-friendly")
+1. **Be Specific** – Modify prompts with your exact requirements, brand guidelines, or constraints
+2. **Iterate** – Use AI outputs as inputs for refinement and improvement
+3. **Combine** – Mix multiple prompts for complex, multi-step workflows
+4. **Add Context** – Include relevant background information for better results
+
+### Prompt Engineering Best Practices
+
+- ✅ Clear objective statement
+- ✅ Specific constraints and requirements
+- ✅ Expected output format
+- ✅ Quality indicators (e.g., "professional", "cinematic", "beginner-friendly")
+- ✅ Examples when helpful
 
 ---
 
 ## 🔗 Related Resources
 
 - [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/library)
-- [OpenAI Best Practices](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Google AI Prompting Guide](https://ai.google.dev/docs/prompting_intro)
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Google AI Prompting Introduction](https://ai.google.dev/docs/prompting_intro)
 
 ---
 
 ## 📜 License
 
-MIT License - feel free to use, modify, and distribute these prompts in your projects.
+**MIT License** – Free to use, modify, and distribute in your projects.
+
+See [LICENSE](LICENSE) file for full details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-Special thanks to the AI community for inspiration and feedback during the development of this collection. Prompts refined through testing with Claude 3.5 Sonnet, GPT-4, and Gemini Pro.
+Special thanks to the AI community for inspiration, feedback, and testing. This collection has been refined with:
+- Claude 3.5 Sonnet
+- GPT-4 & GPT-4 Turbo
+- Gemini Pro
 
 ---
 
-Made with ❤️ by [Darshil](https://github.com/darshil0)
+## 📊 Project Stats
 
-**Star this repo** if you find it useful! ⭐
+- **Total Prompts:** 80
+- **Categories:** 9
+- **Version:** 3.0.5
+- **Release Date:** January 2, 2026
+- **License:** MIT
+- **Maintained by:** [Darshil Shah](https://github.com/darshil0)
+
+---
+
+**⭐ Star this repository** if you find it useful!
+
+**💬 Have suggestions?** Open an issue or submit a pull request.
+
+**🐦 Share your creations** using these prompts – tag us!
