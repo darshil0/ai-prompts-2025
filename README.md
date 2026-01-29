@@ -1,10 +1,10 @@
 # 🤖 AI Prompt Collection 2026
 
-A curated, open-source library of **80 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
+A curated, open-source library of **95 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.0.5-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
-[![Prompts](https://img.shields.io/badge/prompts-80-purple.svg)](index.html)
+[![Version](https://img.shields.io/badge/version-3.1.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
+[![Prompts](https://img.shields.io/badge/prompts-95-purple.svg)](index.html)
 
 ---
 
@@ -21,12 +21,13 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ---
 
-## ✨ What's New in v3.0.5
+## ✨ What's New in v3.1.0
 
-- **13 New Prompts:** Trending 2026 Vision Board collection from viral campaign
-- **Advanced Categories:** SAUCE Constraint and Temporal Fusion for multimodal AI
-- **Research Agents:** PhD-level reasoning and agentic reporting prompts
-- **Enhanced UX:** Improved search, filtering, and mobile responsiveness
+- **🤖 NEW CATEGORY: Agentic AI** - 15 powerful prompts for autonomous AI agents
+- **Advanced Agent Workflows:** Multi-step research, code review, data orchestration, and more
+- **Intelligent Automation:** Prompts for customer support, meeting analysis, and workflow optimization
+- **Strategic Agents:** Competitive intelligence, crisis communication, and sales qualification
+- **Total Prompts:** Now 95 prompts across 10 categories
 
 ---
 
@@ -43,8 +44,9 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 | **Coding** | 13 | API handlers, React hooks, validation, authentication |
 | **Problem Solving** | 9 | Root cause analysis, decision frameworks, habit systems |
 | **Design** | 7 | Color palettes, typography, icons, accessibility |
+| **🆕 Agentic AI** | 15 | Autonomous agents, multi-step workflows, intelligent automation |
 
-**Total: 80 Prompts**
+**Total: 95 Prompts**
 
 ---
 
@@ -55,6 +57,13 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 - **Temporal Fusion** – Seamlessly blend summer/winter in one frame
 - **Hugging My Younger Self** – Emotional cross-generational composite
 - **SAUCE Logical Challenge** – Alphanumeric constraint puzzle for AI
+
+### 🤖 NEW: Agentic AI Power Tools
+- **Multi-Step Research Agent** – Autonomous deep research with citations
+- **Code Review Agent** – Automated quality analysis with reasoning
+- **Customer Support Triage** – Intelligent ticket classification and routing
+- **Workflow Automation Designer** – Process optimization and mapping
+- **Prompt Chain Architect** – Build complex multi-step AI workflows
 
 ### 💼 Professional Power Tools
 - **STAR Resume Bullets** – Convert tasks into quantified achievements
@@ -91,7 +100,7 @@ We welcome high-quality prompt submissions!
 
 ```javascript
 {
-  id: 81,
+  id: 96,
   title: "Your Prompt Title",
   category: "Category Name",
   description: "Brief one-liner description",
@@ -159,10 +168,10 @@ Special thanks to the AI community for inspiration, feedback, and testing. This 
 
 ## 📊 Project Stats
 
-- **Total Prompts:** 80
-- **Categories:** 9
-- **Version:** 3.0.5
-- **Release Date:** January 2, 2026
+- **Total Prompts:** 95
+- **Categories:** 10
+- **Version:** 3.1.0
+- **Release Date:** January 29, 2026
 - **License:** MIT
 - **Maintained by:** [Darshil Shah](https://github.com/darshil0)
 
