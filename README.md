@@ -44,7 +44,7 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 | **Coding** | 13 | API handlers, React hooks, validation, authentication |
 | **Problem Solving** | 9 | Root cause analysis, decision frameworks, habit systems |
 | **Design** | 7 | Color palettes, typography, icons, accessibility |
-| **🆕 Agentic AI** | 15 | Autonomous agents, multi-step workflows, intelligent automation |
+| **Agentic AI** | 15 | Autonomous agents, multi-step workflows, intelligent automation |
 
 **Total: 95 Prompts**
 
