@@ -81,7 +81,7 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ```
 ai-prompt-collection-2026/
-├── index.html          # Complete web app with all 80 prompts
+├── index.html          # Complete web app with all 95 prompts
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── favicon.svg         # Project icon
