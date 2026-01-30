@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="95 premium AI prompts for Claude, GPT-4, and Gemini - optimized for 2026">
-  <title>AI Prompt Collection 2026 | 95 Premium Prompts</title>
-  
+  <meta name="description" content="115 premium AI prompts for Claude, GPT-4, and Gemini 2.0 - optimized for 2026">
+  <title>AI Prompt Collection 2026 | 115 Premium Prompts</title>
+
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -15,41 +16,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
+    body {
+      font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
+
     .glass {
       background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-    .toast-up { 
-      animation: toastUp 0.3s ease-out forwards; 
+
+    .toast-up {
+      animation: toastUp 0.3s ease-out forwards;
     }
-    @keyframes toastUp { 
-      from { transform: translate(-50%, 40px); opacity: 0; } 
-      to { transform: translate(-50%, 0); opacity: 1; } 
+
+    @keyframes toastUp {
+      from {
+        transform: translate(-50%, 40px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
     }
+
     .fade-in {
       animation: fadeIn 0.5s ease-out;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { 
-      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); 
-      border-radius: 10px; 
+
+    ::-webkit-scrollbar {
+      width: 10px;
     }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      border-radius: 10px;
+    }
+
     .card-hover {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .card-hover:hover {
       transform: translateY(-8px);
     }
+
     .gradient-text {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       -webkit-background-clip: text;
@@ -179,7 +209,29 @@
       { id: 92, title: "Security Audit Agent", category: "Agentic AI", description: "Comprehensive vulnerability scanner.", tags: ["Security", "Agent"], content: "Act as a security audit agent. For the provided system architecture: 1) Identify potential security vulnerabilities, 2) Assess authentication and authorization mechanisms, 3) Review data encryption practices, 4) Check for common OWASP risks, 5) Evaluate third-party dependencies, 6) Generate prioritized remediation plan with implementation steps." },
       { id: 93, title: "Sales Qualification Agent", category: "Agentic AI", description: "Lead scoring and prioritization.", tags: ["Sales", "Agent"], content: "You are a sales qualification agent. For each lead: 1) Score based on BANT criteria (Budget, Authority, Need, Timeline), 2) Identify decision makers and influencers, 3) Research company background and recent activity, 4) Assess product-market fit, 5) Suggest personalized outreach strategy, 6) Predict conversion likelihood with reasoning. Provide confidence scores." },
       { id: 94, title: "Workflow Automation Designer", category: "Agentic AI", description: "Process optimization mapper.", tags: ["Productivity", "Agent"], content: "Act as a workflow automation agent. For the described manual process: 1) Map current workflow steps and pain points, 2) Identify automation opportunities, 3) Suggest tools and integration options, 4) Design optimized workflow with decision points, 5) Calculate time/cost savings, 6) Create implementation roadmap with quick wins first." },
-      { id: 95, title: "Prompt Chain Architect", category: "Agentic AI", description: "Multi-step AI workflow builder.", tags: ["AI", "Agent"], content: "You are a prompt chain architecture agent. For the complex task: 1) Decompose into sequential sub-tasks, 2) Design prompts for each step with clear inputs/outputs, 3) Identify decision branches and loops, 4) Plan data passing between steps, 5) Add validation and error handling, 6) Optimize for token efficiency. Create a visual workflow diagram description." }
+      { id: 95, title: "Prompt Chain Architect", category: "Agentic AI", description: "Multi-step AI workflow builder.", tags: ["AI", "Agent"], content: "You are a prompt chain architecture agent. For the complex task: 1) Decompose into sequential sub-tasks, 2) Design prompts for each step with clear inputs/outputs, 3) Identify decision branches and loops, 4) Plan data passing between steps, 5) Add validation and error handling, 6) Optimize for token efficiency. Create a visual workflow diagram description." },
+
+      // ADVANCED AGENTIC AI & MODEL-SPECIFIC (96-115)
+      { id: 96, title: "Multi-Agent Coordination System", category: "Agentic AI", description: "Orchestrate multiple AI agents working together.", tags: ["Agent", "Coordination"], content: "Design a multi-agent system where: 1) A Lead Agent receives the task and delegates to specialized sub-agents, 2) A Research Agent gathers information autonomously, 3) An Analysis Agent processes findings, 4) A Synthesis Agent compiles results, 5) All agents communicate via structured handoffs, 6) Implement conflict resolution when agents disagree. Provide a coordination protocol and example task execution flow." },
+      { id: 97, title: "Context Engineering Blueprint", category: "Agentic AI", description: "Optimize token context for agent efficiency.", tags: ["Context", "Optimization"], content: "You are a context engineering agent. For this complex task: 1) Analyze which information is essential vs. supplementary, 2) Design a context window strategy that prioritizes critical data, 3) Implement dynamic context updates based on task progress, 4) Create retrieval patterns that minimize token waste, 5) Design a caching strategy for frequently referenced information, 6) Provide token budget allocation across task phases." },
+      { id: 98, title: "Gemini 2.0 Deep Research Mode", category: "Agentic AI", description: "Multi-step autonomous research with citation.", tags: ["Gemini", "Research"], content: "Activate deep research mode: Given the topic [INSERT TOPIC], perform autonomous multi-step research: 1) Generate 5 diverse search strategies, 2) Explore each avenue systematically, 3) Extract and verify key findings with source citations, 4) Identify contradictions or gaps in current knowledge, 5) Synthesize a comprehensive report with confidence scores, 6) Suggest follow-up research directions with reasoning. Use chain-of-thought for all analytical steps." },
+      { id: 99, title: "Agentic Code Reviewer (Jules-Style)", category: "Coding", description: "Autonomous bug fixing and test generation.", tags: ["Agent", "Code"], content: "Act as an autonomous coding agent like Google Jules. For the provided codebase: 1) Scan for bugs, security vulnerabilities, and code smells, 2) Create a prioritized fix plan with test cases, 3) Generate pull requests with detailed commit messages, 4) Write comprehensive unit tests for untested functions, 5) Update dependencies and check for breaking changes, 6) Run all tests and report results. Work asynchronously and parallelize where possible." },
+      { id: 100, title: "Agent-to-Agent Protocol Designer", category: "Agentic AI", description: "Standardized inter-agent communication.", tags: ["Protocol", "Agent"], content: "Design an Agent-to-Agent communication protocol: 1) Define message structure (intent, payload, priority, context), 2) Create handshake and acknowledgment patterns, 3) Establish error handling and retry logic, 4) Design state synchronization mechanisms, 5) Implement capability negotiation between agents, 6) Provide JSON schema and example message exchanges for a multi-agent research task." },
+      { id: 101, title: "Gemini Multimodal Chain-of-Thought", category: "Image Generation", description: "Reason through vision + text tasks.", tags: ["Gemini", "Multimodal"], content: "Using Gemini's multimodal capabilities: Analyze the provided image and text prompt together. 1) Describe what you see in the image with spatial details, 2) Identify how it relates to the text query, 3) Reason step-by-step about potential modifications, 4) Explain your creative decisions before generating, 5) Produce a detailed image generation prompt that addresses the query, 6) Include negative prompts to avoid common issues." },
+      { id: 102, title: "Claude Context Engineering (MCP)", category: "Agentic AI", description: "Model Context Protocol implementation.", tags: ["Claude", "MCP"], content: "Implement Claude's Model Context Protocol for this task: 1) Map all required knowledge domains and data sources, 2) Design selective retrieval strategies to minimize context pollution, 3) Create a hierarchical context structure (core → supporting → reference), 4) Implement progressive context loading based on task phase, 5) Design context compression techniques for long documents, 6) Provide a context management plan with token budgets for each section." },
+      { id: 103, title: "Social Media Agent (Platform-Adaptive)", category: "Marketing", description: "Auto-generate platform-optimized content.", tags: ["Agent", "Social"], content: "You are an autonomous social media agent. For the campaign topic [INSERT TOPIC]: 1) Generate platform-specific content (LinkedIn: professional thought leadership, Twitter/X: viral thread with hooks, Instagram: visual carousel with captions, TikTok: short video script), 2) Adapt tone and format for each platform's algorithm, 3) Include optimal posting times and hashtag strategies, 4) Design A/B test variations, 5) Create engagement response templates, 6) Provide analytics tracking recommendations." },
+      { id: 104, title: "Few-Shot Adaptive Agent", category: "Agentic AI", description: "Learn from examples and improve.", tags: ["Learning", "Agent"], content: "Create a few-shot learning agent: 1) Analyze these 3 example tasks and solutions: [PROVIDE EXAMPLES], 2) Extract patterns and decision-making rules, 3) Apply learned patterns to new similar task: [NEW TASK], 4) Explain your reasoning using extracted rules, 5) Identify where the new task differs from examples, 6) Suggest how you would update your rules based on feedback. Show meta-learning awareness." },
+      { id: 105, title: "Negative Prompt Engineering", category: "Image Generation", description: "Comprehensive avoidance instructions.", tags: ["Gemini", "Image"], content: "For this image generation task: 1) Create the primary positive prompt with rich detail (subject, style, composition, lighting, colors, technical specs), 2) Generate an equally detailed negative prompt listing: unwanted artifacts, distortions, style conflicts, quality issues, compositional errors, 3) Include model-specific negative terms (e.g., 'blurry, low quality, distorted faces, extra limbs, watermark'), 4) Balance specificity vs. over-constraint, 5) Provide reasoning for each negative term." },
+      { id: 106, title: "OpenAI Swarm Pattern: Handoffs", category: "Agentic AI", description: "Agent task handoff orchestration.", tags: ["OpenAI", "Swarm"], content: "Implement OpenAI Swarm handoff pattern: Design a customer service system with: 1) Triage Agent (classifies incoming request), 2) Technical Agent (handles tech issues), 3) Billing Agent (manages payments), 4) Escalation Agent (complex cases). Define: handoff triggers, context preservation during transfers, routing logic with conditions, fallback paths when agents are unavailable, and success metrics. Provide implementation pseudocode." },
+      { id: 107, title: "Gemini Grounding with Web Search", category: "Agentic AI", description: "Real-time fact verification agent.", tags: ["Gemini", "Grounding"], content: "Create a fact-grounding agent using Gemini's web search capability: 1) Make a claim or generate content about [TOPIC], 2) Automatically search the web for supporting evidence, 3) Verify each major claim with at least 2 independent sources, 4) Flag any unsupported or contradictory information, 5) Cite sources with URLs and access dates, 6) Provide confidence scores (High/Medium/Low) for each statement based on source quality and consensus." },
+      { id: 108, title: "Anthropic Prompt Caching Strategy", category: "Agentic AI", description: "Optimize costs with smart caching.", tags: ["Claude", "Optimization"], content: "Design a prompt caching strategy for Claude: 1) Identify static vs. dynamic content in your prompts, 2) Structure prompts to maximize cache hits (put stable context first), 3) Design cache-friendly few-shot examples, 4) Calculate cost savings from caching (show token math), 5) Implement cache invalidation logic for when context updates, 6) Provide before/after prompt structures with estimated cost reduction." },
+      { id: 109, title: "Vision Board + Goal Tracking (2026)", category: "Image Generation", description: "Gemini-powered visual goal planner.", tags: ["Gemini", "2026"], content: "Using Gemini's image generation: Create a 2026 vision board with integrated tracking. Design a hand-drawn, notebook-style layout featuring: 1) Q1-Q4 quarterly goal sections with knolling arrangement, 2) Fitness goals (with progress trackers), 3) Financial milestones (with visual graphs), 4) Learning objectives (with certification badges), 5) Travel destinations (with map pins), 6) Use yellow highlighter effects, cross-hatching, and handwritten annotations. Include space for monthly check-ins." },
+      { id: 110, title: "LLM-as-Judge Self-Evaluation", category: "Agentic AI", description: "Agent quality control system.", tags: ["Evaluation", "Agent"], content: "Implement LLM-as-Judge pattern: 1) Generate a response to the user query: [QUERY], 2) Create evaluation criteria (accuracy, helpfulness, safety, conciseness), 3) Self-evaluate your response using those criteria with scores 1-10, 4) Identify specific weaknesses or risks, 5) Generate an improved version addressing the issues, 6) Re-evaluate the new version, 7) Explain your reasoning for all judgments. Show decision transparency." },
+      { id: 111, title: "Conditional Tool Use Routing", category: "Agentic AI", description: "Smart agent tool selection.", tags: ["Tools", "Agent"], content: "Design a conditional tool-use agent: Given the query [QUERY], 1) Analyze what tools are needed (web search, calculator, code interpreter, image generator, database), 2) Create decision tree for tool selection with if-then conditions, 3) Determine optimal tool execution order (parallel vs. sequential), 4) Handle tool failures with fallback strategies, 5) Combine results from multiple tools intelligently, 6) Explain your routing logic and show the execution plan." },
+      { id: 112, title: "Gemini Long Context (1M Tokens)", category: "Coding", description: "Analyze massive codebases efficiently.", tags: ["Gemini", "Context"], content: "Leverage Gemini's extended context window: For this large codebase (assume 500K tokens): 1) Load entire repository into context, 2) Create architectural overview by analyzing all files, 3) Identify cross-file dependencies and patterns, 4) Find potential bugs that span multiple modules, 5) Suggest refactoring opportunities considering global impact, 6) Generate comprehensive documentation. Demonstrate how you utilize the full context vs. traditional chunking approaches." },
+      { id: 113, title: "Parallel Agent Execution", category: "Agentic AI", description: "Simultaneous multi-agent processing.", tags: ["Parallel", "Agent"], content: "Design parallel agent execution: For the task [TASK], deploy agents concurrently: 1) Agent A: Market research, 2) Agent B: Competitor analysis, 3) Agent C: Customer sentiment analysis, 4) Agent D: Technical feasibility study. Specify: parallel execution triggers, race condition handling, result aggregation strategy, timeout management, partial failure recovery, and final synthesis method. Show expected time savings vs. sequential execution." },
+      { id: 114, title: "Input/Output Guardrails Agent", category: "Agentic AI", description: "Safety and validation layer.", tags: ["Safety", "Agent"], content: "Create a guardrails agent: 1) INPUT VALIDATION: Check user input for prompt injection attempts, PII leakage risks, malicious content, off-topic requests, 2) PROCESSING: Flag if task requires human oversight, 3) OUTPUT VALIDATION: Scan generated content for hallucinations, harmful content, privacy violations, copyright issues, 4) REMEDIATION: Suggest safe alternatives or explain why request was blocked, 5) LOGGING: Record all violations for audit. Provide decision logic and examples." },
+      { id: 115, title: "Gemini Spatial Reasoning Prompt", category: "Image Generation", description: "Complex 3D scene composition.", tags: ["Gemini", "Spatial"], content: "Using Gemini's improved spatial understanding: Generate an image with precise spatial relationships: 'Create a realistic scene with: 1) A red cube positioned 2 feet to the LEFT of a blue sphere, 2) A yellow cylinder standing BEHIND both objects by 3 feet, 3) A green cone placed IN FRONT of the cube by 1 foot, 4) All objects on a wooden table, 5) Camera angle: 45-degree elevated view from the front-right, 6) Soft natural lighting from top-left.' Verify spatial accuracy in your reasoning before generating." }
     ];
 
     const App = () => {
@@ -194,9 +246,9 @@
       const filteredItems = useMemo(() => {
         return promptData.filter(item => {
           const matchCat = filter === "All" || item.category === filter;
-          const matchSearch = item.title.toLowerCase().includes(search.toLowerCase()) || 
-                              item.description.toLowerCase().includes(search.toLowerCase()) ||
-                              item.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
+          const matchSearch = item.title.toLowerCase().includes(search.toLowerCase()) ||
+            item.description.toLowerCase().includes(search.toLowerCase()) ||
+            item.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
           return matchCat && matchSearch;
         });
       }, [search, filter]);
@@ -250,27 +302,27 @@
                     🤖 AI Prompt Library
                   </h1>
                   <p className="text-slate-600 text-sm font-medium">
-                    {stats.total} Premium Prompts · {stats.categories} Categories · v3.1.0
+                    {stats.total} Premium Prompts · {stats.categories} Categories · v3.2.0
                   </p>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                  <input 
-                    type="text" 
-                    placeholder="🔍 Search prompts, tags..." 
+                  <input
+                    type="text"
+                    placeholder="🔍 Search prompts, tags..."
                     className="px-5 py-3 w-full sm:w-80 border-2 border-slate-200 rounded-xl outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all font-medium"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
                   <div className="flex gap-2">
-                    <button 
+                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-4 py-3 rounded-xl font-bold transition-all ${viewMode === 'grid' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-white text-slate-600 border-2 border-slate-200'}`}
                       title="Grid View"
                     >
                       ⊞
                     </button>
-                    <button 
+                    <button
                       onClick={() => setViewMode('list')}
                       className={`px-4 py-3 rounded-xl font-bold transition-all ${viewMode === 'list' ? 'bg-indigo-600 text-white shadow-lg' : 'bg-white text-slate-600 border-2 border-slate-200'}`}
                       title="List View"
@@ -307,14 +359,13 @@
             {/* Category Filter */}
             <nav className="flex flex-wrap gap-3 mb-10 justify-center">
               {categories.map(c => (
-                <button 
-                  key={c} 
-                  onClick={() => setFilter(c)} 
-                  className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 ${
-                    filter === c 
-                      ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-xl" 
-                      : "glass text-slate-700 border border-slate-200 hover:border-indigo-300 hover:shadow-md"
-                  }`}
+                <button
+                  key={c}
+                  onClick={() => setFilter(c)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 ${filter === c
+                    ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-xl"
+                    : "glass text-slate-700 border border-slate-200 hover:border-indigo-300 hover:shadow-md"
+                    }`}
                 >
                   {c} {c !== "All" && <span className="opacity-70">({categoryCounts[c]})</span>}
                 </button>
@@ -323,16 +374,15 @@
 
             {/* Prompts Grid/List */}
             <div className={
-              viewMode === 'grid' 
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" 
+              viewMode === 'grid'
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 : "flex flex-col gap-4"
             }>
               {filteredItems.map((p, idx) => (
-                <article 
-                  key={p.id} 
-                  className={`glass border border-slate-200 rounded-2xl p-6 flex flex-col card-hover shadow-lg fade-in ${
-                    viewMode === 'list' ? 'md:flex-row md:items-center md:gap-6' : ''
-                  }`}
+                <article
+                  key={p.id}
+                  className={`glass border border-slate-200 rounded-2xl p-6 flex flex-col card-hover shadow-lg fade-in ${viewMode === 'list' ? 'md:flex-row md:items-center md:gap-6' : ''
+                    }`}
                   style={{ animationDelay: `${idx * 0.05}s` }}
                 >
                   <div className={`flex-1 ${viewMode === 'list' ? 'md:order-2' : ''}`}>
@@ -340,25 +390,24 @@
                       <span className="text-[10px] font-extrabold uppercase tracking-widest text-white bg-gradient-to-r from-indigo-600 to-violet-600 px-3 py-1.5 rounded-lg shadow-md">
                         {p.category}
                       </span>
-                      <button 
-                        onClick={() => copyToClipboard(p.content, p.title)} 
+                      <button
+                        onClick={() => copyToClipboard(p.content, p.title)}
                         className="text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-lg transition-all active:scale-95 shadow-lg hover:shadow-xl"
                       >
                         📋 Copy
                       </button>
                     </div>
-                    
+
                     <h3 className="font-bold text-xl mb-2 leading-tight text-slate-900">{p.title}</h3>
                     <p className="text-slate-600 text-sm mb-3 font-medium">{p.description}</p>
-                    
+
                     <div className="relative mb-4">
-                      <p className={`text-slate-500 text-sm leading-relaxed transition-all ${
-                        expandedId === p.id ? "" : "line-clamp-2"
-                      }`}>
+                      <p className={`text-slate-500 text-sm leading-relaxed transition-all ${expandedId === p.id ? "" : "line-clamp-2"
+                        }`}>
                         {p.content}
                       </p>
                       {p.content.length > 100 && (
-                        <button 
+                        <button
                           onClick={() => setExpandedId(expandedId === p.id ? null : p.id)}
                           className="text-indigo-600 text-xs font-bold mt-2 hover:text-indigo-800 transition-colors"
                         >
@@ -369,8 +418,8 @@
 
                     <div className="pt-4 border-t border-slate-100 flex flex-wrap gap-2">
                       {p.tags.map(t => (
-                        <span 
-                          key={t} 
+                        <span
+                          key={t}
                           className="text-xs text-indigo-700 font-semibold bg-indigo-50 px-3 py-1 rounded-full"
                         >
                           #{t}
@@ -393,7 +442,7 @@
                 <div className="text-6xl mb-4">🔍</div>
                 <p className="text-slate-500 text-xl font-semibold mb-2">No prompts found</p>
                 <p className="text-slate-400">Try adjusting your search or filter</p>
-                <button 
+                <button
                   onClick={() => { setSearch(""); setFilter("All"); }}
                   className="mt-6 px-6 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all"
                 >
@@ -429,4 +478,5 @@
     root.render(<App />);
   </script>
 </body>
+
 </html>

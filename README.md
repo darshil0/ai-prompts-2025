@@ -1,10 +1,10 @@
 # 🤖 AI Prompt Collection 2026
 
-A curated, open-source library of **95 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
+A curated, open-source library of **115 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini 2.0, and beyond).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.1.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
-[![Prompts](https://img.shields.io/badge/prompts-95-purple.svg)](index.html)
+[![Version](https://img.shields.io/badge/version-3.2.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
+[![Prompts](https://img.shields.io/badge/prompts-115-purple.svg)](index.html)
 
 ---
 
@@ -21,13 +21,14 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ---
 
-## ✨ What's New in v3.1.0
+## ✨ What's New in v3.2.0
 
-- **🤖 NEW CATEGORY: Agentic AI** - 15 powerful prompts for autonomous AI agents
-- **Advanced Agent Workflows:** Multi-step research, code review, data orchestration, and more
-- **Intelligent Automation:** Prompts for customer support, meeting analysis, and workflow optimization
-- **Strategic Agents:** Competitive intelligence, crisis communication, and sales qualification
-- **Total Prompts:** Now 95 prompts across 10 categories
+- **🚀 EXPANDED AGENTIC AI** - 28 cutting-edge prompts (nearly doubled from v3.1!)
+- **Gemini 2.0 Features:** Deep research mode, multimodal reasoning, long context (1M tokens), spatial understanding
+- **Multi-Agent Systems:** Agent coordination, handoffs, parallel execution, A2A protocols
+- **Context Engineering:** Prompt caching, token optimization, MCP implementation
+- **Real-World Examples:** Google Jules, OpenAI Swarm, Anthropic Claude patterns
+- **Total Prompts:** Now 115 prompts across 10 categories
 
 ---
 
@@ -36,17 +37,17 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 | Category | Count | Description |
 |----------|-------|-------------|
 | **Infographics** | 8 | Timelines, data visualizations, journey maps, comparison matrices |
-| **Image Generation** | 7 | Vision boards, portraits, micro-worlds, mythological objects |
+| **Image Generation** | 11 | Vision boards, Gemini multimodal, negative prompts, spatial reasoning |
 | **Image Editing** | 12 | Temporal fusion, style transfers, composites, retouching |
 | **Video Generation** | 1 | Cinematic camera movements and drone shots |
-| **Marketing** | 13 | Viral threads, email sequences, ad copy, landing pages |
+| **Marketing** | 14 | Viral threads, social media agents, ad copy, landing pages |
 | **Career** | 10 | Resumes, LinkedIn optimization, negotiation, portfolios |
-| **Coding** | 13 | API handlers, React hooks, validation, authentication |
+| **Coding** | 15 | Jules-style agents, long context analysis, API handlers, React hooks |
 | **Problem Solving** | 9 | Root cause analysis, decision frameworks, habit systems |
 | **Design** | 7 | Color palettes, typography, icons, accessibility |
-| **Agentic AI** | 15 | Autonomous agents, multi-step workflows, intelligent automation |
+| **Agentic AI** | 28 | Multi-agent systems, context engineering, Gemini/Claude/OpenAI patterns |
 
-**Total: 95 Prompts**
+**Total: 115 Prompts**
 
 ---
 
@@ -58,12 +59,13 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 - **Hugging My Younger Self** – Emotional cross-generational composite
 - **SAUCE Logical Challenge** – Alphanumeric constraint puzzle for AI
 
-### 🤖 NEW: Agentic AI Power Tools
-- **Multi-Step Research Agent** – Autonomous deep research with citations
-- **Code Review Agent** – Automated quality analysis with reasoning
-- **Customer Support Triage** – Intelligent ticket classification and routing
-- **Workflow Automation Designer** – Process optimization and mapping
-- **Prompt Chain Architect** – Build complex multi-step AI workflows
+### 🤖 NEW: Advanced Agentic AI (v3.2.0)
+- **Multi-Agent Coordination** – Orchestrate specialized agents working together
+- **Gemini 2.0 Deep Research** – Autonomous research with web grounding
+- **Context Engineering** – Optimize token usage with smart caching (Claude MCP)
+- **OpenAI Swarm Patterns** – Agent handoffs and parallel execution
+- **LLM-as-Judge** – Self-evaluation and quality control systems
+- **Jules-Style Code Agent** – Autonomous bug fixing and test generation
 
 ### 💼 Professional Power Tools
 - **STAR Resume Bullets** – Convert tasks into quantified achievements
@@ -81,7 +83,7 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ```
 ai-prompt-collection-2026/
-├── index.html          # Complete web app with all 95 prompts
+├── index.html          # Complete web app with all 115 prompts
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── favicon.svg         # Project icon
@@ -100,7 +102,7 @@ We welcome high-quality prompt submissions!
 
 ```javascript
 {
-  id: 96,
+  id: 116,
   title: "Your Prompt Title",
   category: "Category Name",
   description: "Brief one-liner description",
@@ -168,10 +170,10 @@ Special thanks to the AI community for inspiration, feedback, and testing. This 
 
 ## 📊 Project Stats
 
-- **Total Prompts:** 95
+- **Total Prompts:** 115
 - **Categories:** 10
-- **Version:** 3.1.0
-- **Release Date:** January 29, 2026
+- **Version:** 3.2.0
+- **Release Date:** January 30, 2026
 - **License:** MIT
 - **Maintained by:** [Darshil Shah](https://github.com/darshil0)
 
