@@ -1,10 +1,10 @@
 # 🤖 AI Prompt Collection 2026
 
-A curated, open-source library of **115 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini 2.0, and beyond).
+A curated, open-source library of **125 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini 3.5 Flash, and beyond).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.2.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
-[![Prompts](https://img.shields.io/badge/prompts-115-purple.svg)](index.html)
+[![Version](https://img.shields.io/badge/version-3.3.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
+[![Prompts](https://img.shields.io/badge/prompts-125-purple.svg)](index.html)
 
 ---
 
@@ -21,14 +21,15 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ---
 
-## ✨ What's New in v3.2.0
+## ✨ What's New in v3.3.0
 
-- **🚀 EXPANDED AGENTIC AI** - 28 cutting-edge prompts (nearly doubled from v3.1!)
-- **Gemini 2.0 Features:** Deep research mode, multimodal reasoning, long context (1M tokens), spatial understanding
-- **Multi-Agent Systems:** Agent coordination, handoffs, parallel execution, A2A protocols
-- **Context Engineering:** Prompt caching, token optimization, MCP implementation
-- **Real-World Examples:** Google Jules, OpenAI Swarm, Anthropic Claude patterns
-- **Total Prompts:** Now 115 prompts across 10 categories
+- **🧠 GEMINI 3.5 FLASH DEEP AGENT MODE** - PhD-level reasoning with Think-Act-Observe loops
+- **Google AI Products:** NotebookLM research assistant, AI Studio rapid prototyping, AI Mode shopping
+- **Agentic Vision:** Active image investigation with Python code generation
+- **Deep Think Mode:** Modulated reasoning (Fast/Thinking/Pro) with 30% token efficiency
+- **Full-Stack Generator:** One-shot website/app creation with Snowbunny capabilities
+- **Multimodal Live API:** Real-time streaming agents with text, audio, video
+- **Total Prompts:** Now 125 prompts across 10 categories
 
 ---
 
@@ -37,17 +38,17 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 | Category | Count | Description |
 |----------|-------|-------------|
 | **Infographics** | 8 | Timelines, data visualizations, journey maps, comparison matrices |
-| **Image Generation** | 11 | Vision boards, Gemini multimodal, negative prompts, spatial reasoning |
+| **Image Generation** | 13 | Agentic vision, Gemini multimodal, negative prompts, spatial reasoning |
 | **Image Editing** | 12 | Temporal fusion, style transfers, composites, retouching |
 | **Video Generation** | 1 | Cinematic camera movements and drone shots |
 | **Marketing** | 14 | Viral threads, social media agents, ad copy, landing pages |
 | **Career** | 10 | Resumes, LinkedIn optimization, negotiation, portfolios |
-| **Coding** | 15 | Jules-style agents, long context analysis, API handlers, React hooks |
+| **Coding** | 18 | AI Studio, full-stack generator, vision+code, Jules-style agents |
 | **Problem Solving** | 9 | Root cause analysis, decision frameworks, habit systems |
 | **Design** | 7 | Color palettes, typography, icons, accessibility |
-| **Agentic AI** | 28 | Multi-agent systems, context engineering, Gemini/Claude/OpenAI patterns |
+| **Agentic AI** | 33 | Deep Think, NotebookLM, multi-agent, Gemini 3.5 Flash, Google products |
 
-**Total: 115 Prompts**
+**Total: 125 Prompts**
 
 ---
 
@@ -59,13 +60,14 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 - **Hugging My Younger Self** – Emotional cross-generational composite
 - **SAUCE Logical Challenge** – Alphanumeric constraint puzzle for AI
 
-### 🤖 NEW: Advanced Agentic AI (v3.2.0)
-- **Multi-Agent Coordination** – Orchestrate specialized agents working together
-- **Gemini 2.0 Deep Research** – Autonomous research with web grounding
-- **Context Engineering** – Optimize token usage with smart caching (Claude MCP)
-- **OpenAI Swarm Patterns** – Agent handoffs and parallel execution
-- **LLM-as-Judge** – Self-evaluation and quality control systems
-- **Jules-Style Code Agent** – Autonomous bug fixing and test generation
+### 🧠 NEW: Gemini 3.5 Flash & Google AI (v3.3.0)
+- **Deep Think Mode** – PhD-level reasoning with Fast/Thinking/Pro settings
+- **Agentic Vision** – Think-Act-Observe loops for active image investigation
+- **NotebookLM Research** – Grounded multi-source research with citations
+- **AI Studio Prototyping** – Rapid AI-first app development playground
+- **Full-Stack Generator (Snowbunny)** – One-shot website and app creation
+- **AI Mode Shopping** – Agentic commerce with Google Search UCP
+- **Multimodal Live API** – Real-time streaming agents with voice
 
 ### 💼 Professional Power Tools
 - **STAR Resume Bullets** – Convert tasks into quantified achievements
@@ -83,7 +85,7 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ```
 ai-prompt-collection-2026/
-├── index.html          # Complete web app with all 115 prompts
+├── index.html          # Complete web app with all 125 prompts
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── favicon.svg         # Project icon
@@ -102,7 +104,7 @@ We welcome high-quality prompt submissions!
 
 ```javascript
 {
-  id: 116,
+  id: 126,
   title: "Your Prompt Title",
   category: "Category Name",
   description: "Brief one-liner description",
@@ -170,9 +172,9 @@ Special thanks to the AI community for inspiration, feedback, and testing. This 
 
 ## 📊 Project Stats
 
-- **Total Prompts:** 115
+- **Total Prompts:** 125
 - **Categories:** 10
-- **Version:** 3.2.0
+- **Version:** 3.3.0
 - **Release Date:** January 30, 2026
 - **License:** MIT
 - **Maintained by:** [Darshil Shah](https://github.com/darshil0)
