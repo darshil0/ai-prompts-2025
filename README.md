@@ -1,4 +1,4 @@
-# 🤖 AI Prompt Collection 2026
+# 🤖 AI Prompt Collection 2025
 
 A curated, open-source library of **125 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
 
