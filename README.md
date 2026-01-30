@@ -1,6 +1,6 @@
 # 🤖 AI Prompt Collection 2026
 
-A curated, open-source library of **125 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini 3.5 Flash, and beyond).
+A curated, open-source library of **125 premium AI prompts** optimized for modern generative AI tools (Claude, GPT-4, Gemini, and beyond).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-3.3.0-brightgreen.svg)](https://github.com/darshil0/ai-prompt-collection-2026)
@@ -23,13 +23,13 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 
 ## ✨ What's New in v3.3.0
 
-- **🧠 GEMINI 3.5 FLASH DEEP AGENT MODE** - PhD-level reasoning with Think-Act-Observe loops
-- **Google AI Products:** NotebookLM research assistant, AI Studio rapid prototyping, AI Mode shopping
-- **Agentic Vision:** Active image investigation with Python code generation
-- **Deep Think Mode:** Modulated reasoning (Fast/Thinking/Pro) with 30% token efficiency
-- **Full-Stack Generator:** One-shot website/app creation with Snowbunny capabilities
-- **Multimodal Live API:** Real-time streaming agents with text, audio, video
-- **Total Prompts:** Now 125 prompts across 10 categories
+- **🧠 Gemini 3.5 Flash Deep Agent Mode** - PhD-level reasoning with Think-Act-Observe loops
+- **Google AI Products** - NotebookLM research assistant, AI Studio rapid prototyping, AI Mode shopping
+- **Agentic Vision** - Active image investigation with Python code generation
+- **Deep Think Mode** - Modulated reasoning (Fast/Thinking/Pro) with 30% token efficiency
+- **Full-Stack Generator** - One-shot website and app creation with Snowbunny capabilities
+- **Multimodal Live API** - Real-time streaming agents with text, audio, and video
+- **Total Prompts** - Now 125 prompts across 10 categories
 
 ---
 
@@ -55,29 +55,29 @@ Extract prompts from the `promptData` array in `index.html` for programmatic use
 ## 🎯 Featured Prompts
 
 ### 🔥 Trending in 2026
-- **2026 Vision Board** – Hand-drawn goal visualization with knolling layout
-- **Temporal Fusion** – Seamlessly blend summer/winter in one frame
-- **Hugging My Younger Self** – Emotional cross-generational composite
-- **SAUCE Logical Challenge** – Alphanumeric constraint puzzle for AI
+- **2026 Vision Board** - Hand-drawn goal visualization with knolling layout
+- **Temporal Fusion** - Seamlessly blend summer/winter in one frame
+- **Hugging My Younger Self** - Emotional cross-generational composite
+- **SAUCE Logical Challenge** - Alphanumeric constraint puzzle for AI
 
 ### 🧠 NEW: Gemini 3.5 Flash & Google AI (v3.3.0)
-- **Deep Think Mode** – PhD-level reasoning with Fast/Thinking/Pro settings
-- **Agentic Vision** – Think-Act-Observe loops for active image investigation
-- **NotebookLM Research** – Grounded multi-source research with citations
-- **AI Studio Prototyping** – Rapid AI-first app development playground
-- **Full-Stack Generator (Snowbunny)** – One-shot website and app creation
-- **AI Mode Shopping** – Agentic commerce with Google Search UCP
-- **Multimodal Live API** – Real-time streaming agents with voice
+- **Deep Think Mode** - PhD-level reasoning with Fast/Thinking/Pro settings
+- **Agentic Vision** - Think-Act-Observe loops for active image investigation
+- **NotebookLM Research** - Grounded multi-source research with citations
+- **AI Studio Prototyping** - Rapid AI-first app development playground
+- **Full-Stack Generator (Snowbunny)** - One-shot website and app creation
+- **AI Mode Shopping** - Agentic commerce with Google Search UCP
+- **Multimodal Live API** - Real-time streaming agents with voice
 
 ### 💼 Professional Power Tools
-- **STAR Resume Bullets** – Convert tasks into quantified achievements
-- **Viral Twitter Thread** – 7-tweet engagement framework
-- **React State Debugger** – Fix stale closures and hooks issues
+- **STAR Resume Bullets** - Convert tasks into quantified achievements
+- **Viral Twitter Thread** - 7-tweet engagement framework
+- **React State Debugger** - Fix stale closures and hooks issues
 
 ### 🎨 Creative Generators
-- **Object Mythology** – Turn everyday items into legendary artifacts
-- **Identity Without Face** – Atmospheric storytelling through posture
-- **Natural Skin Retouch** – Pore-preserving professional editing
+- **Object Mythology** - Turn everyday items into legendary artifacts
+- **Identity Without Face** - Atmospheric storytelling through posture
+- **Natural Skin Retouch** - Pore-preserving professional editing
 
 ---
 
@@ -119,10 +119,10 @@ We welcome high-quality prompt submissions!
 
 ### Contribution Guidelines
 
-- **Quality First:** Prompts should be well-tested and produce consistent results
-- **Clear Structure:** Include specific constraints and expected output format
-- **Unique Value:** Avoid duplicating existing prompts
-- **Proper Formatting:** Follow the existing JSON structure
+- **Quality First** - Prompts should be well-tested and produce consistent results
+- **Clear Structure** - Include specific constraints and expected output format
+- **Unique Value** - Avoid duplicating existing prompts
+- **Proper Formatting** - Follow the existing JSON structure
 
 ---
 
@@ -130,18 +130,18 @@ We welcome high-quality prompt submissions!
 
 ### Maximize Prompt Effectiveness
 
-1. **Be Specific** – Modify prompts with your exact requirements, brand guidelines, or constraints
-2. **Iterate** – Use AI outputs as inputs for refinement and improvement
-3. **Combine** – Mix multiple prompts for complex, multi-step workflows
-4. **Add Context** – Include relevant background information for better results
+1. **Be Specific** - Modify prompts with your exact requirements, brand guidelines, or constraints
+2. **Iterate** - Use AI outputs as inputs for refinement and improvement
+3. **Combine** - Mix multiple prompts for complex, multi-step workflows
+4. **Add Context** - Include relevant background information for better results
 
 ### Prompt Engineering Best Practices
 
-- ✅ Clear objective statement
-- ✅ Specific constraints and requirements
-- ✅ Expected output format
-- ✅ Quality indicators (e.g., "professional", "cinematic", "beginner-friendly")
-- ✅ Examples when helpful
+- Clear objective statement
+- Specific constraints and requirements
+- Expected output format
+- Quality indicators (e.g., "professional", "cinematic", "beginner-friendly")
+- Examples when helpful
 
 ---
 
@@ -155,7 +155,7 @@ We welcome high-quality prompt submissions!
 
 ## 📜 License
 
-**MIT License** – Free to use, modify, and distribute in your projects.
+**MIT License** - Free to use, modify, and distribute in your projects.
 
 See [LICENSE](LICENSE) file for full details.
 
@@ -163,10 +163,7 @@ See [LICENSE](LICENSE) file for full details.
 
 ## 🙏 Acknowledgments
 
-Special thanks to the AI community for inspiration, feedback, and testing. This collection has been refined with:
-- Claude 3.5 Sonnet
-- GPT-4 & GPT-4 Turbo
-- Gemini Pro
+Special thanks to the AI community for inspiration, feedback, and testing. This collection has been refined with Claude 3.5 Sonnet, GPT-4 & GPT-4 Turbo, and Gemini Pro.
 
 ---
 
@@ -185,4 +182,4 @@ Special thanks to the AI community for inspiration, feedback, and testing. This 
 
 **💬 Have suggestions?** Open an issue or submit a pull request.
 
-**🐦 Share your creations** using these prompts – tag us!
+**🐦 Share your creations** using these prompts - tag us!
